@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>LPK Garuda Mestakung Indonesia</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{{ asset('templates/assets/img/GMI/logo.png') }}" rel="icon">
+    <link href="{{ asset('templates/assets/img/GMI/logo.png') }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('templates/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('templates/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('templates/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('templates/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('templates/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('templates/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('templates/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('templates/assets/css/floating.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    @include('landing.header')
+
+    <section id="hero" class="d-flex align-items-center section-bg" style="padding: 10px;">
+        <div class="container" data-aos="zoom-out" data-aos-delay="100">
+            <div class="row">
+                <div class="col-md-6" style="margin-top: 40px;">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipNKTIVxVhMLFiGYhV9r9585ecn-jSfofpxTpKN3=s680-w680-h510"
+                                    class="d-block w-100" alt="..." style="border-radius: 10px;width: 370px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipPyPGMlrdpT7bW0psY-jYsSb5K5_xgKbCqlUZ_D=s680-w680-h510"
+                                    class="d-block w-100" alt="..." style="border-radius: 10px;width: 370px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipPyPGMlrdpT7bW0psY-jYsSb5K5_xgKbCqlUZ_D=s680-w680-h510"
+                                    class="d-block w-100" alt="..." style="border-radius: 10px;width: 370px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-top: 20px;padding: 20px;">
+                    <p class="justify-content-center;"><i class="fa fa-map-pin" style="padding-right: 10px;"></i> Tegal,
+                        Central Java</p>
+                    <h1>Garuda Mestakung Indonesia (GMI)
+                        <span></span>
+                    </h1>
+                    <p style="text-align: justify;">LPK Garuda Mestakung Indonesia merupakan suatu lembaga pelatihan
+                        kerja di Wilayah
+                        jawa Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris
+                        No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
+                        kecamatan Pangkah Kabupaten Tegal.</p>
+                    <div class="d-flex">
+                        <a href="#location" class="btn-get-started scrollto"><i class="fa fa-map-pin"></i> Location</a>
+                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
+                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" style="padding: 20px;">
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>About</h2>
+                    <h3>Find Out More <span>About Us</span></h3>
+                    {{-- <p>Mencetak Calon Pekerja
+                        Migran Indonesia yang
+                        Unggul</p> --}}
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipMgWp-AOaGdVvClzC-h0NHDrNiljH0P3xta4CBb=s1360-w1360-h1020"
+                            class="img-fluid" alt="" style="border-radius: 10px;">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipOIKVFReN08fRXXjnY8_LhO8_IcOMaGF0vbcpsV=s1360-w1360-h1020"
+                            class="img-fluid" alt="" style="border-radius: 10px;padding-top: 10px;">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <h3>Tentang Kami</h3>
+                        <p style="text-align: justify;">
+                            <b>LPK GARUDA MESTAKUNG INDONESIA</b> merupakan suatu lembaga pelatihan kerja di Wilayah
+                            jawa Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris
+                            No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
+                            kecamatan Pangkah Kabupaten Tegal. Dengan kewenangan utama melaksanakan pelatihan
+                            bahasa yang berbasis kompetensi dalam rangka tujuan untuk membantu mengentaskan
+                            kemiskinan dan pengangguran di wilayah Jawa Tengah
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bx bx-book"></i>
+                                <div>
+                                    <h5>Visi</h5>
+                                    <p style="text-align: justify;">
+                                        Menjadi Lembaga Pendidikan dan Pelatihan yang terkemuka, terunggul, terdepan dan
+                                        terbesar
+                                        di Indonesia yang mampu menghasilkan Insan yang unggul, profesional, dan
+                                        berkualitas global.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bx bx-book"></i>
+                                <div>
+                                    <h5>Misi</h5>
+                                    <p style="text-align: justify;">
+                                        Menerapkan kurikulum yang sesuai dengan kebutuhan
+                                        pasar kerja regional dan
+                                        internasional di era globalisasi.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        Secara terus menerus berusaha melakukan perbaikan
+                                        dalam sistem dan metode
+                                        pengajaran untuk meningkatkan kualitas lulusannya.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        Melakukan peningkatan perbaikan yang
+                                        berkesinambungan terhadap infrastruktur
+                                        untuk
+                                        kelancaran proses belajar mengajar agar tercipta suasana belajar yang ideal.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        Membentuk sumber daya manusia yang unggul, profesional, berkualitas dan
+                                        berbudi
+                                        pekerti luhur.
+                                    </p>
+                                    <p style="text-align: justify;">
+                                        Menjadi lembaga pendidikan dan pelatihan yang dipercaya dan bermanfaat bagi
+                                        masyarakat.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="counts" class="counts">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Projects</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="bi bi-headset"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="1463"
+                                data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Hours Of Support</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="bi bi-people"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Hard Workers</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Counts Section -->
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients section-bg">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Services</h2>
+                    <h3>Check our <span>Services</span></h3>
+                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
+                        atque vitae autem.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a href="">Lorem Ipsum</a></h4>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                        data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4><a href="">Sed ut perspiciatis</a></h4>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+                        data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            <h4><a href="">Magni Dolores</a></h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-world"></i></div>
+                            <h4><a href="">Nemo Enim</a></h4>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
+                        data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-slideshow"></i></div>
+                            <h4><a href="">Dele cardo</a></h4>
+                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
+                        data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-arch"></i></div>
+                            <h4><a href="">Divera don</a></h4>
+                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Ceo &amp; Founder</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                                    risus at semper.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Sara Wilsson</h3>
+                                <h4>Designer</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
+                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
+                                    legam anim culpa.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Jena Karlis</h3>
+                                <h4>Store Owner</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
+                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
+                                    minim.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>Matt Brandon</h3>
+                                <h4>Freelancer</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
+                                    dolore labore illum veniam.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
+                                    alt="">
+                                <h3>John Larson</h3>
+                                <h4>Entrepreneur</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
+                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
+                                    culpa fore nisi cillum quid.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="reviews" class="pricing">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Reviews</h2>
+                    <h3>Check our <span>Reviews</span></h3>
+                    <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
+                        Migran Indonesia yang
+                        Unggul</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12" data-aos="fade-up" data-aos-delay="100">
+                        <div class='sk-ww-google-reviews' data-embed-id='25368619'></div>
+                        <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Pricing Section -->
+
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="galeri" class="faq section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Galeri</h2>
+                    <h3>Galeri <span>GMI</span></h3>
+                    <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
+                        Migran Indonesia yang
+                        Unggul</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-12">
+                        <div class='sk-ww-google-business-photo' data-embed-id='25368624'></div>
+                        <script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <h3><span>Garuda Mestakung Indonesia</span></h3>
+                    <p>LPK Garuda Mestakung Indonesia (GMI) Mencetak Calon Pekerja
+                        Migran Indonesia yang
+                        Unggul</p>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-6">
+                        <div class="info-box mb-4">
+                            <i class="bx bx-map"></i>
+                            <h3>GMI Address</h3>
+                            <p>JL. Kaibon Rt. 03 Rw. 03 Desa Balamoa
+                                Kec. Pangkah Kab. Tegal
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="info-box  mb-4">
+                            <i class="bx bx-envelope"></i>
+                            <h3>Email</h3>
+                            <p>lpkgarudamestakungindonesia@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="info-box  mb-4">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>WhatsApp</h3>
+                            <p>085643493825</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="100" id="location">
+                    <div class="col-lg-6 ">
+                        <iframe class="mb-4 mb-lg-0"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.929751248736!2d109.1843675!3d-6.9522777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fbfe260681b91%3A0x122ab99fb2d88a7!2sLpk%20Garuda%20Mestakung%20Indonesia!5e0!3m2!1sid!2sid!4v1708396367934!5m2!1sid!2sid"
+                            frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Your Name" required>
+                                </div>
+                                <div class="col form-group">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="kc_fab_wrapper"></div>
+
+    @include('landing.footer')
+
+    <div id="preloader"></div>
+
+    {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a> --}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{ asset('templates/assets/js/kc.fab.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/js/kc.fab.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var links = [{
+                    "bgcolor": "#106eea",
+                    "icon": "+"
+                },
+                {
+                    "url": "https://wa.me/6285643493825",
+                    "title": "WhatsApp GMI",
+                    "bgcolor": "#128c7e",
+                    "color": "#fffff",
+                    "icon": "<i class='fa fa-whatsapp'></i>",
+                    "target": "_blank"
+                },
+                {
+                    "url": "https://wa.me/6285643493825",
+                    "title": "Tiktok GMI",
+                    "bgcolor": "#000000",
+                    "color": "#00000",
+                    "icon": "<i class='bx bxl-tiktok'></i>",
+                    "target": "_blank"
+                },
+                {
+                    "url": "https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA",
+                    "title": "YouTube GMI",
+                    "bgcolor": "red",
+                    "color": "white",
+                    "icon": "<i class='fa fa-youtube'></i>",
+                    "target": "_blank"
+                }
+            ]
+            $('.kc_fab_wrapper').kc_fab(links);
+        })
+    </script>
+
+    <script src="{{ asset('templates/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/php-email-form/validate.js') }}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ asset('templates/assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
