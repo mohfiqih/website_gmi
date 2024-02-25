@@ -1,23 +1,8 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
-
-    {{-- <div class="footer-newsletter">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <h4>Join Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     <div class="footer-top">
         <div class="container">
-            <div class="row">
+            <div class="row" style="padding: 20px;">
 
                 <div class="col-lg-3 col-md-6 footer-contact" style="padding-right: 20px;">
                     <h3>LPK GMI<span>.</span></h3>
@@ -54,9 +39,10 @@
                     <h4>Our Social Networks</h4>
                     <p>Social Media of Garuda Mestakung Indonesia (GMI)</p>
                     <div class="social-links mt-3">
-                        <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-                        <a href="#" class="tiktok"><i class="bx bxl-tiktok"></i></a>
-                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://wa.me/6285643493825" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@lpkgmi2023" class="tiktok"><i class="bx bxl-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA" class="youtube"><i
+                                class="bx bxl-youtube"></i></a>
                     </div>
                 </div>
 

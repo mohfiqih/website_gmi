@@ -66,9 +66,10 @@
                         No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
                         kecamatan Pangkah Kabupaten Tegal.</p>
                     <div class="d-flex">
-                        <a href="#location" class="btn-get-started scrollto"><i class="fa fa-map-pin"></i> Location</a>
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
-                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                        <a href="#lokasi" class="btn-get-started"><i class="fa fa-map-pin"></i> Lokasi</a>
+                        <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="btn-watch-video"><i
+                                class="bi bi-play-circle"></i><span>Watch Tiktok
+                                GMI</span></a>
                     </div>
                 </div>
             </div>
@@ -82,9 +83,9 @@
                 <div class="section-title">
                     <h2>About</h2>
                     <h3>Find Out More <span>About Us</span></h3>
-                    {{-- <p>Mencetak Calon Pekerja
+                    <p>Mencetak Calon Pekerja
                         Migran Indonesia yang
-                        Unggul</p> --}}
+                        Unggul</p>
                 </div>
 
                 <div class="row">
@@ -105,6 +106,29 @@
                             bahasa yang berbasis kompetensi dalam rangka tujuan untuk membantu mengentaskan
                             kemiskinan dan pengangguran di wilayah Jawa Tengah
                         </p>
+                        <div class="row" style="padding-bottom: 10px;">
+                            <div class="col-md-4" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modalProsedur"><button
+                                        type="button" class="btn btn-primary text-white"
+                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="bi bi-book"
+                                                style="padding-right: 10px;"></i>
+                                            Fishing Korea</b></button></a>
+                            </div>
+                            <div class="col-md-4" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSarpras"><button
+                                        type="button" class="btn btn-primary text-white"
+                                        style="width: 100%;text-align: left;height: 50px;"><b><i
+                                                class="bi bi-building" style="padding-right: 10px;"></i>
+                                            Sarpras</b></button></a>
+                            </div>
+                            <div class="col-md-4" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><button
+                                        type="button" class="btn btn-primary text-white"
+                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
+                                                style="padding-right: 10px;"></i>
+                                            Struktur</b></button></a>
+                            </div>
+                        </div>
                         <ul>
                             <li>
                                 <i class="bx bx-book"></i>
@@ -156,7 +180,7 @@
             </div>
         </section>
 
-        <section id="counts" class="counts">
+        {{-- <section id="counts" class="counts">
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
@@ -200,10 +224,9 @@
                 </div>
 
             </div>
-        </section><!-- End Counts Section -->
+        </section> --}}
 
-        <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients section-bg">
+        {{-- <section id="clients" class="clients section-bg">
             <div class="container" data-aos="zoom-in">
 
                 <div class="row">
@@ -235,79 +258,67 @@
                 </div>
 
             </div>
-        </section>
+        </section> --}}
 
-        <section id="services" class="services">
+        <section id="services" class="services section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>Services</h2>
                     <h3>Check our <span>Services</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-                        atque vitae autem.</p>
+                    <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja Migran Indonesia yang Unggul</p>
                 </div>
 
                 <div class="row">
+
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
                         data-aos-delay="100">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                        </div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalTahap">
+                            <div class="icon-box">
+                                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+
+                                <h4>Tahapan
+                                    Fishing
+                                    Korea
+                                </h4>
+                                <p>Klik untuk melihat detail tahapan fishing korea</p>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                         data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Sed ut perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                        </div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalProsedur">
+                            <div class="icon-box">
+                                <div class="icon"><i class="bx bx-file"></i></div>
+
+                                <h4>Syarat Fishing Korea</h4>
+
+                                <p>Klik untuk melihat detail persyaratan fishing korea</p>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
                         data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                        </div>
-                    </div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalKelebihan">
+                            <div class="icon-box">
+                                <div class="icon"><i class="bx bx-tachometer"></i></div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
-                        data-aos-delay="100">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        </div>
-                    </div>
+                                <h4>Kelebihan
+                                    GMI Korea
+                                </h4>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
-                        data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-slideshow"></i></div>
-                            <h4><a href="">Dele cardo</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
-                        data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-arch"></i></div>
-                            <h4><a href="">Divera don</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-                        </div>
+                                <p>Klik untuk melihat detail kelebihan LPK GMI Korea</p>
+                            </div>
+                        </a>
                     </div>
 
                 </div>
 
             </div>
-        </section><!-- End Services Section -->
+        </section>
 
-        <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
             <div class="container" data-aos="zoom-in">
 
@@ -316,84 +327,9 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                    minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                    dolore labore illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
                             </div>
                         </div>
-
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -446,7 +382,7 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section class="contact" id="contact section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -457,7 +393,7 @@
                         Unggul</p>
                 </div>
 
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="row" data-aos="fade-up" data-aos-delay="100" id="lokasi">
                     <div class="col-lg-6">
                         <div class="info-box mb-4">
                             <i class="bx bx-map"></i>
@@ -486,7 +422,7 @@
 
                 </div>
 
-                <div class="row" data-aos="fade-up" data-aos-delay="100" id="location">
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-6 ">
                         <iframe class="mb-4 mb-lg-0"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.929751248736!2d109.1843675!3d-6.9522777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fbfe260681b91%3A0x122ab99fb2d88a7!2sLpk%20Garuda%20Mestakung%20Indonesia!5e0!3m2!1sid!2sid!4v1708396367934!5m2!1sid!2sid"
@@ -529,6 +465,127 @@
 
     @include('landing.footer')
 
+    <!-- Struktur Organisasi -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Struktur Organisasi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('img/struktur-gmi.png') }}" class="img-fluid rounded-4" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Sarana & Prasarana --}}
+    <div class="modal fade" id="modalSarpras" tabindex="-1" aria-labelledby="modalSarpras" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalSarpras">Sarana & Prasarana</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/sarpras1.png') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Prosedur --}}
+    <div class="modal fade" id="modalProsedur" tabindex="-1" aria-labelledby="modalProsedur" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalProsedur">Prosedur Fishing Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/prosedur_gmi_korea.png') }}" class="img-fluid rounded-4"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Tahapan --}}
+    <div class="modal fade" id="modalTahap" tabindex="-1" aria-labelledby="modalTahap" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalTahap">Tahapan Fishing Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/tahapan.png') }}" class="img-fluid rounded-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Kelebihan --}}
+    <div class="modal fade" id="modalKelebihan" tabindex="-1" aria-labelledby="modalKelebihan" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalKelebihan">Kelebihan GMI Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                <i class="fa fa-check"></i> Pelatihan Bahasa Korea Selatan Dari Awal
+                            </p>
+                            <p>
+                                <i class="fa fa-check"></i> Bimbingan Dari Awal Hingga Keberangkatan
+                            </p>
+                            <p>
+                                <i class="fa fa-check"></i> Kesempatan Bekerja di Kapal Korea Selatan
+                            </p>
+                            <p>
+                                <i class="fa fa-check"></i> Pengalaman Tinggal di Korea Selatan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="preloader"></div>
 
     {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -552,7 +609,7 @@
                     "target": "_blank"
                 },
                 {
-                    "url": "https://wa.me/6285643493825",
+                    "url": "https://www.tiktok.com/@lpkgmi2023?_t=8kB6vVQYsoT&_r=1",
                     "title": "Tiktok GMI",
                     "bgcolor": "#000000",
                     "color": "#00000",
