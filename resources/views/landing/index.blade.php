@@ -337,7 +337,7 @@
             </div>
         </section>
 
-        <section id="reviews" class="pricing">
+        {{-- <section id="reviews" class="pricing">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -358,7 +358,21 @@
                 </div>
 
             </div>
-        </section><!-- End Pricing Section -->
+        </section> --}}
+
+        <div id="reviews" style="padding-top: 20px;padding-bottom: 20px;">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Reviews</h2>
+                    <h3>Check our <span>Reviews</span></h3>
+                    <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
+                        Migran Indonesia yang
+                        Unggul</p>
+                </div>
+                <div class='sk-ww-google-reviews' data-embed-id='25368619'></div>
+                <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+            </div>
+        </div>
 
         <!-- ======= Frequently Asked Questions Section ======= -->
         <section id="galeri" class="faq section-bg">
