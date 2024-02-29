@@ -26,7 +26,7 @@
     <link href="{{ asset('templates/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('templates/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="{{ asset('templates/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('templates/assets/css/style.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('templates/assets/css/floating.css') }}" rel="stylesheet">
 </head>
 
@@ -40,16 +40,28 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://lh3.googleusercontent.com/p/AF1QipNKTIVxVhMLFiGYhV9r9585ecn-jSfofpxTpKN3=s680-w680-h510"
-                                    class="d-block w-100" alt="..." style="border-radius: 10px;width: 370px;">
+                                <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
+                                    alt="..." style="border-radius: 10px;width: 370px;">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://lh3.googleusercontent.com/p/AF1QipPyPGMlrdpT7bW0psY-jYsSb5K5_xgKbCqlUZ_D=s680-w680-h510"
-                                    class="d-block w-100" alt="..." style="border-radius: 10px;width: 370px;">
+                                <img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
+                                    alt="..." style="border-radius: 10px;width: 370px;">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://lh3.googleusercontent.com/p/AF1QipPyPGMlrdpT7bW0psY-jYsSb5K5_xgKbCqlUZ_D=s680-w680-h510"
-                                    class="d-block w-100" alt="..." style="border-radius: 10px;width: 370px;">
+                                <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
+                                    alt="..." style="border-radius: 10px;width: 370px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('templates/assets/img/GMI/9.jpg') }}" class="d-block w-100"
+                                    alt="..." style="border-radius: 10px;width: 370px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('templates/assets/img/GMI/1.jpg') }}" class="d-block w-100"
+                                    alt="..." style="border-radius: 10px;width: 370px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('templates/assets/img/GMI/4.jpg') }}" class="d-block w-100"
+                                    alt="..." style="border-radius: 10px;width: 370px;">
                             </div>
                         </div>
                     </div>
@@ -60,7 +72,9 @@
                     <h1>Garuda Mestakung Indonesia (GMI)
                         <span></span>
                     </h1>
-                    <p style="text-align: justify;">LPK Garuda Mestakung Indonesia merupakan suatu lembaga pelatihan
+                    <p style="text-align: justify;margin-top: 10px;margin-bottom: 20px;">LPK Garuda Mestakung Indonesia
+                        merupakan suatu
+                        lembaga pelatihan
                         kerja di Wilayah
                         jawa Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris
                         No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
@@ -327,7 +341,41 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
+                                <p>
+                                    "LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja Migran Indonesia yang Unggul"
+                                </p>
+                            </div>
+                        </div>
 
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    "Pelatihan Bahasa Korea Selatan Dari Awal"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    "Bimbingan Dari Awal Hingga Keberangkatan"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    "Kesempatan Bekerja di Kapal Korea Selatan"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    "Pengalaman Tinggal di Korea Selatan"
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -388,8 +436,48 @@
 
                 <div class="row justify-content-center">
                     <div class="col-xl-12">
-                        <div class='sk-ww-google-business-photo' data-embed-id='25368624'></div>
-                        <script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="0" class="active" aria-current="true"
+                                    aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('templates/assets/img/GMI/4.jpg') }}" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('templates/assets/img/GMI/4.jpg') }}" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- Carousel wrapper -->
+                        {{-- <div class='sk-ww-google-business-photo' data-embed-id='25368624'></div> --}}
+                        {{-- <script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script> --}}
                     </div>
                 </div>
 
@@ -611,8 +699,8 @@
     <script>
         $(document).ready(function() {
             var links = [{
-                    "bgcolor": "#106eea",
-                    "icon": "+"
+                    "bgcolor": "#128c7e",
+                    "icon": "<i class='fa fa-whatsapp'></i>"
                 },
                 {
                     "url": "https://wa.me/6285643493825",
@@ -628,6 +716,14 @@
                     "bgcolor": "#000000",
                     "color": "#00000",
                     "icon": "<i class='bx bxl-tiktok'></i>",
+                    "target": "_blank"
+                },
+                {
+                    "url": "https://www.instagram.com/lpk.garuda.mestakung.indonesia?igsh=NXkxcDlwMWJrY3A4",
+                    "title": "Instagram GMI",
+                    "bgcolor": "#E1306C",
+                    "color": "#ffffff",
+                    "icon": "<i class='bx bxl-instagram'></i>",
                     "target": "_blank"
                 },
                 {

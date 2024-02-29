@@ -51,8 +51,8 @@
 }
 
 .sub_fab_btns_wrapper button {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
     background: #128c7e;
     margin-bottom: 12px;
@@ -61,18 +61,18 @@
     border: none;
     outline: none;
     color: #fff;
-    font-size: 19px;
+    font-size: 25px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     transition: 0.3s;
     pointer-events: all;
 }
 button.kc_fab_main_btn {
     background-color: #128c7e;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
     background: #128c7e;
-    right: 23px;
+    right: 26px;
     bottom: 16px;
     position: absolute;
     margin-right: 0;
