@@ -8,7 +8,7 @@
                     <h3>LPK GMI<span>.</span></h3>
                     <p>
                         RT.03/RW.03, Kaibun, Balamoa, Kec. Pangkah, Kabupaten Tegal, Jawa Tengah 52471 <br><br>
-                        <strong>Phone:</strong> 085643493825<br>
+                        <strong>WhatsApp:</strong> 082221108191<br>
                         <strong>Email:</strong> lpkgarudamestakungindonesia@gmail.com<br>
                     </p>
                 </div>
@@ -39,7 +39,7 @@
                     <h4>Our Social Networks</h4>
                     <p>Social Media of Garuda Mestakung Indonesia (GMI)</p>
                     <div class="social-links mt-3">
-                        <a target="_blank" href="https://wa.me/6285643493825" class="whatsapp"><i
+                        <a target="_blank" href="https://wa.me/6282221108191" class="whatsapp"><i
                                 class="bx bxl-whatsapp"></i></a>
                         <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="tiktok"><i
                                 class="bx bxl-tiktok"></i></a>

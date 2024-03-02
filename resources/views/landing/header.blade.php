@@ -11,7 +11,7 @@
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.tiktok.com/@lpkgmi2023?_t=8kB6vVQYsoT&_r=1" class="tiktok"><i
                         class="bi bi-tiktok"></i></a>
-                <a href="https://wa.me/6285643493825" class="whatsapp"><i class="bi bi-whatsapp"></i></i></a>
+                <a href="https://wa.me/6282221108191" class="whatsapp"><i class="bi bi-whatsapp"></i></i></a>
             </div>
         </div>
     </section>

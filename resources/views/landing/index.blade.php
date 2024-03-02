@@ -80,8 +80,11 @@
                         No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
                         kecamatan Pangkah Kabupaten Tegal.</p>
                     <div class="d-flex">
-                        <a href="#lokasi" class="btn btn-primary"><i class="fa fa-map-pin"></i> Lokasi</a>
-                        <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="btn btn-primary"
+                        <a href="#lokasi">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-map-pin"></i>
+                                Location</button>
+                        </a>
+                        <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="btn btn-outline-primary"
                             style="margin-left: 10px;"><i class="bi bi-play-circle"></i><span> Watch Tiktok
                                 GMI</span></a>
                     </div>
@@ -106,8 +109,8 @@
 
                         <img src="https://lh3.googleusercontent.com/p/AF1QipMgWp-AOaGdVvClzC-h0NHDrNiljH0P3xta4CBb=s1360-w1360-h1020"
                             class="img-fluid" alt="" style="border-radius: 10px;">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipOIKVFReN08fRXXjnY8_LhO8_IcOMaGF0vbcpsV=s1360-w1360-h1020"
-                            class="img-fluid" alt="" style="border-radius: 10px;padding-top: 10px;">
+                        <img src="{{ asset('templates/assets/img/GMI/3.jpg') }}" class="img-fluid" alt=""
+                            style="border-radius: 10px;padding-top: 10px;">
 
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
@@ -451,11 +454,15 @@
                                         alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('templates/assets/img/GMI/4.jpg') }}" class="d-block w-100"
+                                    <img src="{{ asset('templates/assets/img/GMI/gmi1.png') }}" class="d-block w-100"
                                         alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('templates/assets/img/GMI/4.jpg') }}" class="d-block w-100"
+                                    <img src="{{ asset('templates/assets/img/GMI/33.jpg') }}" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('templates/assets/img/GMI/334.jpg') }}" class="d-block w-100"
                                         alt="...">
                                 </div>
                             </div>
@@ -555,7 +562,7 @@
                         <div class="info-box  mb-4">
                             <i class="bx bx-phone-call"></i>
                             <h3>WhatsApp</h3>
-                            <p>085643493825</p>
+                            <p>082221108191</p>
                         </div>
                     </div>
 
@@ -740,7 +747,7 @@
                     "icon": "<i class='fa fa-whatsapp'></i>"
                 },
                 {
-                    "url": "https://wa.me/6285643493825",
+                    "url": "https://wa.me/6282221108191",
                     "title": "WhatsApp GMI",
                     "bgcolor": "#128c7e",
                     "color": "#fffff",
