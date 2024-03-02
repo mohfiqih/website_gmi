@@ -33,10 +33,10 @@
 <body>
     @include('landing.header')
 
-    <section id="hero" class="d-flex align-items-center section-bg" style="padding: 10px;">
+    <section class="d-flex align-items-center section-bg">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
             <div class="row">
-                <div class="col-md-6" style="margin-top: 40px;">
+                <div class="col-md-6">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -80,9 +80,9 @@
                         No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
                         kecamatan Pangkah Kabupaten Tegal.</p>
                     <div class="d-flex">
-                        <a href="#lokasi" class="btn-get-started"><i class="fa fa-map-pin"></i> Lokasi</a>
-                        <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="btn-watch-video"><i
-                                class="bi bi-play-circle"></i><span>Watch Tiktok
+                        <a href="#lokasi" class="btn btn-primary"><i class="fa fa-map-pin"></i> Lokasi</a>
+                        <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="btn btn-primary"
+                            style="margin-left: 10px;"><i class="bi bi-play-circle"></i><span> Watch Tiktok
                                 GMI</span></a>
                     </div>
                 </div>
@@ -480,12 +480,14 @@
         </section>
 
         <div class="section-title">
+
+            <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
+                Migran Indonesia yang
+                Unggul</p><br />
+
             <a href="{{ url('galeri') }}">
                 <h2>Klik More Galeri</h2>
             </a>
-            <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
-                Migran Indonesia yang
-                Unggul</p>
         </div>
 
         <section id="testimonials" class="testimonials">
@@ -723,7 +725,7 @@
         </div>
     </div>
 
-    <div id="preloader"></div>
+    <!--<div id="preloader"></div>-->
 
     {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a> --}}
