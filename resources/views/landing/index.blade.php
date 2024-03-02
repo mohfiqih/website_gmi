@@ -101,13 +101,14 @@
                         Migran Indonesia yang
                         Unggul</p>
                 </div>
-
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+
                         <img src="https://lh3.googleusercontent.com/p/AF1QipMgWp-AOaGdVvClzC-h0NHDrNiljH0P3xta4CBb=s1360-w1360-h1020"
                             class="img-fluid" alt="" style="border-radius: 10px;">
                         <img src="https://lh3.googleusercontent.com/p/AF1QipOIKVFReN08fRXXjnY8_LhO8_IcOMaGF0vbcpsV=s1360-w1360-h1020"
                             class="img-fluid" alt="" style="border-radius: 10px;padding-top: 10px;">
+
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
                         data-aos="fade-up" data-aos-delay="100">
@@ -143,6 +144,7 @@
                                             Struktur</b></button></a>
                             </div>
                         </div>
+
                         <ul>
                             <li>
                                 <i class="bx bx-book"></i>
@@ -194,7 +196,7 @@
             </div>
         </section>
 
-        {{-- <section id="counts" class="counts">
+        <section id="counts" class="counts">
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
@@ -202,7 +204,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="count-box">
                             <i class="bi bi-emoji-smile"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="520" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>Happy Clients</p>
                         </div>
@@ -211,34 +213,39 @@
                     <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
                         <div class="count-box">
                             <i class="bi bi-journal-richtext"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="520" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Projects</p>
+                            <p>Pendidikan Korea GMI</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                         <div class="count-box">
                             <i class="bi bi-headset"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="1463"
-                                data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Hours Of Support</p>
+                            <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Karyawan GMI</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                         <div class="count-box">
                             <i class="bi bi-people"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p>Hard Workers</p>
+                            <p>Penerbangan</p>
                         </div>
                     </div>
+                </div>
 
+                <br />
+                <div class="card">
+                    <div class='sk-ww-google-business-profile' data-embed-id='25374831'></div>
+                    <script src='https://widgets.sociablekit.com/google-business-profile/widget.js' async defer></script>
                 </div>
 
             </div>
-        </section> --}}
+        </section>
 
         {{-- <section id="clients" class="clients section-bg">
             <div class="container" data-aos="zoom-in">
@@ -408,19 +415,7 @@
             </div>
         </section> --}}
 
-        <div id="reviews" style="padding-top: 20px;padding-bottom: 20px;">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Reviews</h2>
-                    <h3>Check our <span>Reviews</span></h3>
-                    <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
-                        Migran Indonesia yang
-                        Unggul</p>
-                </div>
-                <div class='sk-ww-google-reviews' data-embed-id='25368619'></div>
-                <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
-            </div>
-        </div>
+
 
         <!-- ======= Frequently Asked Questions Section ======= -->
         <section id="galeri" class="faq section-bg">
@@ -483,6 +478,46 @@
 
             </div>
         </section>
+
+        <div class="section-title">
+            <a href="{{ url('galeri') }}">
+                <h2>Klik More Galeri</h2>
+            </a>
+            <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
+                Migran Indonesia yang
+                Unggul</p>
+        </div>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    @foreach ($images as $index => $image)
+                        <div class="col-md-3 mb-4">
+                            <div class="card"
+                                style="background-image: url('{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}'); background-size: cover; border-radius: 10px; height: 250px;">
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <div id="reviews" style="padding-top: 20px;padding-bottom: 20px;">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Reviews</h2>
+                    <h3>Check our <span>Reviews</span></h3>
+                    <p>LPK Garuda Mestakung Indonesia Mencetak Calon Pekerja
+                        Migran Indonesia yang
+                        Unggul</p>
+                </div>
+                <div class='sk-ww-google-reviews' data-embed-id='25368619'></div>
+                <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+            </div>
+        </div>
 
         <section class="contact" id="contact section-bg">
             <div class="container" data-aos="fade-up">

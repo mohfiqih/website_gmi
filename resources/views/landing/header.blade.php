@@ -20,8 +20,9 @@
     <header id="header" class="d-flex align-items-center section-bg">
         <div class="container d-flex align-items-center justify-content-between">
 
-            <h1 class="logo"><a href="#"><img src="{{ asset('templates/assets/img/GMI/logo.png') }}"
-                        alt="" class="img-fluid" width="70px"><span>.</span></a></h1>
+            <h5 class="logo"><a href="#"><img src="{{ asset('templates/assets/img/GMI/logo.png') }}"
+                        alt="" class="img-fluid" width="70px"><span>.</span></a>
+            </h5>
 
             <nav id="navbar" class="navbar">
                 <ul>

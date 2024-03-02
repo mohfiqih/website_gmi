@@ -39,10 +39,12 @@
                     <h4>Our Social Networks</h4>
                     <p>Social Media of Garuda Mestakung Indonesia (GMI)</p>
                     <div class="social-links mt-3">
-                        <a href="https://wa.me/6285643493825" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-                        <a href="https://www.tiktok.com/@lpkgmi2023" class="tiktok"><i class="bx bxl-tiktok"></i></a>
-                        <a href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA" class="youtube"><i
-                                class="bx bxl-youtube"></i></a>
+                        <a target="_blank" href="https://wa.me/6285643493825" class="whatsapp"><i
+                                class="bx bxl-whatsapp"></i></a>
+                        <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="tiktok"><i
+                                class="bx bxl-tiktok"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA"
+                            class="youtube"><i class="bx bxl-youtube"></i></a>
                     </div>
                 </div>
 
