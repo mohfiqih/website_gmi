@@ -81,8 +81,7 @@
                         kecamatan Pangkah Kabupaten Tegal.</p>
                     <div class="d-flex">
                         <a href="#lokasi">
-                            <button type="button" class="btn btn-primary"><i class="fa fa-map-pin"></i>
-                                Location</button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-map-pin"></i> Location</button>
                         </a>
                         <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="btn btn-outline-primary"
                             style="margin-left: 10px;"><i class="bi bi-play-circle"></i><span> Watch Tiktok
@@ -569,39 +568,39 @@
                 </div>
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-6 ">
+                    <div class="col-lg-12">
                         <iframe class="mb-4 mb-lg-0"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.929751248736!2d109.1843675!3d-6.9522777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fbfe260681b91%3A0x122ab99fb2d88a7!2sLpk%20Garuda%20Mestakung%20Indonesia!5e0!3m2!1sid!2sid!4v1708396367934!5m2!1sid!2sid"
                             frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
                     </div>
 
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="row">
-                                <div class="col form-group">
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" required>
-                                </div>
-                                <div class="col form-group">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    placeholder="Subject" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form>
-                    </div>
+                    <!--<div class="col-lg-6">-->
+                    <!--    <form action="forms/contact.php" method="post" role="form" class="php-email-form">-->
+                    <!--        <div class="row">-->
+                    <!--            <div class="col form-group">-->
+                    <!--                <input type="text" name="name" class="form-control" id="name"-->
+                    <!--                    placeholder="Your Name" required>-->
+                    <!--            </div>-->
+                    <!--            <div class="col form-group">-->
+                    <!--                <input type="email" class="form-control" name="email" id="email"-->
+                    <!--                    placeholder="Your Email" required>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--        <div class="form-group">-->
+                    <!--            <input type="text" class="form-control" name="subject" id="subject"-->
+                    <!--                placeholder="Subject" required>-->
+                    <!--        </div>-->
+                    <!--        <div class="form-group">-->
+                    <!--            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>-->
+                    <!--        </div>-->
+                    <!--        <div class="my-3">-->
+                    <!--            <div class="loading">Loading</div>-->
+                    <!--            <div class="error-message"></div>-->
+                    <!--            <div class="sent-message">Your message has been sent. Thank you!</div>-->
+                    <!--        </div>-->
+                    <!--        <div class="text-center"><button type="submit">Send Message</button></div>-->
+                    <!--    </form>-->
+                    <!--</div>-->
                 </div>
             </div>
         </section>
@@ -641,7 +640,6 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="{{ asset('img/sarpras1.png') }}" class="img-fluid rounded-4" alt="">
                             <img src="{{ asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
                             <img src="{{ asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
                         </div>
@@ -732,7 +730,7 @@
         </div>
     </div>
 
-    <!--<div id="preloader"></div>-->
+    <div id="preloader"></div>
 
     {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a> --}}
