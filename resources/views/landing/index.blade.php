@@ -69,7 +69,7 @@
                 <div class="col-md-6" style="margin-top: 20px;padding: 20px;">
                     <p class="justify-content-center;"><i class="fa fa-map-pin" style="padding-right: 10px;"></i> Tegal,
                         Central Java</p>
-                    <h1>Garuda Mestakung Indonesia (GMI)
+                    <h1>LPK Garuda Mestakung Indonesia (GMI)
                         <span></span>
                     </h1>
                     <p style="text-align: justify;margin-top: 10px;margin-bottom: 20px;">LPK Garuda Mestakung Indonesia
@@ -81,7 +81,8 @@
                         kecamatan Pangkah Kabupaten Tegal.</p>
                     <div class="d-flex">
                         <a href="#lokasi">
-                        <button type="button" class="btn btn-primary"><i class="fa fa-map-pin"></i> Location</button>
+                            <button type="button" class="btn btn-primary"><i class="fa fa-map-pin"></i>
+                                Location</button>
                         </a>
                         <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="btn btn-outline-primary"
                             style="margin-left: 10px;"><i class="bi bi-play-circle"></i><span> Watch Tiktok

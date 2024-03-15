@@ -21,7 +21,7 @@ Route::get('/', function () {
         '30.jpg','31.jpg','32.jpg','33.jpg','34.jpg'
     ];
 
-    return view('landing/index', ['images' => $images]);
+    return view('landing/landing-new', ['images' => $images]);
 });
 
 Route::get('/galeri', function () {
