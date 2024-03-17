@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #0606a3;
+    --primary: #093d91;
     --secondary: #fba504;
     --light: #f6f4f9;
     --dark: #04000b;
@@ -23,9 +23,125 @@
 .back-to-top {
     position: fixed;
     display: none;
-    right: 10px;
-    bottom: 10px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
     z-index: 99;
+}
+
+.zoom {
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+}
+
+.zoom-fab {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #128c7e;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-out;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #fff;
+}
+
+.zoom-fab:hover {
+    background-color: #128c7e;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-btn-large {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.zoom-btn-person {
+    background-color: #128c7e;
+}
+
+.zoom-btn-person:hover {
+    background-color: #128c7e;
+}
+
+.zoom-btn-doc {
+    background-color: #b92d7b;
+}
+
+.zoom-btn-doc:hover {
+    background-color: #b92d7b;
+}
+
+.zoom-btn-tangram {
+    background-color: #df0700;
+}
+
+.zoom-btn-tangram:hover {
+    background-color: #df0700;
+}
+
+.zoom-btn-report {
+    background-color: #000000;
+}
+
+.zoom-btn-report:hover {
+    background-color: #000000;
+}
+
+.zoom-menu {
+    position: absolute;
+    right: 55px;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 500px;
+    list-style: none;
+    text-align: right;
+}
+
+.zoom-menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.zoom-card {
+    position: absolute;
+    bottom: 70px;
+    transition: box-shadow 0.25s;
+    border-radius: 2px;
+    background-color: #009688;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.zoom-card ul {
+    -webkit-padding-start: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.scale-transition {
+    transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
+}
+
+.scale-transition.scale-out {
+    transform: scale(0);
+    transition: transform 0.2s !important;
+}
+
+.scale-transition.scale-in {
+    transform: scale(1);
 }
 
 /*** Heading ***/
@@ -108,7 +224,7 @@ h6,
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
-    color: var(--dark) !important;
+    color: white !important;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -168,7 +284,8 @@ h6,
 
     .sticky-top.navbar-light {
         position: fixed;
-        background: #ffffff;
+        background: #093d91 !important;
+        color: white !important;
     }
 
     .sticky-top.navbar-light .navbar-brand h1 {
@@ -206,10 +323,13 @@ h6,
 /*** Hero Header ***/
 .hero-header {
     /* margin-bottom: 6rem; */
-    padding: 12rem 0;
+    padding: 12rem 0 80px;
     /* background: url(../img/blob-top-left.png), url(../img/blob-top-right.png),
-    url(../img/blob-bottom-left.png), url(../img/blob-bottom-right.png),
-    url(../img/blob-center.png), url(../img/bg-bottom.png); */
+        url(../img/blob-bottom-left.png); */
+    /* background: linear-gradient(#063581, #3080ba) !important; */
+    /* background: url(../img/map.png);
+    background-color: #0b439c; */
+    background: url(../img/map.png), #0b439c;
     background-position: left 0px top 0px, right 0px top 0px,
         left 0px bottom 0px, right 0px bottom 0px, center center, center bottom;
     background-repeat: no-repeat;
@@ -301,7 +421,7 @@ h6,
 
 /*** Fact ***/
 .fact {
-    margin: 6rem 0;
+    margin: 6rem 0 0;
     background: url(../img/blob-top-left.png), url(../img/blob-top-right.png),
         url(../img/blob-bottom-left.png), url(../img/blob-bottom-right.png),
         url(../img/blob-center.png);
@@ -419,7 +539,7 @@ h6,
 
 /*** Newsletter ***/
 .newsletter {
-    margin: 6rem 0;
+    /* margin: 6rem 0; */
     background: url(../img/blob-top-left.png), url(../img/blob-top-right.png),
         url(../img/blob-bottom-left.png), url(../img/blob-bottom-right.png),
         url(../img/blob-center.png);
@@ -473,9 +593,9 @@ h6,
 
 /*** Footer ***/
 .footer {
-    margin-top: 6rem;
+    margin-top: 2rem;
     padding-top: 9rem;
-    background: url(../img/bg-top.png), url(../img/map.png);
+    background: url(../img/map.png);
     background-position: center top, center center;
     background-repeat: no-repeat;
 }

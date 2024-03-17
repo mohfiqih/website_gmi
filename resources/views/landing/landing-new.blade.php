@@ -32,6 +32,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('landing/css/style.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('templates/assets/css/floating.css?v=1.0') }}" rel="stylesheet"> --}}
 </head>
 
 <body>
@@ -47,7 +48,7 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
+        <div class="container-xxl position-relative p-0" id="home">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h3 class="m-0">LPK GMI</h3> -->
@@ -59,21 +60,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#service" class="nav-item nav-link">Service</a>
+                        <a href="#location" class="nav-item nav-link">Location</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our
+                                Programs</a>
                             <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="#" class="dropdown-item">Program GMI Korea</a>
+                                <a href="#" class="dropdown-item">Program GMI Jepang</a>
+                                <a href="#" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
+                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">LPK GMI</a>
                 </div>
             </nav>
 
@@ -81,7 +83,6 @@
                 <div class="container px-lg-5">
                     <div class="row g-5 align-items-end">
                         <div class="col-lg-6 text-center text-lg-start">
-                            {{-- <img class="img-fluid animated zoomIn" src="img/hero.png" alt=""> --}}
                             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -96,39 +97,34 @@
                                         <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
                                             alt="..." style="border-radius: 10px;width: 370px;">
                                     </div>
-                                    {{-- <div class="carousel-item">
-                                        <img src="{{ asset('templates/assets/img/GMI/9.jpg') }}" class="d-block w-100"
-                                            alt="..." style="border-radius: 10px;width: 370px;">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('templates/assets/img/GMI/1.jpg') }}" class="d-block w-100"
-                                            alt="..." style="border-radius: 10px;width: 370px;">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('templates/assets/img/GMI/4.jpg') }}"
-                                            class="d-block w-100" alt="..."
-                                            style="border-radius: 10px;width: 370px;">
-                                    </div> --}}
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
-                            <p style="color: white;text-align: left;" class="animated slideInDown"><i
-                                    class="fa fa fa-search text-white mb-2" style="padding-right: 10px;"></i> Tegal,
-                                Central Java</p>
+                            <a href="https://maps.app.goo.gl/FaqwnyLMjym9c4N16" target="_blank">
+                                <p style="color: white;text-align: left;" class="animated slideInDown"><i
+                                        class="fa fa fa-search text-white mb-2"
+                                        style="padding-right: 10px;"></i>Pangkah,
+                                    Kabupaten Tegal,
+                                    Central Java </p>
+                            </a>
                             <h1 class="text-white mb-4 animated slideInDown">LPK Garuda Mestakung Indonesia (GMI)</h1>
+                            <marquee style="color: white">Let's Join Us, LPK Resmi & Terpercaya | Terdapat Dana
+                                Talangan | Proses
+                                Transparan | Amanah
+                            </marquee>
                             <p class="text-white pb-3 animated slideInDown" style="text-align: justify;">
                                 LPK Garuda Mestakung Indonesia merupakan suatu lembaga pelatihan kerja di Wilayah jawa
                                 Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris No. 01
                                 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
                                 kecamatan Pangkah Kabupaten Tegal.
                             </p>
-                            <a href=""
-                                class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft"><i
+                            <a href="#"
+                                class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill me-3 animated slideInLeft"><i
                                     class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program
                                 Korea</a>
-                            <a href=""
-                                class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight"><i
+                            <a href="#"
+                                class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
                                     class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program
                                 Jepang</a>
                         </div>
@@ -141,31 +137,27 @@
 
 
         <!-- Feature Start -->
+
         <div class="container-xxl py-2">
             <div class="container py-5 px-lg-5">
                 <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                            <h5 class="mb-3">Digital Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
+                    <p class="section-title text-secondary">Program LPK GMI<span></span></p>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item rounded text-center p-4"
+                            style="background: url(../img/map.png), #0b439c;color: white;">
+                            <i class="fa fa-3x fa-book text-white mb-4"></i>
+                            <h5 class="mb-3" style="color: white">Program GMI Korea</h5>
+                            <p class="m-0" style="color: white">Program P to P Fishing Korea Lokal | Dana Talangan
+                                |
+                                Proses Transparan | Terpercaya & Amanah</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-search text-primary mb-4"></i>
-                            <h5 class="mb-3">SEO & Backlinks</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
-                            <h5 class="mb-3">Design & Development</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item rounded text-center p-4"
+                            style="background-color: #093d91;color: white;">
+                            <i class="fa fa-3x fa-book text-white mb-4"></i>
+                            <h5 class="mb-3" style="color: white">Program GMI Jepang</h5>
+                            <p class="m-0" style="color: white">Cooming Soon<br />Program GMI Jepang</p>
                         </div>
                     </div>
                 </div>
@@ -175,18 +167,49 @@
 
 
         <!-- About Start -->
-        <div class="container-xxl py-2">
+        <div class="container-xxl py-2" id="about">
             <div class="container py-2 px-lg-5">
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
                         <p class="section-title text-secondary">About Us<span></span></p>
-                        <h1 class="mb-5">#1 LPK Garuda Mestakung Indonesia</h1>
-                        <p class="mb-2">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.
-                            Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna
-                            dolore erat amet</p>
+                        <h1 class="mb-2">#1 LPK Garuda Mestakung Indonesia</h1>
+                        <div class="alert" role="alert" style="background-color: #093d91;color: white;">
+                            <marquee>Bahasa Adalah Jendela Untuk Melihat Dunia Lebih Luas</marquee>
+                        </div>
+                        <p class="mb-2" style="text-align: justify;"><b>LPK GARUDA MESTAKUNG INDONESIA</b> merupakan
+                            suatu
+                            lembaga pelatihan kerja Korea dan Jepang di
+                            Wilayah jawa Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris
+                            No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
+                            kecamatan Pangkah Kabupaten Tegal. Dengan kewenangan utama melaksanakan pelatihan bahasa
+                            yang berbasis kompetensi dalam rangka tujuan untuk membantu mengentaskan kemiskinan dan
+                            pengangguran di wilayah Jawa Tengah</p><br />
+                        <div class="row" style="padding-bottom: 10px;">
+                            <div class="col-md-4" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modalProsedur"><button
+                                        type="button" class="btn btn-primary text-white"
+                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="bi bi-book"
+                                                style="padding-right: 10px;"></i>
+                                            Fishing Korea</b></button></a>
+                            </div>
+                            <div class="col-md-4" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSarpras"><button
+                                        type="button" class="btn btn-primary text-white"
+                                        style="width: 100%;text-align: left;height: 50px;"><b><i
+                                                class="bi bi-building" style="padding-right: 10px;"></i>
+                                            Sarpras</b></button></a>
+                            </div>
+                            <div class="col-md-4" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><button
+                                        type="button" class="btn btn-primary text-white"
+                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
+                                                style="padding-right: 10px;"></i>
+                                            Struktur</b></button></a>
+                            </div>
+                        </div>
                         <div class="skill mb-4">
                             <div class="d-flex justify-content-between">
-                                <p class="mb-2">Pelayanan</p>
+                                <p class="mb-2">Pelayanan Ramah</p>
                                 <p class="mb-2">100%</p>
                             </div>
                             <div class="progress">
@@ -214,10 +237,65 @@
                                     aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
-                        {{-- <a href="" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</a> --}}
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Proses Transparan</p>
+                                <p class="mb-2">100%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="100"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Amanah</p>
+                                <p class="mb-2">100%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="100"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row" style="padding-bottom: 10px;">
+                            <div class="col-md-6" style="padding-bottom: 10px;">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalTahap">
+                                            <div class="icon-box">
+                                                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+
+                                                <h4>Tahapan
+                                                    Fishing
+                                                    Korea
+                                                </h4>
+                                                <p>Klik untuk melihat detail tahapan fishing korea</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding-bottom: 10px;">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalKelebihan">
+                                            <div class="icon-box">
+                                                <div class="icon"><i class="bx bx-tachometer"></i></div>
+
+                                                <h4>Kelebihan
+                                                    LPK GMI
+                                                </h4>
+
+                                                <p>Klik untuk melihat detail kelebihan LPK GMI Korea</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        {{-- <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.png"> --}}
+                    <div class="col-lg-5">
                         <div id="carouselExampleIndicators" class="carousel slide">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleIndicators"
@@ -231,23 +309,15 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
-                                        alt="...">
+                                        alt="..." style="border-radius: 10px;">
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
-                                        alt="...">
+                                        alt="..." style="border-radius: 10px;">
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{{ asset('templates/assets/img/GMI/gmi1.png') }}" class="d-block w-100"
-                                        alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('templates/assets/img/GMI/33.jpg') }}" class="d-block w-100"
-                                        alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('templates/assets/img/GMI/334.jpg') }}" class="d-block w-100"
-                                        alt="...">
+                                        alt="..." style="border-radius: 10px;">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button"
@@ -260,13 +330,27 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                        </div>
+                        </div><br />
+
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipMgWp-AOaGdVvClzC-h0NHDrNiljH0P3xta4CBb=s1360-w1360-h1020"
+                            class="img-fluid" alt="" style="border-radius: 10px;">
+                        <br /><br />
+                        <img src="{{ asset('templates/assets/img/GMI/3.jpg') }}" class="img-fluid" alt=""
+                            style="border-radius: 10px;">
                     </div>
                 </div>
             </div>
         </div>
         <!-- About End -->
 
+        <div class="container py-5 px-lg-5">
+            <p class="section-title text-secondary justify-content-center"><span></span>Bussiness LPK GMI<span></span>
+            </p>
+            <div class="card">
+                <div class='sk-ww-google-business-profile' data-embed-id='25374831'></div>
+                <script src='https://widgets.sociablekit.com/google-business-profile/widget.js' async defer></script>
+            </div>
+        </div>
 
         <!-- Facts Start -->
         <div class="container-xxl bg-primary fact py-2 wow fadeInUp" data-wow-delay="0.1s">
@@ -283,8 +367,8 @@
                         <p class="text-white mb-0">Years Experience</p>
                     </div>
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                        <i class="fa fa-users-cog fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">25</h1>
+                        <i class="fa fa-users fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">21</h1>
                         <p class="text-white mb-0">Karyawan</p>
                     </div>
 
@@ -300,55 +384,44 @@
 
 
         <!-- Service Start -->
-        <div class="container-xxl py-2">
+        <div class="container-xxl py-2" id="service">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our
                         Services<span></span></p>
-                    <h1 class="text-center mb-5">What Solutions We Provide</h1>
+                    <h1 class="text-center mb-5">Program LPK GMI</h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column text-center rounded">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-search fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">SEO Optimization</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
+                            <h5 class="mb-3">Klik Program GMI Korea</h5>
+                            <p class="m-0">Program P to P Fishing Korea Lokal | Dana Talangan
+                                |
+                                Proses Transparan | Terpercaya & Amanah <br /> Klik More Info</p>
                             <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item d-flex flex-column text-center rounded">
                             <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop-code fa-2x"></i>
+                                <i class="fa fa-laptop fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Social Media Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
+                            <h5 class="mb-3">Klik Program GMI Jepang</h5>
+                            <p class="m-0">Cooming Soon<br />Program GMI Jepang<br />Klik More Info</p>
                             <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column text-center rounded">
                             <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-mail-bulk fa-2x"></i>
+                                <i class="fa fa-info fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">Email Marketing</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
+                            <h5 class="mb-3">Dana Talangan</h5>
+                            <p class="m-0">LPK Garuda Mestakung Indonesia (GMI) menyediakan Dana Talangan bagi yang
+                                mendaftar</p>
                             <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -357,20 +430,20 @@
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-thumbs-up fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">PPC Advertising</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
+                            <h5 class="mb-3">Resmi dan Terpercaya</h5>
+                            <p class="m-0">LPK Garuda Mestakung Indonesia (GMI) sudah resmi, berpengalaman,
+                                dan terpercaya</p>
                             <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="service-item d-flex flex-column text-center rounded">
                             <div class="service-icon flex-shrink-0">
-                                <i class="fab fa-android fa-2x"></i>
+                                <i class="fa fa-book fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">App Development</h5>
-                            <p class="m-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet lorem.</p>
+                            <h5 class="mb-3">Proses Transparan</h5>
+                            <p class="m-0">LPK Garuda Mestakung Indonesia (GMI) mengutamakan transparan dalam proses
+                            </p>
                             <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -387,12 +460,14 @@
                     <div class="col-lg-7 text-center">
                         <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span>
                         </p>
-                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
-                        <p class="text-white mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos
-                            labore. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo</p>
+                        <h1 class="text-center text-white mb-4">Stay Always In LPK GMI</h1>
+                        <p class="text-white mb-4" style="text-align: center">LPK Garuda Mestakung Indonesia (GMI)
+                            Mencetak
+                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Korea Selatan dari Awal</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                                placeholder="Enter Your Email" style="height: 48px;">
+                                placeholder="Email: lpkgarudamestakungindonesia@gmail.com" style="height: 48px;"
+                                readonly>
                             <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
                                     class="fa fa-paper-plane text-primary fs-4"></i></button>
                         </div>
@@ -408,121 +483,39 @@
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our
-                        Projects<span></span></p>
-                    <h1 class="text-center mb-5">Recently Completed Projects</h1>
+                        Galeri GMI<span></span></p>
+                    <h1 class="text-center mb-5">Recently Galeri LPK GMI</h1>
                 </div>
                 <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="col-12 text-center">
                         <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="mx-2 active" data-filter="*">All</li>
-                            <li class="mx-2" data-filter=".first">Web Design</li>
-                            <li class="mx-2" data-filter=".second">Graphic Design</li>
+                            <li class="mx-2 active" data-filter="*">All Galeri</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row g-4 portfolio-container">
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
+                    @foreach ($images as $index => $image)
+                        <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="rounded overflow-hidden">
+                                <div class="position-relative overflow-hidden">
+                                    <img class="img-fluid w-100"
+                                        src="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}"
+                                        alt="">
+
+                                    <div class="portfolio-overlay">
+                                        <a class="btn btn-square btn-outline-light mx-1" href="#"
+                                            data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                        <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                                class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                                <div class="bg-light p-4">
+                                    <p class="text-primary fw-medium mb-2">Galeri LPK GMI</p>
+                                    <h5 class="lh-base mb-0">LPK Garuda Mestakung Program Korea & Jepang</a>
                                 </div>
                             </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.jpg"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
-                                <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg"
-                                        data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                            class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="bg-light p-4">
-                                <p class="text-primary fw-medium mb-2">UI / UX Design</p>
-                                <h5 class="lh-base mb-0">Digital Agency Website Design And Development</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -530,45 +523,42 @@
 
 
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
                 <p class="section-title text-secondary justify-content-center"><span></span>Testimonial<span></span>
                 </p>
                 <h1 class="text-center mb-5">What Say Our Clients!</h1>
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor
-                            diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem
-                            sit clita duo justo.</p>
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Buat Kalian
+                            yang ingin job Fishing Korea saya rekomendasi untuk Lpk Garuda Mestakung Indonesia</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg"
-                                style="width: 65px; height: 65px;">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg"
+                                style="width: 65px; height: 65px;"> --}}
                             <div class="ps-4">
-                                <h5 class="mb-1">Client Name</h5>
+                                <h5 class="mb-1">Client GMI</h5>
                                 <span>Profession</span>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor
-                            diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem
-                            sit clita duo justo.</p>
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Kantor
+                            terpercaya megah mewah dan bekerja sama dgn agncy yg terbukti</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg"
-                                style="width: 65px; height: 65px;">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg"
+                                style="width: 65px; height: 65px;"> --}}
                             <div class="ps-4">
-                                <h5 class="mb-1">Client Name</h5>
+                                <h5 class="mb-1">Client GMI</h5>
                                 <span>Profession</span>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor
-                            diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem
-                            sit clita duo justo.</p>
+                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>LPK terpercaya
+                            amanah, bangunanny puny sendiri, prosesnya cepat dan transparan.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg"
-                                style="width: 65px; height: 65px;">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg"
+                                style="width: 65px; height: 65px;"> --}}
                             <div class="ps-4">
                                 <h5 class="mb-1">Client Name</h5>
                                 <span>Profession</span>
@@ -580,141 +570,87 @@
         </div>
         <!-- Testimonial End -->
 
+        <div class="container">
+            <div class='sk-ww-google-reviews' data-embed-id='25368619'></div>
+            <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+        </div>
 
-        <!-- Team Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our Team<span></span>
-                    </p>
-                    <h1 class="text-center mb-5">Our Team Members</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-1.jpg" alt="">
-                                <h5>John Doe</h5>
-                                <span>CEO & Founder</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-2.jpg" alt="">
-                                <h5>Jessica Brown</h5>
-                                <span>Web Designer</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class="img-fluid rounded-circle mb-4" src="img/team-3.jpg" alt="">
-                                <h5>Tony Johnson</h5>
-                                <span>SEO Expert</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
+        <div class="container py-5" id="location">
+            <h5>1. Lokasi LPK Garuda Mestakung Indonesia</h5>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12">
+                    <iframe class="mb-4 mb-lg-0"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.929751248736!2d109.1843675!3d-6.9522777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fbfe260681b91%3A0x122ab99fb2d88a7!2sLpk%20Garuda%20Mestakung%20Indonesia!5e0!3m2!1sid!2sid!4v1708396367934!5m2!1sid!2sid"
+                        frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <!-- Team End -->
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s" id="contact">
+            <div class="container py-2 px-lg-2">
+                <div class="row g-2">
+                    <div class="col-md-8 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
+                        <p><i class="fa fa-map me-3"></i>Lokasi <br />RT.03/RW.03, Kaibun, Balamoa, Kec.
+                            Pangkah,
+                            Kabupaten Tegal, Jawa Tengah 52471</p>
+                        <p><i class="fa fa-whatsapp me-3"></i>WhatsApp <br />0822-2110-8191</p>
+                        <p><i class="fa fa-envelope me-3"></i>Email <br />lpkgarudamestakungindonesia@gmail.com</p>
+
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Career</a>
+                        <a class="btn btn-link" href="#">About Us</a>
+                        <a class="btn btn-link" href="#">Contact Us</a>
+                        <a class="btn btn-link" href="#">Privacy Policy</a>
+                        <a class="btn btn-link" href="#">Terms & Condition</a>
+                        <a class="btn btn-link" href="#">Career</a>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
+                    <div class="col-md-4 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Our Services<span></span></p>
                         <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
-                            </div>
+                            <a class="btn btn-link" href="#">Program GMI Korea Centre</a>
+                            <a class="btn btn-link" href="#">Program GMI Japan Centre</a>
+                            <a class="btn btn-link" href="#">Dana Talangan</a>
+                            <a class="btn btn-link" href="#">Proses Transparan</a>
+                            <a class="btn btn-link" href="#">Terpercaya & Amanah</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
-                            non vulpu</p>
+                        <p>LPK Garuda Mestakung, Tegal, Central Java</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
                                 placeholder="Your Email" style="height: 48px;">
                             <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
                                     class="fa fa-paper-plane text-primary fs-4"></i></button>
                         </div>
+                        <div class="d-flex pt-2">
+                            <a target="_blank" href="https://www.tiktok.com/@officiallpkgmi2023"
+                                class="btn btn-outline-light btn-social" href=""><i
+                                    class="fa fa-music"></i></a>
+                            <a target="_blank" href="wa.me/6282221108191" class="btn btn-outline-light btn-social"
+                                href=""><i class="fab fa-whatsapp"></i></a>
+                            <a target="_blank"
+                                href="https://www.instagram.com/lpk.garuda.mestakung.indonesia/?igsh=NXkxcDlwMWJrY3A4"
+                                class="btn btn-outline-light btn-social" href=""><i
+                                    class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA"
+                                class="btn btn-outline-light btn-social" href=""><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="container px-lg-5">
+            <div class="container px-lg-2">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                            Distributed By a <a class="border-bottom" href="https://themewagon.com"
-                                target="_blank">ThemeWagon</a>
+                        <div class="col-md-6 text-left text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">LPK Garuda Mestakung Indonesia</a> |
+                            Website GMI v.1.2
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
@@ -730,13 +666,262 @@
         </div>
         <!-- Footer End -->
 
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
                 class="bi bi-arrow-up"></i></a>
+
+        <div class="zoom">
+            <a class="zoom-fab zoom-btn-large" id="zoomBtn"><i class="fa fa-whatsapp"></i></a>
+            <ul class="zoom-menu">
+                <li>
+                    <a target="_blank" href="https://wa.me/6282221108191"
+                        class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
+                            class="fa fa-whatsapp"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.instagram.com/lpkgmikorea?igsh=NXkxcDlwMWJrY3A4"
+                        class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition scale-out"><i
+                            class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA"
+                        class="zoom-fab zoom-btn-sm zoom-btn-tangram scale-transition scale-out"><i
+                            class="fa fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.tiktok.com/@officiallpkgmi2023?_t=8kkOmn4rnBS&_r=1"
+                        class="zoom-fab zoom-btn-sm zoom-btn-report scale-transition scale-out"><i
+                            class="fa fa-music"></i></a>
+                </li>
+            </ul>
+            {{-- <div class="zoom-card scale-transition scale-out">
+                <ul class="zoom-card-content">
+                    <li>Content</li>
+                    <li>Content</li>
+                    <li>Content</li>
+                    <li>Content</li>
+                </ul>
+            </div> --}}
+        </div>
     </div>
 
+    <!-- Struktur Organisasi -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Struktur Organisasi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('img/struktur-gmi.png') }}" class="img-fluid rounded-4" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Sarana & Prasarana --}}
+    <div class="modal fade" id="modalSarpras" tabindex="-1" aria-labelledby="modalSarpras" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalSarpras">Sarana & Prasarana</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Prosedur --}}
+    <div class="modal fade" id="modalProsedur" tabindex="-1" aria-labelledby="modalProsedur" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalProsedur">Prosedur Fishing Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/prosedur_gmi_korea.png') }}" class="img-fluid rounded-4"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Tahapan --}}
+    <div class="modal fade" id="modalTahap" tabindex="-1" aria-labelledby="modalTahap" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalTahap">Tahapan Fishing Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/tahapan.png') }}" class="img-fluid rounded-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Kelebihan --}}
+    <div class="modal fade" id="modalKelebihan" tabindex="-1" aria-labelledby="modalKelebihan" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalKelebihan">Kelebihan GMI Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                <i class="fa fa-check"></i> Pelatihan Bahasa Korea Selatan Dari Awal
+                            </p>
+                            <p>
+                                <i class="fa fa-check"></i> Bimbingan Dari Awal Hingga Keberangkatan
+                            </p>
+                            <p>
+                                <i class="fa fa-check"></i> Kesempatan Bekerja di Kapal Korea Selatan
+                            </p>
+                            <p>
+                                <i class="fa fa-check"></i> Pengalaman Tinggal di Korea Selatan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- JavaScript --}}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-36251023-1"]);
+        _gaq.push(["_setDomainName", "jqueryscript.net"]);
+        _gaq.push(["_trackPageview"]);
+
+        (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript";
+            ga.async = true;
+            ga.src =
+                ("https:" == document.location.protocol ?
+                    "https://ssl" :
+                    "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script>
+        $('#zoomBtn').click(function() {
+            $('.zoom-btn-sm').toggleClass('scale-out');
+            if (!$('.zoom-card').hasClass('scale-out')) {
+                $('.zoom-card').toggleClass('scale-out');
+            }
+        });
+
+        $('.zoom-btn-sm').click(function() {
+            var btn = $(this);
+            var card = $('.zoom-card');
+
+            if ($('.zoom-card').hasClass('scale-out')) {
+                $('.zoom-card').toggleClass('scale-out');
+            }
+            if (btn.hasClass('zoom-btn-person')) {
+                card.css('background-color', '#d32f2f');
+            } else if (btn.hasClass('zoom-btn-doc')) {
+                card.css('background-color', '#fbc02d');
+            } else if (btn.hasClass('zoom-btn-tangram')) {
+                card.css('background-color', '#388e3c');
+            } else if (btn.hasClass('zoom-btn-report')) {
+                card.css('background-color', '#1976d2');
+            } else {
+                card.css('background-color', '#7b1fa2');
+            }
+        });
+    </script>
     <!-- JavaScript Libraries -->
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{ asset('templates/assets/js/kc.fab.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/js/kc.fab.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var links = [{
+                    "bgcolor": "#128c7e",
+                    "icon": "<i class='fa fa-whatsapp'></i>"
+                },
+                {
+                    "url": "https://wa.me/6282221108191",
+                    "title": "WhatsApp GMI",
+                    "bgcolor": "#128c7e",
+                    "color": "#fffff",
+                    "icon": "<i class='fa fa-whatsapp'></i>",
+                    "target": "_blank"
+                },
+                {
+                    "url": "https://www.tiktok.com/@lpkgmi2023?_t=8kB6vVQYsoT&_r=1",
+                    "title": "Tiktok GMI",
+                    "bgcolor": "#000000",
+                    "color": "#00000",
+                    "icon": "<i class='bx bxl-tiktok'></i>",
+                    "target": "_blank"
+                },
+                {
+                    "url": "https://www.instagram.com/lpk.garuda.mestakung.indonesia?igsh=NXkxcDlwMWJrY3A4",
+                    "title": "Instagram GMI",
+                    "bgcolor": "#E1306C",
+                    "color": "#ffffff",
+                    "icon": "<i class='bx bxl-instagram'></i>",
+                    "target": "_blank"
+                },
+                {
+                    "url": "https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA",
+                    "title": "YouTube GMI",
+                    "bgcolor": "red",
+                    "color": "white",
+                    "icon": "<i class='fa fa-youtube'></i>",
+                    "target": "_blank"
+                }
+            ]
+            $('.kc_fab_wrapper').kc_fab(links);
+        })
+    </script> --}}
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('landing/lib/wow/wow.min.js') }}"></script>
