@@ -70,7 +70,7 @@
 }
 
 .zoom-btn-person:hover {
-    background-color: #128c7e;
+    background-color: #ffffff;
 }
 
 .zoom-btn-doc {
@@ -119,7 +119,7 @@
     bottom: 70px;
     transition: box-shadow 0.25s;
     border-radius: 2px;
-    background-color: #009688;
+    background-color: #fafcfc;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
         0 3px 1px -2px rgba(0, 0, 0, 0.2);
     color: #fff;
@@ -594,7 +594,7 @@ h6,
 /*** Footer ***/
 .footer {
     margin-top: 2rem;
-    padding-top: 9rem;
+    padding-top: 3rem;
     background: url(../img/map.png);
     background-position: center top, center center;
     background-repeat: no-repeat;

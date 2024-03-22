@@ -28,10 +28,10 @@
     <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ asset('landing/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{ asset('landing/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
     {{-- <link href="{{ asset('templates/assets/css/floating.css?v=1.0') }}" rel="stylesheet"> --}}
 </head>
 
@@ -49,7 +49,7 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-2 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h3 class="m-0">LPK GMI</h3> -->
                     <img src="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" alt="Logo">
@@ -98,7 +98,12 @@
                                             alt="..." style="border-radius: 10px;width: 370px;">
                                     </div>
                                 </div>
-                            </div>
+                            </div><br />
+                            <marquee style="color: white">Let's Join with LPK Garuda Mestakung Indonesia | Resmi &
+                                Terpercaya | Terdapat Dana
+                                Talangan | Proses
+                                Transparan | Amanah
+                            </marquee>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <a href="https://maps.app.goo.gl/FaqwnyLMjym9c4N16" target="_blank">
@@ -109,24 +114,21 @@
                                     Central Java </p>
                             </a>
                             <h1 class="text-white mb-4 animated slideInDown">LPK Garuda Mestakung Indonesia (GMI)</h1>
-                            <marquee style="color: white">Let's Join Us, LPK Resmi & Terpercaya | Terdapat Dana
-                                Talangan | Proses
-                                Transparan | Amanah
-                            </marquee>
+
                             <p class="text-white pb-3 animated slideInDown" style="text-align: justify;">
                                 LPK Garuda Mestakung Indonesia merupakan suatu lembaga pelatihan kerja di Wilayah jawa
                                 Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris No. 01
                                 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
                                 kecamatan Pangkah Kabupaten Tegal.
                             </p>
-                            <a href="#"
+                            <a href="#" style="width: 100%;"
                                 class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill me-3 animated slideInLeft"><i
-                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program
-                                Korea</a>
-                            <a href="#"
+                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
+                                Korean Centre</a>
+                            <a href="#" style="width: 100%;margin-top: 10px;"
                                 class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
-                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program
-                                Jepang</a>
+                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
+                                Japan Centre</a>
                         </div>
 
                     </div>
@@ -498,7 +500,7 @@
                         <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                             <div class="rounded overflow-hidden">
                                 <div class="position-relative overflow-hidden">
-                                    <img class="img-fluid w-100"
+                                    <img class="img-fluid w-100" style="height: 50%"
                                         src="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}"
                                         alt="">
 
@@ -594,11 +596,11 @@
                 <div class="row g-2">
                     <div class="col-md-8 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map me-3"></i>Lokasi <br />RT.03/RW.03, Kaibun, Balamoa, Kec.
+                        <p><i class="fa fa-map me-3"></i>RT.03/RW.03, Kaibun, Balamoa, Kec.
                             Pangkah,
                             Kabupaten Tegal, Jawa Tengah 52471</p>
-                        <p><i class="fa fa-whatsapp me-3"></i>WhatsApp <br />0822-2110-8191</p>
-                        <p><i class="fa fa-envelope me-3"></i>Email <br />lpkgarudamestakungindonesia@gmail.com</p>
+                        <p><i class="fa fa-whatsapp me-3"></i>WhatsApp 0822-2110-8191</p>
+                        <p><i class="fa fa-envelope me-3"></i>lpkgarudamestakungindonesia@gmail.com</p>
 
                     </div>
                     <div class="col-md-4 col-lg-3">
@@ -624,7 +626,7 @@
                         <p>LPK Garuda Mestakung, Tegal, Central Java</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                                placeholder="Your Email" style="height: 48px;">
+                                placeholder="lpkgarudamestakungindonesia@gmail.com" style="height: 48px;" readonly>
                             <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
                                     class="fa fa-paper-plane text-primary fs-4"></i></button>
                         </div>
@@ -648,9 +650,11 @@
             <div class="container px-lg-2">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-6 text-left text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">LPK Garuda Mestakung Indonesia</a> |
-                            Website GMI v.1.2
+                        <div class="col-md-6 text-left text-md-start mb-3 mb-md-0" style="text-align: center;">
+                            Copyright
+                            &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK Garuda
+                                Mestakung Indonesia</a><br />
+                            <p style="margin-top: 10px;">Website LPK GMI Update v.1.2</p>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
@@ -694,14 +698,6 @@
                             class="fa fa-music"></i></a>
                 </li>
             </ul>
-            {{-- <div class="zoom-card scale-transition scale-out">
-                <ul class="zoom-card-content">
-                    <li>Content</li>
-                    <li>Content</li>
-                    <li>Content</li>
-                    <li>Content</li>
-                </ul>
-            </div> --}}
         </div>
     </div>
 
