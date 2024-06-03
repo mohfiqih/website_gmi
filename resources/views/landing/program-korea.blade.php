@@ -3,39 +3,56 @@
 
 <head>
     <meta charset="utf-8">
-    <title>LPK Garuda Mestakung Indonesia</title>
+    <title>Program GMI Korea</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+
+    <!-- Favicon -->
     <link href="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+
     <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('landing/css/bootstrap.min.css?v=3.0') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
     <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('templates/assets/css/floating.css?v=1.0') }}" rel="stylesheet"> --}}
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
+        <!-- Spinner End -->
 
+
+        <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0" id="home">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h3 class="m-0">LPK GMI</h3> -->
-                    <img src="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" alt="Logo" width="70px">
-                    <img src="img/logo-jepang-removebg.jpg" alt="Logo" width="100px">
+                    <img src="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -43,21 +60,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
                         <a href="#service" class="nav-item nav-link">Service</a>
                         <a href="#location" class="nav-item nav-link">Location</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our
-                                Programs GMI</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="{{ url('/program-korea')}} " class="dropdown-item">Program GMI Korea</a>
-                                <a href="{{ url('/program-jepang')}}" class="dropdown-item">Program GMI Jepang</a>
-                            </div>
-                        </div>
                         <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">LPK GMI</a>
+                    <a href="#" class="btn rounded-pill py-1 px-2 ms-3 d-none d-lg-block"><img src="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" alt="Logo" width="50px"> LPK GMI Korea</a>
                 </div>
             </nav>
 
@@ -79,10 +88,6 @@
                                         <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
                                             alt="..." style="border-radius: 10px;width: 370px;">
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('img/sarpras5.jpg') }}" class="d-block w-100"
-                                            alt="..." style="border-radius: 10px;width: 370px;">
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -94,67 +99,33 @@
                                     Kabupaten Tegal,
                                     Central Java </p>
                             </a>
-                            <h2 class="text-white mb-4 animated slideInDown">LPK Garuda Mestakung Indonesia (GMI)</h2>
+                            <h1 class="text-white mb-4 animated slideInDown">Program GMI Korea</h1>
 
-                            <p class="text-white pb-1 animated slideInDown" style="text-align: justify;">
-                                LPK GMI (Garuda Mestakung Indonesia) memberikan kesempatan bagi anda yang ingin bekerja di luar negeri, untuk Program Magang Jepang dan ABK Korea Selatan.
+                            <p class="text-white pb-3 animated slideInDown" style="text-align: justify;">
+                                LPK Garuda Mestakung Indonesia merupakan suatu lembaga pelatihan kerja di Wilayah jawa
+                                Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris No. 01
+                                tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
+                                kecamatan Pangkah Kabupaten Tegal.
                             </p>
-                            <marquee style="color: white;padding-bottom: 10px;">Let's Join with LPK Garuda Mestakung Indonesia | Resmi &
-                                Terpercaya | Terdapat Dana
-                                Talangan | Proses
-                                Transparan | Amanah
-                            </marquee>
-                            <a href="{{ url('/program-korea')}}" style="width: 100%;"
-                                class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill me-3 animated slideInLeft"><i
-                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
-                                Korean Centre</a>
-                            <a href="{{ url('/program-jepang')}}" style="width: 100%;margin-top: 10px;"
-                                class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
-                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
-                                Japan Centre</a>
+
+                            <div class="alert alert-danger" role="alert">
+                                <marquee><b>Announcement!</b> Kami LPK Garuda Mestakung Indonesia (GMI Jepang & Korea) tidak membuka cabang diwilayah <b>Kota Tegal/sekitarnya!</b> apabila ada lembaga atau perorangan mengatasnamakan kami mohon diklarifikasikan terlebih dahulu kepada kami, dan kami tidka bertanggung jawab apabila ada oknum yang mengaku cabang kami! Terimakasih</marquee>
+                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-
-        <br/><br/>
-        <div class="container-xxl py-2" style="padding-top: 20px;">
-            <div class="container py-2 px-lg-5">
-                <div class="row g-4">
-                    <p class="section-title text-secondary">Program LPK GMI<span></span></p>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item rounded text-center p-4"
-                            style="background-color: #0b439c;color: white;">
-                            <i class="fa fa-3x fa-book text-white mb-4"></i>
-                            <h5 class="mb-3" style="color: white">Program GMI Korea</h5>
-                            <p class="m-0" style="color: white">Program P to P Fishing Korea | Dana Talangan
-                                | Proses Transparan | Terpercaya & Amanah</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item rounded text-center p-4"
-                            style="background-color: #093d91;color: white;">
-                            <i class="fa fa-3x fa-book text-white mb-4"></i>
-                            <h5 class="mb-3" style="color: white">Program GMI Jepang</h5>
-                            <a href="{{ url('program-jepang') }}">
-                                <p class="m-0" style="color: white">Program Magang Jepang | Dana Talangan | Proses Transparan | Terpercaya & Amanah</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><br/>
-        <!-- Feature End -->
+        <!-- Navbar & Hero End -->
 
         <!-- About Start -->
         <div class="container-xxl py-2" id="about">
-            <div class="container py-2 px-lg-5">
+            <div class="container py-5 px-lg-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
                         <p class="section-title text-secondary">About Us<span></span></p>
-                        <h1 class="mb-2">#1 LPK Garuda Mestakung Indonesia</h1>
+                        <h1 class="mb-2">#GMI Korea Centre</h1>
                         <div class="alert" role="alert" style="background-color: #093d91;color: white;">
                             <marquee>Bahasa Adalah Jendela Untuk Melihat Dunia Lebih Luas</marquee>
                         </div>
@@ -168,6 +139,13 @@
                             pengangguran di wilayah Jawa Tengah</p><br />
                         <div class="row" style="padding-bottom: 10px;">
                             <div class="col-md-4" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modalProsedur"><button
+                                        type="button" class="btn btn-primary text-white"
+                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="bi bi-book"
+                                                style="padding-right: 10px;"></i>
+                                            Fishing Korea</b></button></a>
+                            </div>
+                            <div class="col-md-4" style="padding-bottom: 10px;">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#modalSarpras"><button
                                         type="button" class="btn btn-primary text-white"
                                         style="width: 100%;text-align: left;height: 50px;"><b><i
@@ -179,14 +157,7 @@
                                         type="button" class="btn btn-primary text-white"
                                         style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
                                                 style="padding-right: 10px;"></i>
-                                            Struktur Korea</b></button></a>
-                            </div>
-                            <div class="col-md-4" style="padding-bottom: 10px;">
-                                <a href="#"><button
-                                        type="button" class="btn btn-primary text-white"
-                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
-                                                style="padding-right: 10px;"></i>
-                                            Struktur Jepang</b></button></a>
+                                            Struktur</b></button></a>
                             </div>
                         </div>
                         <div class="skill mb-4">
@@ -241,7 +212,24 @@
                         </div>
                         <br />
                         <div class="row" style="padding-bottom: 10px;">
-                            <div class="col-md-12" style="padding-bottom: 10px;">
+                            <div class="col-md-6" style="padding-bottom: 10px;">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalTahap">
+                                            <div class="icon-box">
+                                                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+
+                                                <h4>Tahapan
+                                                    Fishing
+                                                    Korea
+                                                </h4>
+                                                <p>Klik untuk melihat detail tahapan fishing korea</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding-bottom: 10px;">
                                 <div class="card">
                                     <div class="card-body">
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#modalKelebihan">
@@ -249,10 +237,10 @@
                                                 <div class="icon"><i class="bx bx-tachometer"></i></div>
 
                                                 <h4>Kelebihan
-                                                    LPK GMI
+                                                    LPK GMI Korea
                                                 </h4>
 
-                                                <p>Klik untuk melihat detail kelebihan LPK GMI</p>
+                                                <p>Klik untuk melihat detail kelebihan LPK GMI Korea</p>
                                             </div>
                                         </a>
                                     </div>
@@ -284,10 +272,6 @@
                                     <img src="{{ asset('templates/assets/img/GMI/gmi1.png') }}" class="d-block w-100"
                                         alt="..." style="border-radius: 10px;">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('sarpras5.jpg') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;">
-                                </div>
                             </div>
                             <button class="carousel-control-prev" type="button"
                                 data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -304,7 +288,7 @@
                         <img src="https://lh3.googleusercontent.com/p/AF1QipMgWp-AOaGdVvClzC-h0NHDrNiljH0P3xta4CBb=s1360-w1360-h1020"
                             class="img-fluid" alt="" style="border-radius: 10px;">
                         <br /><br />
-                        <img src="{{ asset('img/sarpras5.jpg') }}" class="img-fluid" alt=""
+                        <img src="{{ asset('templates/assets/img/GMI/3.jpg') }}" class="img-fluid" alt=""
                             style="border-radius: 10px;">
                     </div>
                 </div>
@@ -321,13 +305,6 @@
             </div>
         </div>
 
-        <br/>
-        <div class="container py-2 px-lg-5">
-            <p class="section-title text-secondary justify-content-center"><span></span>Galeri LPK GMI<span></span>
-            </p>
-            <div class='sk-ww-google-business-photo' data-embed-id='25420534'></div><script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
-        </div>
-
         <!-- Facts Start -->
         <div class="container-xxl bg-primary fact py-2 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
@@ -339,12 +316,12 @@
                     </div>
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                         <i class="fa fa-calendar fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">3</h1>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">2</h1>
                         <p class="text-white mb-0">Years Experience</p>
                     </div>
                     <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                         <i class="fa fa-users fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">25</h1>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">21</h1>
                         <p class="text-white mb-0">Karyawan</p>
                     </div>
 
@@ -358,6 +335,7 @@
         </div>
         <!-- Facts End -->
 
+
         <!-- Service Start -->
         <div class="container-xxl py-2" id="service">
             <div class="container py-5 px-lg-5">
@@ -367,7 +345,7 @@
                     <h1 class="text-center mb-5">Program LPK GMI</h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column text-center rounded">
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-search fa-2x"></i>
@@ -376,17 +354,7 @@
                             <p class="m-0">Program P to P Fishing Korea Lokal | Dana Talangan
                                 |
                                 Proses Transparan | Terpercaya & Amanah <br /> Klik More Info</p>
-                            <a class="btn btn-square" href="{{ url('program-korea') }}"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Klik Program GMI Jepang</h5>
-                            <p class="m-0">Program Magang Jepang | Dana Talangan | Proses Transparan | Terpercaya & Amanah</p>
-                            <a class="btn btn-square" href="{{ url('program-jepang') }}"><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -427,6 +395,7 @@
         </div>
         <!-- Service End -->
 
+
         <!-- Newsletter Start -->
         <div class="container-xxl bg-primary newsletter py-2 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
@@ -437,7 +406,7 @@
                         <h1 class="text-center text-white mb-4">Stay Always In LPK GMI</h1>
                         <p class="text-white mb-4" style="text-align: center">LPK Garuda Mestakung Indonesia (GMI)
                             Mencetak
-                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Korea dan Program Magang Jepang dari Awal Hingga Mendapatkan Job</p>
+                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Korea Selatan dari Awal</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
                                 placeholder="Email: lpkgarudamestakungindonesia@gmail.com" style="height: 48px;"
@@ -450,7 +419,6 @@
             </div>
         </div>
         <!-- Newsletter End -->
-
 
         <!-- Projects Start -->
         <div class="container-xxl py-5">
@@ -495,7 +463,6 @@
         </div>
         <!-- Projects End -->
 
-
         <!-- Testimonial Start -->
         <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
@@ -507,6 +474,8 @@
                         <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Buat Kalian
                             yang ingin job Fishing Korea saya rekomendasi untuk Lpk Garuda Mestakung Indonesia</p>
                         <div class="d-flex align-items-center">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg"
+                                style="width: 65px; height: 65px;"> --}}
                             <div class="ps-4">
                                 <h5 class="mb-1">Client GMI</h5>
                                 <span>Profession</span>
@@ -517,6 +486,8 @@
                         <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Kantor
                             terpercaya megah mewah dan bekerja sama dgn agncy yg terbukti</p>
                         <div class="d-flex align-items-center">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg"
+                                style="width: 65px; height: 65px;"> --}}
                             <div class="ps-4">
                                 <h5 class="mb-1">Client GMI</h5>
                                 <span>Profession</span>
@@ -527,6 +498,8 @@
                         <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>LPK terpercaya
                             amanah, bangunanny puny sendiri, prosesnya cepat dan transparan.</p>
                         <div class="d-flex align-items-center">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg"
+                                style="width: 65px; height: 65px;"> --}}
                             <div class="ps-4">
                                 <h5 class="mb-1">Client Name</h5>
                                 <span>Profession</span>
@@ -543,6 +516,12 @@
             <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
         </div>
 
+        <br/>
+        <div class="container py-2 px-lg-5">
+            <p class="section-title text-secondary justify-content-center"><span></span>Galeri LPK GMI<span></span>
+            </p>
+            <div class='sk-ww-google-business-photo' data-embed-id='25420534'></div><script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
+        </div>
 
         <div class="container py-5" id="location">
             <h5>1. Lokasi LPK Garuda Mestakung Indonesia</h5>
@@ -557,11 +536,10 @@
 
 
         <!-- Footer Start -->
-
-        <!-- Footer End -->
         @include('landing.footer')
-        <!-- Back to Top -->
+        <!-- Footer End -->
 
+        <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
                 class="bi bi-arrow-up"></i></a>
 
@@ -624,8 +602,51 @@
                         <div class="col-md-12">
                             <img src="{{ asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
                             <img src="{{ asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras4.jpg') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras5.jpg') }}" class="img-fluid rounded-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Prosedur --}}
+    <div class="modal fade" id="modalProsedur" tabindex="-1" aria-labelledby="modalProsedur" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalProsedur">Prosedur Fishing Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/prosedur_gmi_korea.png') }}" class="img-fluid rounded-4"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Tahapan --}}
+    <div class="modal fade" id="modalTahap" tabindex="-1" aria-labelledby="modalTahap" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalTahap">Tahapan Fishing Korea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ asset('img/tahapan.png') }}" class="img-fluid rounded-4" alt="">
                         </div>
                     </div>
                 </div>
@@ -641,23 +662,23 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalKelebihan">Kelebihan LPK GMI</h1>
+                    <h1 class="modal-title fs-5" id="modalKelebihan">Kelebihan GMI Korea</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                                <i class="fa fa-check"></i> Pelatihan Bahasa Jepang & Korea Dari Awal
+                                <i class="fa fa-check"></i> Pelatihan Bahasa Korea Selatan Dari Awal
                             </p>
                             <p>
                                 <i class="fa fa-check"></i> Bimbingan Dari Awal Hingga Keberangkatan
                             </p>
                             <p>
-                                <i class="fa fa-check"></i> Kesempatan Bekerja di PT. Jepang Darat & Kapal Korea Selatan
+                                <i class="fa fa-check"></i> Kesempatan Bekerja di Kapal Korea Selatan
                             </p>
                             <p>
-                                <i class="fa fa-check"></i> Pengalaman Tinggal di Jepang & Korea Selatan
+                                <i class="fa fa-check"></i> Pengalaman Tinggal di Korea Selatan
                             </p>
                         </div>
                     </div>
@@ -719,52 +740,6 @@
             }
         });
     </script>
-    <!-- JavaScript Libraries -->
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{ asset('templates/assets/js/kc.fab.min.js') }}"></script>
-    <script src="{{ asset('templates/assets/js/kc.fab.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            var links = [{
-                    "bgcolor": "#128c7e",
-                    "icon": "<i class='fa fa-whatsapp'></i>"
-                },
-                {
-                    "url": "https://wa.me/6282221108191",
-                    "title": "WhatsApp GMI",
-                    "bgcolor": "#128c7e",
-                    "color": "#fffff",
-                    "icon": "<i class='fa fa-whatsapp'></i>",
-                    "target": "_blank"
-                },
-                {
-                    "url": "https://www.tiktok.com/@lpkgmi2023?_t=8kB6vVQYsoT&_r=1",
-                    "title": "Tiktok GMI",
-                    "bgcolor": "#000000",
-                    "color": "#00000",
-                    "icon": "<i class='bx bxl-tiktok'></i>",
-                    "target": "_blank"
-                },
-                {
-                    "url": "https://www.instagram.com/lpk.garuda.mestakung.indonesia?igsh=NXkxcDlwMWJrY3A4",
-                    "title": "Instagram GMI",
-                    "bgcolor": "#E1306C",
-                    "color": "#ffffff",
-                    "icon": "<i class='bx bxl-instagram'></i>",
-                    "target": "_blank"
-                },
-                {
-                    "url": "https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA",
-                    "title": "YouTube GMI",
-                    "bgcolor": "red",
-                    "color": "white",
-                    "icon": "<i class='fa fa-youtube'></i>",
-                    "target": "_blank"
-                }
-            ]
-            $('.kc_fab_wrapper').kc_fab(links);
-        })
-    </script> --}}
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

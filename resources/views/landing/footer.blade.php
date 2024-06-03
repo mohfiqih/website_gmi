@@ -1,65 +1,55 @@
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row" style="padding: 20px;">
+<div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s" id="contact">
+    <div class="container py-2 px-lg-2">
+        <div class="row g-2">
+            <div class="col-md-10 col-lg-6">
+                <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                <p><i class="fa fa-map me-3"></i>RT.03/RW.03, Kaibun, Balamoa, Kec.
+                    Pangkah,
+                    Kabupaten Tegal, Jawa Tengah 52471</p>
+                {{-- <p><i class="fa fa-whatsapp me-3"></i>WhatsApp 0822-2110-8191</p> --}}
+                <p><i class="fa fa-envelope me-3"></i>lpkgarudamestakungindonesia@gmail.com</p>
 
-                <div class="col-lg-3 col-md-6 footer-contact" style="padding-right: 20px;">
-                    <h3>LPK GMI<span>.</span></h3>
-                    <p>
-                        RT.03/RW.03, Kaibun, Balamoa, Kec. Pangkah, Kabupaten Tegal, Jawa Tengah 52471 <br><br>
-                        <strong>WhatsApp:</strong> 082221108191<br>
-                        <strong>Email:</strong> lpkgarudamestakungindonesia@gmail.com<br>
-                    </p>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <p class="section-title text-white h5 mb-4">Our Services<span></span></p>
+                <div class="row g-2">
+                    <a class="btn btn-link" href="{{ url('/program-korea') }}">Program GMI Korea Centre</a>
+                    <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan Centre</a>
+                    <a class="btn btn-link" href="#">Dana Talangan</a>
+                    <a class="btn btn-link" href="#">Proses Transparan</a>
+                    <a class="btn btn-link" href="#">Terpercaya & Amanah</a>
                 </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                    </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                <p>LPK Garuda Mestakung, Tegal, Central Java</p>
+                <div class="position-relative w-100 mt-3">
+                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                        placeholder="lpkgarudamestakungindonesia@gmail.com" style="height: 48px;" readonly>
+                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                            class="fa fa-paper-plane text-primary fs-4"></i></button>
                 </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Our Social Networks</h4>
-                    <p>Social Media of Garuda Mestakung Indonesia (GMI)</p>
-                    <div class="social-links mt-3">
-                        <a target="_blank" href="https://wa.me/6282221108191" class="whatsapp"><i
-                                class="bx bxl-whatsapp"></i></a>
-                        <a target="_blank" href="https://www.tiktok.com/@lpkgmi2023" class="tiktok"><i
-                                class="bx bxl-tiktok"></i></a>
-                        <a target="_blank" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA"
-                            class="youtube"><i class="bx bxl-youtube"></i></a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-
-
-    <div class="container py-4">
+    <div class="container px-lg-2">
         <div class="copyright">
-            &copy; Copyright <strong><span>LPK GMI</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            Website GMI v.1.0
-            {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
+            <div class="row">
+                <div class="col-md-6 text-left text-md-start mb-3 mb-md-0" style="text-align: center;">
+                    Copyright
+                    &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK Garuda
+                        Mestakung Indonesia</a><br />
+                    <p style="margin-top: 10px;">Website LPK GMI Update v.1.3</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="#">Home</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Help</a>
+                        <a href="#">FQAs</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
+</div>
