@@ -111,7 +111,7 @@
                                         Talangan | Proses
                                         Transparan | Amanah
                                     </marquee>
-                                    <a href="#" style="width: 100%;margin-top: 10px;"
+                                    <a href="https://wa.me/622324353371" style="width: 100%;margin-top: 10px;"
                                         class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
                                             class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Info Pendaftaran</a>
                         </div>
@@ -127,7 +127,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
                         <p class="section-title text-secondary">About Us<span></span></p>
-                        <h1 class="mb-2">#GMI Japan Centre</h1>
+                        <h1 class="mb-2">#Program GMI Japan</h1>
                         <div class="alert" role="alert" style="background-color: #093d91;color: white;">
                             <marquee>Bahasa Adalah Jendela Untuk Melihat Dunia Lebih Luas</marquee>
                         </div>
@@ -345,7 +345,7 @@
         </div>
         <!-- About End -->
 
-        <div class="container py-2 px-lg-5">
+        {{-- <div class="container py-2 px-lg-5">
             <p class="section-title text-secondary justify-content-center"><span></span>Bussiness LPK GMI<span></span>
             </p>
             <div class="card">
@@ -353,7 +353,7 @@
                 <script src='https://widgets.sociablekit.com/google-business-profile/widget.js' async defer></script>
             </div>
         </div>
-        <br/>
+        <br/> --}}
         <div class="container py-2 px-lg-5">
             <p class="section-title text-secondary justify-content-center"><span></span>Galeri LPK GMI<span></span>
             </p>
@@ -534,7 +534,62 @@
 
 
         <!-- Footer Start -->
-        @include('landing.footer')
+        {{-- @include('landing.footer') --}}
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s" id="contact">
+            <div class="container py-2 px-lg-2">
+                <div class="row g-2">
+                    <div class="col-md-10 col-lg-6">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map me-3"></i>RT.03/RW.03, Kaibun, Balamoa, Kec.
+                            Pangkah,
+                            Kabupaten Tegal, Jawa Tengah 52471</p>
+                        <p><i class="fa fa-whatsapp me-3"></i>WhatsApp 0823-2435-3371</p>
+                        <p><i class="fa fa-envelope me-3"></i>lpkgmijapan@gmail.com</p>
+
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Our Services<span></span></p>
+                        <div class="row g-2">
+                            <a class="btn btn-link" href="{{ url('/program-korea') }}">Program GMI Korea Centre</a>
+                            <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan Centre</a>
+                            <a class="btn btn-link" href="#">Dana Talangan</a>
+                            <a class="btn btn-link" href="#">Proses Transparan</a>
+                            <a class="btn btn-link" href="#">Terpercaya & Amanah</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                        <p>LPK Garuda Mestakung, Tegal, Central Java</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="lpkgarudamestakungindonesia@gmail.com" style="height: 48px;" readonly>
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-2">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-left text-md-start mb-3 mb-md-0" style="text-align: center;">
+                            Copyright
+                            &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK Garuda
+                                Mestakung Indonesia</a><br />
+                            <p style="margin-top: 10px;">Website LPK GMI Jepang v.1.1</p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Footer End -->
 
         <!-- Back to Top -->
@@ -545,7 +600,7 @@
             <a class="zoom-fab zoom-btn-large" id="zoomBtn"><i class="fa fa-whatsapp"></i></a>
             <ul class="zoom-menu">
                 <li>
-                    <a target="_blank" href="https://wa.me/0895379180003"
+                    <a target="_blank" href="https://wa.me/622324353371"
                         class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
                             class="fa fa-whatsapp"></i></a>
                 </li>
@@ -578,7 +633,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="{{ asset('img/struktur-gmi.png') }}" class="img-fluid rounded-4" alt="">
+                    <img src="{{ asset('img/struktur-jepang.jpg') }}" class="img-fluid rounded-4" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -632,7 +687,7 @@
 
                             </li>
                             <li>
-                                Program Magang dan TG ke
+                                Program Magang ke
                                 Jepang
                             </li>
                             <li>Pelatihan Kerja sesuai Job
@@ -657,29 +712,14 @@
                 </div>
                 <div class="modal-body">
                     <ul>
-                        <li>Pendaftaran <br>(Tiap
-                            Bulan
-                            Ada Kuota Pendaftaran)
-                        </li>
-                        <li>Pendidikan 3-4 Bulan
-                            <br>(Siswa
-                            wajib mengikuti pndidikan tiap hari senin-sampai jum'at Jam
-                            09:00 - 15:00 WIB)
-                        </li>
-                        <li>
-                            Interview Job
-                            <br>(Mensetsu JO
-                            -Job Order- (Interview Dengan Pihak Jepang))
-                        </li>
-                        <li>Pemberkasan <br>(Kontrak
-                            kerja
-                            dan COE (Certificate of Eligibility))
-                        </li>
-                        <li>Pemberangkatan
-                            <br>(Setelah
-                            melalui proses diatas akan ada proses pemantapan bahasa (7 hari - 1
-                            Bulan) Dilanjut Penerbangan ke Jepang dan siap kerja dijepang)
-                        </li>
+                        Hallo Salam  kenal  kak,,,<br/>saya jelaskan dulu untuk prosedur magang di jepang ya kak🙏
+                        <li>Pendaftran (bisa datang langsung ke kantor atau via online) </li>
+                        <li>Mengikuti pendidikan bahasa jepang selama 4 bulan (tempat pendidikan ada di tegal dan ada mess gratis)</li>
+                        <li>Tes interview ( biasanya ikut interview setelah 1 bulan pendidikn agar sebelum 4 bulan sudah lolos job )</li>
+                        <li>Medical ( setelah lolos interview )</li>
+                        <li>Ttd kontrak</li>
+                        <li>Pemantapan sambil nunggu COE dan Visa turun</li>
+                        <li>Terbang ke jepang ✈</li>
                     </ul>
                 </div>
                 <div class="modal-footer">

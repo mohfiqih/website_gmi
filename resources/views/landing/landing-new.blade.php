@@ -107,11 +107,11 @@
                             <a href="{{ url('/program-korea')}}" style="width: 100%;"
                                 class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill me-3 animated slideInLeft"><i
                                     class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
-                                Korean Centre</a>
+                                Korea</a>
                             <a href="{{ url('/program-jepang')}}" style="width: 100%;margin-top: 10px;"
                                 class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
                                     class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
-                                Japan Centre</a>
+                                Jepang</a>
                         </div>
 
                     </div>

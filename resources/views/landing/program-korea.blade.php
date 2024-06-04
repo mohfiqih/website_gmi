@@ -125,7 +125,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
                         <p class="section-title text-secondary">About Us<span></span></p>
-                        <h1 class="mb-2">#GMI Korea Centre</h1>
+                        <h1 class="mb-2">#Program GMI Korea</h1>
                         <div class="alert" role="alert" style="background-color: #093d91;color: white;">
                             <marquee>Bahasa Adalah Jendela Untuk Melihat Dunia Lebih Luas</marquee>
                         </div>
