@@ -13,8 +13,8 @@
             <div class="col-md-4 col-lg-3">
                 <p class="section-title text-white h5 mb-4">Our Services<span></span></p>
                 <div class="row g-2">
-                    <a class="btn btn-link" href="{{ url('/program-korea') }}">Program GMI Korea Centre</a>
-                    <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan Centre</a>
+                    <a class="btn btn-link" href="{{ url('/program-korea') }}">Program GMI Korea</a>
+                    <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan</a>
                     <a class="btn btn-link" href="#">Dana Talangan</a>
                     <a class="btn btn-link" href="#">Proses Transparan</a>
                     <a class="btn btn-link" href="#">Terpercaya & Amanah</a>

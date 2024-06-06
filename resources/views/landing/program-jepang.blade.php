@@ -111,9 +111,13 @@
                                         Talangan | Proses
                                         Transparan | Amanah
                                     </marquee>
-                                    <a href="https://wa.me/622324353371" style="width: 100%;margin-top: 10px;"
-                                        class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
+                                    <a href="https://wa.me/6282324353371" style="width: 100%;margin-top: 10px;"
+                                        class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
                                             class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Info Pendaftaran</a>
+
+                                    <a href="https://forms.gle/Fmw1esaH6tNfbZFt6" style="width: 100%;margin-top: 10px;"
+                                            class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
+                                                class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Pendaftaran Online</a>
                         </div>
 
                     </div>
@@ -550,8 +554,8 @@
                     <div class="col-md-4 col-lg-3">
                         <p class="section-title text-white h5 mb-4">Our Services<span></span></p>
                         <div class="row g-2">
-                            <a class="btn btn-link" href="{{ url('/program-korea') }}">Program GMI Korea Centre</a>
-                            <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan Centre</a>
+                            <a class="btn btn-link" href="{{ url('/program-korea') }}">Program GMI Korea</a>
+                            <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan</a>
                             <a class="btn btn-link" href="#">Dana Talangan</a>
                             <a class="btn btn-link" href="#">Proses Transparan</a>
                             <a class="btn btn-link" href="#">Terpercaya & Amanah</a>
@@ -600,7 +604,7 @@
             <a class="zoom-fab zoom-btn-large" id="zoomBtn"><i class="fa fa-whatsapp"></i></a>
             <ul class="zoom-menu">
                 <li>
-                    <a target="_blank" href="https://wa.me/622324353371"
+                    <a target="_blank" href="https://wa.me/6282324353371"
                         class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
                             class="fa fa-whatsapp"></i></a>
                 </li>
@@ -678,7 +682,7 @@
                 <div class="card-body">
                     <div class="card-body">
                         <p>
-                            <b>Program LPK GMI Japan Centre</b>
+                            <b>Program LPK GMI Japan</b>
                         </p>
                         <ul>
                             <li>Pelatihan Bahasa Jepang
