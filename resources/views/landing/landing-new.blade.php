@@ -571,7 +571,16 @@
                 <li>
                     <a target="_blank" href="https://wa.me/6282221108191"
                         class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
-                            class="fa fa-whatsapp"></i></a>
+                            class="fa fa-whatsapp" style="margin-top: 5px;"><p style="font-size: 10px;margin-top: 5px;">Korea</p></i>
+
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://wa.me/6282324353371"
+                        class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
+                            class="fa fa-whatsapp" style="margin-top: 5px;"><p style="font-size: 10px;margin-top: 5px;">Jepang</p></i>
+                    </a>
+
                 </li>
                 <li>
                     <a target="_blank" href="https://www.instagram.com/lpkgmikorea?igsh=NXkxcDlwMWJrY3A4"
