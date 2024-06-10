@@ -637,7 +637,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="{{ asset('img/struktur-jepang.jpg') }}" class="img-fluid rounded-4" alt="">
+                    <img src="{{ asset('img/struktur_organisasi.jpg') }}" class="img-fluid rounded-4" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
