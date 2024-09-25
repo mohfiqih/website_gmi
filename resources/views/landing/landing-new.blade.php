@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>LPK Garuda Mestakung Indonesia</title>
+    <title>LPK GMI Jepang - Tegal</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <link href="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" rel="icon">
+    <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
@@ -33,8 +33,6 @@
         <div class="container-xxl position-relative p-0" id="home">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <!-- <h3 class="m-0">LPK GMI</h3> -->
-                    <img src="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" alt="Logo" width="70px">
                     <img src="img/logo-jepang-removebg.jpg" alt="Logo" width="100px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -48,16 +46,17 @@
                         <a href="#service" class="nav-item nav-link">Service</a>
                         <a href="#location" class="nav-item nav-link">Location</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our
-                                Programs GMI</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                Programs GMI Jepang</a>
                             <div class="dropdown-menu m-0">
-                                <a href="{{ url('/program-korea')}} " class="dropdown-item">Program GMI Korea</a>
-                                <a href="{{ url('/program-jepang')}}" class="dropdown-item">Program GMI Jepang</a>
+                                {{-- <a href="{{ url('/program-korea')}} " class="dropdown-item">Program GMI Korea</a> --}}
+                                <a href="{{ url('/program-jepang') }}" class="dropdown-item">Program Magang</a>
+                                <a href="#" class="dropdown-item">Program TG</a>
                             </div>
                         </div>
                         <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">LPK GMI</a>
+                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">LPK GMI Jepang</a>
                 </div>
             </nav>
 
@@ -68,6 +67,10 @@
                             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
+                                        <img src="{{ asset('img/sarpras5.jpg') }}" class="d-block w-100" alt="..."
+                                            style="border-radius: 10px;width: 370px;">
+                                    </div>
+                                    <div class="carousel-item">
                                         <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
                                             alt="..." style="border-radius: 10px;width: 370px;">
                                     </div>
@@ -76,12 +79,9 @@
                                             alt="..." style="border-radius: 10px;width: 370px;">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
-                                            alt="..." style="border-radius: 10px;width: 370px;">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('img/sarpras5.jpg') }}" class="d-block w-100"
-                                            alt="..." style="border-radius: 10px;width: 370px;">
+                                        <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}"
+                                            class="d-block w-100" alt="..."
+                                            style="border-radius: 10px;width: 370px;">
                                     </div>
                                 </div>
                             </div>
@@ -90,28 +90,27 @@
                             <a href="https://maps.app.goo.gl/FaqwnyLMjym9c4N16" target="_blank">
                                 <p style="color: white;text-align: left;" class="animated slideInDown"><i
                                         class="fa fa fa-search text-white mb-2"
-                                        style="padding-right: 10px;"></i>Pangkah,
+                                        style="padding-right: 10px;"></i>Balamoa,
                                     Kabupaten Tegal,
                                     Central Java </p>
                             </a>
                             <h2 class="text-white mb-4 animated slideInDown">LPK Garuda Mestakung Indonesia (GMI)</h2>
 
                             <p class="text-white pb-1 animated slideInDown" style="text-align: justify;">
-                                LPK GMI (Garuda Mestakung Indonesia) memberikan kesempatan bagi anda yang ingin bekerja di luar negeri, untuk Program Magang Jepang dan ABK Korea Selatan.
+                                LPK GMI (Garuda Mestakung Indonesia) memberikan kesempatan bagi anda yang ingin bekerja
+                                di luar negeri khususnya di Jepang, LPK GMI membuka Program Magang Jepang dan Program
+                                TG.
                             </p>
-                            <marquee style="color: white;padding-bottom: 10px;">Let's Join with LPK Garuda Mestakung Indonesia | Resmi &
+                            <marquee style="color: white;padding-bottom: 10px;">Let's Join with LPK Garuda Mestakung
+                                Indonesia | Resmi &
                                 Terpercaya | Terdapat Dana
                                 Talangan | Proses
                                 Transparan | Amanah
                             </marquee>
-                            <a href="{{ url('/program-korea')}}" style="width: 100%;"
-                                class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill me-3 animated slideInLeft"><i
-                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
-                                Korea</a>
-                            <a href="{{ url('/program-jepang')}}" style="width: 100%;margin-top: 10px;"
-                                class="btn btn-light py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
-                                    class="fa fa fa-info text-dark mb-2" style="padding-right: 5px;"></i> Program GMI
-                                Jepang</a>
+                            <a href="{{ url('/program-jepang') }}" style="width: 100%;margin-top: 10px;"
+                                class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
+                                    class="fa fa fa-info mb-2" style="padding-right: 5px;"></i> Program GMI
+                                Jepang (Magang & TG)</a>
                         </div>
 
                     </div>
@@ -119,33 +118,36 @@
             </div>
         </div>
 
-        <br/><br/>
+        <br /><br />
         <div class="container-xxl py-2" style="padding-top: 20px;">
             <div class="container py-2 px-lg-5">
                 <div class="row g-4">
-                    <p class="section-title text-secondary">Program LPK GMI<span></span></p>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item rounded text-center p-4"
-                            style="background-color: #0b439c;color: white;">
-                            <i class="fa fa-3x fa-book text-white mb-4"></i>
-                            <h5 class="mb-3" style="color: white">Program GMI Korea</h5>
-                            <p class="m-0" style="color: white">Program P to P Fishing Korea | Dana Talangan
-                                | Proses Transparan | Terpercaya & Amanah</p>
-                        </div>
-                    </div>
+                    <p class="section-title text-secondary">Program Magang<span></span></p>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item rounded text-center p-4"
                             style="background-color: #093d91;color: white;">
                             <i class="fa fa-3x fa-book text-white mb-4"></i>
                             <h5 class="mb-3" style="color: white">Program GMI Jepang</h5>
                             <a href="{{ url('program-jepang') }}">
-                                <p class="m-0" style="color: white">Program Magang Jepang | Dana Talangan | Proses Transparan | Terpercaya & Amanah</p>
+                                <p class="m-0" style="color: white">Program Magang Jepang | Dana Talangan | Proses
+                                    Transparan | Terpercaya & Amanah</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item rounded text-center p-4"
+                            style="background-color: #093d91;color: white;">
+                            <i class="fa fa-3x fa-book text-white mb-4"></i>
+                            <h5 class="mb-3" style="color: white">Program TG Jepang</h5>
+                            <a href="{{ url('program-jepang') }}">
+                                <p class="m-0" style="color: white">Program TG Jepang | Dana Talangan | Proses
+                                    Transparan | Terpercaya & Amanah</p>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><br/>
+        </div><br />
         <!-- Feature End -->
 
         <!-- About Start -->
@@ -160,33 +162,28 @@
                         </div>
                         <p class="mb-2" style="text-align: justify;"><b>LPK GARUDA MESTAKUNG INDONESIA</b> merupakan
                             suatu
-                            lembaga pelatihan kerja Korea dan Jepang di
+                            lembaga pelatihan kerja Jepang di
                             Wilayah jawa Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris
                             No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
                             kecamatan Pangkah Kabupaten Tegal. Dengan kewenangan utama melaksanakan pelatihan bahasa
                             yang berbasis kompetensi dalam rangka tujuan untuk membantu mengentaskan kemiskinan dan
                             pengangguran di wilayah Jawa Tengah</p><br />
                         <div class="row" style="padding-bottom: 10px;">
-                            <div class="col-md-4" style="padding-bottom: 10px;">
+                            <div class="col-md-6" style="padding-bottom: 10px;">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#modalSarpras"><button
                                         type="button" class="btn btn-primary text-white"
                                         style="width: 100%;text-align: left;height: 50px;"><b><i
                                                 class="bi bi-building" style="padding-right: 10px;"></i>
                                             Sarpras</b></button></a>
                             </div>
-                            <div class="col-md-4" style="padding-bottom: 10px;">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><button
-                                        type="button" class="btn btn-primary text-white"
+                            <div class="col-md-6" style="padding-bottom: 10px;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button type="button" class="btn btn-primary text-white"
                                         style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
                                                 style="padding-right: 10px;"></i>
-                                            Struktur Korea</b></button></a>
-                            </div>
-                            <div class="col-md-4" style="padding-bottom: 10px;">
-                                <a href="#"><button
-                                        type="button" class="btn btn-primary text-white"
-                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
-                                                style="padding-right: 10px;"></i>
-                                            Struktur Jepang</b></button></a>
+                                            Struktur Jepang</b>
+                                    </button>
+                                </a>
                             </div>
                         </div>
                         <div class="skill mb-4">
@@ -285,8 +282,8 @@
                                         alt="..." style="border-radius: 10px;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('sarpras5.jpg') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;">
+                                    <img src="{{ asset('sarpras5.jpg') }}" class="d-block w-100" alt="..."
+                                        style="border-radius: 10px;">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button"
@@ -321,11 +318,12 @@
             </div>
         </div>
 
-        <br/>
+        <br />
         <div class="container py-2 px-lg-5">
             <p class="section-title text-secondary justify-content-center"><span></span>Galeri LPK GMI<span></span>
             </p>
-            <div class='sk-ww-google-business-photo' data-embed-id='25420534'></div><script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
+            <div class='sk-ww-google-business-photo' data-embed-id='25420534'></div>
+            <script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
         </div>
 
         <!-- Facts Start -->
@@ -372,11 +370,11 @@
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-search fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">Klik Program GMI Korea</h5>
-                            <p class="m-0">Program P to P Fishing Korea Lokal | Dana Talangan
+                            <h5 class="mb-3">Program GMI TG Jepang</h5>
+                            <p class="m-0">Program TG Jepang | Dana Talangan
                                 |
                                 Proses Transparan | Terpercaya & Amanah <br /> Klik More Info</p>
-                            <a class="btn btn-square" href="{{ url('program-korea') }}"><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -384,9 +382,10 @@
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-laptop fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">Klik Program GMI Jepang</h5>
-                            <p class="m-0">Program Magang Jepang | Dana Talangan | Proses Transparan | Terpercaya & Amanah</p>
-                            <a class="btn btn-square" href="{{ url('program-jepang') }}"><i class="fa fa-arrow-right"></i></a>
+                            <h5 class="mb-3">Program GMI Jepang</h5>
+                            <p class="m-0">Program Magang Jepang | Dana Talangan | Proses Transparan | Terpercaya &
+                                Amanah</p>
+                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -437,7 +436,8 @@
                         <h1 class="text-center text-white mb-4">Stay Always In LPK GMI</h1>
                         <p class="text-white mb-4" style="text-align: center">LPK Garuda Mestakung Indonesia (GMI)
                             Mencetak
-                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Korea dan Program Magang Jepang dari Awal Hingga Mendapatkan Job</p>
+                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Korea dan Program Magang Jepang
+                            dari Awal Hingga Mendapatkan Job</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
                                 placeholder="Email: lpkgarudamestakungindonesia@gmail.com" style="height: 48px;"
@@ -485,7 +485,7 @@
                                 </div>
                                 <div class="bg-light p-4">
                                     <p class="text-primary fw-medium mb-2">Galeri LPK GMI</p>
-                                    <h5 class="lh-base mb-0">LPK Garuda Mestakung Program Korea & Jepang</a>
+                                    <h5 class="lh-base mb-0">LPK GMI Program Jepang</a>
                                 </div>
                             </div>
                         </div>
@@ -545,7 +545,7 @@
 
 
         <div class="container py-5" id="location">
-            <h5>1. Lokasi LPK Garuda Mestakung Indonesia</h5>
+            <h5>1. Lokasi LPK GMI Jepang</h5>
             <div class="row" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-12">
                     <iframe class="mb-4 mb-lg-0"
@@ -569,16 +569,10 @@
             <a class="zoom-fab zoom-btn-large" id="zoomBtn"><i class="fa fa-whatsapp"></i></a>
             <ul class="zoom-menu">
                 <li>
-                    <a target="_blank" href="https://wa.me/6282221108191"
-                        class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
-                            class="fa fa-whatsapp" style="margin-top: 5px;"><p style="font-size: 10px;margin-top: 5px;">Korea</p></i>
-
-                    </a>
-                </li>
-                <li>
                     <a target="_blank" href="https://wa.me/6282324353371"
                         class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
-                            class="fa fa-whatsapp" style="margin-top: 5px;"><p style="font-size: 10px;margin-top: 5px;">Jepang</p></i>
+                            class="fa fa-whatsapp" style="margin-top: 5px;">
+                        </i>
                     </a>
 
                 </li>
@@ -650,23 +644,23 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalKelebihan">Kelebihan LPK GMI</h1>
+                    <h1 class="modal-title fs-5" id="modalKelebihan">Kelebihan LPK GMI Jepang</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                                <i class="fa fa-check"></i> Pelatihan Bahasa Jepang & Korea Dari Awal
+                                <i class="fa fa-check"></i> Pelatihan Bahasa Jepang Dari Awal
                             </p>
                             <p>
                                 <i class="fa fa-check"></i> Bimbingan Dari Awal Hingga Keberangkatan
                             </p>
                             <p>
-                                <i class="fa fa-check"></i> Kesempatan Bekerja di PT. Jepang Darat & Kapal Korea Selatan
+                                <i class="fa fa-check"></i> Kesempatan Bekerja di Jepang (Magang atau TG)
                             </p>
                             <p>
-                                <i class="fa fa-check"></i> Pengalaman Tinggal di Jepang & Korea Selatan
+                                <i class="fa fa-check"></i> Pengalaman Tinggal di Jepang
                             </p>
                         </div>
                     </div>

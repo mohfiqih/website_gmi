@@ -13,7 +13,6 @@
             <div class="col-md-4 col-lg-3">
                 <p class="section-title text-white h5 mb-4">Our Services<span></span></p>
                 <div class="row g-2">
-                    <a class="btn btn-link" href="{{ url('/program-korea') }}">Program GMI Korea</a>
                     <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan</a>
                     <a class="btn btn-link" href="#">Dana Talangan</a>
                     <a class="btn btn-link" href="#">Proses Transparan</a>
@@ -39,7 +38,7 @@
                     Copyright
                     &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK Garuda
                         Mestakung Indonesia</a><br />
-                    <p style="margin-top: 10px;">Website LPK GMI Update v.1.3</p>
+                    <p style="margin-top: 10px;">Website LPK GMI Update v.1.1.4</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
