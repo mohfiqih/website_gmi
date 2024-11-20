@@ -318,13 +318,36 @@
             </div>
         </div>
 
-        <br />
+        {{-- <br />
         <div class="container py-2 px-lg-5">
             <p class="section-title text-secondary justify-content-center"><span></span>Galeri LPK GMI<span></span>
             </p>
             <div class='sk-ww-google-business-photo' data-embed-id='25420534'></div>
             <script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
-        </div>
+        </div> --}}
+
+        <section class="testimonials" id="galeri">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h2>Galeri ACC GMI</h2>
+                </div>
+                <div class="row">
+                    @foreach ($images_db as $image)
+                        <div class="col-md-3 mb-4">
+                            <div class="card" style="height: 250px;">
+                                <img src="{{ asset($image->filepath) }}" class="card-img-top" alt="Image"
+                                    style="height: 100%; object-fit: cover;">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Date: {{ $image->created_at->format('d M Y H:i') }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
 
         <!-- Facts Start -->
         <div class="container-xxl bg-primary fact py-2 wow fadeInUp" data-wow-delay="0.1s">
