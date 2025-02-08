@@ -6,7 +6,6 @@
                 <p><i class="fa fa-map me-3"></i>RT.03/RW.03, Kaibun, Balamoa, Kec.
                     Pangkah,
                     Kabupaten Tegal, Jawa Tengah 52471</p>
-                {{-- <p><i class="fa fa-whatsapp me-3"></i>WhatsApp 0822-2110-8191</p> --}}
                 <p><i class="fa fa-envelope me-3"></i>lpkgarudamestakungindonesia@gmail.com</p>
 
             </div>
@@ -38,7 +37,7 @@
                     Copyright
                     &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK Garuda
                         Mestakung Indonesia</a><br />
-                    <p style="margin-top: 10px;">Website LPK GMI Update v.1.1.4</p>
+                    <p style="margin-top: 10px;">Website LPK GMI Update v.1.2</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">

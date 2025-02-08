@@ -62,7 +62,7 @@
 
             <div class="container-xxl bg-primary hero-header">
                 <div class="container px-lg-5">
-                    <div class="row g-5 align-items-end">
+                    <div class="row g-5 align-items-center">
                         <div class="col-lg-6 text-center text-lg-start">
                             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
@@ -745,52 +745,6 @@
             }
         });
     </script>
-    <!-- JavaScript Libraries -->
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{ asset('templates/assets/js/kc.fab.min.js') }}"></script>
-    <script src="{{ asset('templates/assets/js/kc.fab.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            var links = [{
-                    "bgcolor": "#128c7e",
-                    "icon": "<i class='fa fa-whatsapp'></i>"
-                },
-                {
-                    "url": "https://wa.me/6282221108191",
-                    "title": "WhatsApp GMI",
-                    "bgcolor": "#128c7e",
-                    "color": "#fffff",
-                    "icon": "<i class='fa fa-whatsapp'></i>",
-                    "target": "_blank"
-                },
-                {
-                    "url": "https://www.tiktok.com/@lpkgmi2023?_t=8kB6vVQYsoT&_r=1",
-                    "title": "Tiktok GMI",
-                    "bgcolor": "#000000",
-                    "color": "#00000",
-                    "icon": "<i class='bx bxl-tiktok'></i>",
-                    "target": "_blank"
-                },
-                {
-                    "url": "https://www.instagram.com/lpk.garuda.mestakung.indonesia?igsh=NXkxcDlwMWJrY3A4",
-                    "title": "Instagram GMI",
-                    "bgcolor": "#E1306C",
-                    "color": "#ffffff",
-                    "icon": "<i class='bx bxl-instagram'></i>",
-                    "target": "_blank"
-                },
-                {
-                    "url": "https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA",
-                    "title": "YouTube GMI",
-                    "bgcolor": "red",
-                    "color": "white",
-                    "icon": "<i class='fa fa-youtube'></i>",
-                    "target": "_blank"
-                }
-            ]
-            $('.kc_fab_wrapper').kc_fab(links);
-        })
-    </script> --}}
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
