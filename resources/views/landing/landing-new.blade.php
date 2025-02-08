@@ -17,7 +17,7 @@
     <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/bootstrap.min.css?v=3.0') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
 </head>
 
