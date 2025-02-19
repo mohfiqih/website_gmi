@@ -18,8 +18,8 @@
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         Programs</a>
                     <div class="dropdown-menu m-0">
-                        <a href="#" class="dropdown-item">Program GMI Korea</a>
-                        <a href="#" class="dropdown-item">Program GMI Jepang</a>
+                        <a href="#" class="dropdown-item">Program Magang</a>
+                        <a href="#" class="dropdown-item">Program Tokutei Ginou (TG)</a>
                     </div>
                 </div>
                 <a href="#contact" class="nav-item nav-link">Contact</a>

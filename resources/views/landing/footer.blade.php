@@ -1,4 +1,4 @@
-<div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s" id="contact">
+<div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s" id="contact" style="padding-right: 30px;padding-left: 30px;">
     <div class="container py-2 px-lg-2">
         <div class="row g-2">
             <div class="col-md-10 col-lg-6">
@@ -19,13 +19,14 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                <p>LPK Garuda Mestakung, Tegal, Central Java</p>
+                <p class="section-title text-white h5 mb-4">LPK GMI Japan<span></span></p>
+                <p>LPK Garuda Mestakung, Tegal, Jawa Tengah</p>
                 <div class="position-relative w-100 mt-3">
                     <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                        placeholder="lpkgarudamestakungindonesia@gmail.com" style="height: 48px;" readonly>
-                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                            class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        placeholder="lpkgarudamestakungindonesia@gmail.com" style="height: 48px;width: 100px;" readonly>
+                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
+                        <i class="fa fa-envelope text-primary fs-4"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -36,7 +37,7 @@
                 <div class="col-md-6 text-left text-md-start mb-3 mb-md-0" style="text-align: center;">
                     Copyright
                     &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK Garuda
-                        Mestakung Indonesia</a><br />
+                        Mestakung Indonesia (GMI)</a><br />
                     <p style="margin-top: 10px;">Website LPK GMI v.1.3.0</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">

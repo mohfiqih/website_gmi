@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>LPK GMI Jepang - Tegal</title>
+    <title>LPK GMI Japan Tegal</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -196,7 +196,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a href="https://forms.gle/hcRxJmkEWH9X7qkz6">
+                                    <a target="_blank" href="https://forms.gle/hcRxJmkEWH9X7qkz6">
                                         <button class="btn btn-secondary" style="width: 100%;">
                                             <i class="bi bi-book" style="margin-right: 5px;"></i> Daftar Online
                                         </button>
@@ -574,12 +574,12 @@
             <div class="container py-5 px-lg-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span>
+                        <p class="section-title text-white justify-content-center"><span></span>About GMI<span></span>
                         </p>
                         <h1 class="text-center text-white mb-4">Stay Always In LPK GMI</h1>
                         <p class="text-white mb-4" style="text-align: center">LPK Garuda Mestakung Indonesia (GMI)
                             Mencetak
-                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Korea dan Program Magang Jepang
+                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Jepang dan Program Magang dan Tokutei Ginou (TG)
                             dari Awal Hingga Mendapatkan Job</p>
                         <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
@@ -594,50 +594,31 @@
         </div>
         <!-- Newsletter End -->
 
-
         <!-- Projects Start -->
-        {{-- <div class="container-xxl py-5">
+        <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our
                         Galeri GMI<span></span></p>
-                    <h1 class="text-center mb-5">Recently Galeri LPK GMI</h1>
+                    <h1 class="text-center mb-5">Galeri LPK GMI</h1>
                 </div>
-                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-12 text-center">
-                        <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="mx-2 active" data-filter="*">All Galeri</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row g-4 portfolio-container">
+                <div class="row" style="padding-right: 30px;padding-left: 30px;">
                     @foreach ($images as $index => $image)
-                        <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="rounded overflow-hidden">
-                                <div class="position-relative overflow-hidden">
-                                    <img class="img-fluid w-100"
-                                        src="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}"
-                                        alt="">
-
-                                    <div class="portfolio-overlay">
-                                        <a class="btn btn-square btn-outline-light mx-1" href="#"
-                                            data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                        <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                                class="fa fa-link"></i></a>
-                                    </div>
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}" class="card-img-top lazyload" data-lity alt="Image" style="height: 100%; object-fit: cover;height: 300px;">
                                 </div>
-                                <div class="bg-light p-4">
-                                    <p class="text-primary fw-medium mb-2">Galeri LPK GMI</p>
-                                    <h5 class="lh-base mb-0">LPK GMI Program Jepang</a>
+                                <div class="card-footer text-body-secondary">
+                                    <b>LPK GMI Japan</b>
                                 </div>
-                            </div>
+                            </div><br/>
                         </div>
                     @endforeach
                 </div>
             </div>
-        </div> --}}
+        </div>
         <!-- Projects End -->
-
 
         <!-- Testimonial Start -->
         <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -687,7 +668,7 @@
         </div>
 
 
-        <div class="container py-5" id="location">
+        <div class="container py-2" id="location" style="padding-right: 30px;padding-left: 30px;">
             <h5>1. Lokasi LPK GMI Jepang</h5>
             <div class="row" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-12">
@@ -704,18 +685,17 @@
                 class="bi bi-arrow-up"></i></a>
 
         <div class="zoom">
-            <a class="zoom-fab zoom-btn-large" id="zoomBtn"><i class="fa fa-whatsapp"></i></a>
+            <a class="zoom-fab zoom-btn-large bg-success" id="zoomBtn"><i class="fa fa-whatsapp"></i></a>
             <ul class="zoom-menu">
                 <li>
                     <a target="_blank" href="https://wa.me/6282324353371"
-                        class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out"><i
+                        class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out bg-success"><i
                             class="fa fa-whatsapp" style="margin-top: 5px;">
                         </i>
                     </a>
-
                 </li>
                 <li>
-                    <a target="_blank" href="https://www.instagram.com/lpkgmikorea?igsh=NXkxcDlwMWJrY3A4"
+                    <a target="_blank" href="https://www.instagram.com/lpk.gmijapanofficial?igsh=MXVyempkOTIxeWRiMQ=="
                         class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition scale-out"><i
                             class="fa fa-instagram"></i></a>
                 </li>
@@ -725,9 +705,9 @@
                             class="fa fa-youtube"></i></a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://www.tiktok.com/@officiallpkgmi2023?_t=8kkOmn4rnBS&_r=1"
-                        class="zoom-fab zoom-btn-sm zoom-btn-report scale-transition scale-out"><i
-                            class="fa fa-music"></i></a>
+                    <a target="_blank" href="https://www.tiktok.com/@lpk.gmijapantegal?_t=ZS-8u2sgx8yiAq&_r=1"
+                        class="zoom-fab zoom-btn-sm zoom-btn-report scale-transition scale-out" alt="Tiktok">
+                        <i class="fa fa-music"></i></a>
                 </li>
             </ul>
         </div>
