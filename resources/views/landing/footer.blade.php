@@ -37,7 +37,7 @@
                     Copyright
                     &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK Garuda
                         Mestakung Indonesia</a><br />
-                    <p style="margin-top: 10px;">Website LPK GMI Update v.1.2</p>
+                    <p style="margin-top: 10px;">Website LPK GMI v.1.3.0</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">

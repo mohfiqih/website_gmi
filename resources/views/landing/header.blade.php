@@ -15,12 +15,11 @@
                 <a href="#service" class="nav-item nav-link">Service</a>
                 <a href="#location" class="nav-item nav-link">Location</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         Programs</a>
                     <div class="dropdown-menu m-0">
                         <a href="#" class="dropdown-item">Program GMI Korea</a>
                         <a href="#" class="dropdown-item">Program GMI Jepang</a>
-                        <a href="#" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
                 <a href="#contact" class="nav-item nav-link">Contact</a>

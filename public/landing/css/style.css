@@ -42,7 +42,7 @@
     height: 50px;
     line-height: 50px;
     border-radius: 50%;
-    background-color: #128c7e;
+    background-color: #093d91;
     vertical-align: middle;
     text-decoration: none;
     text-align: center;
@@ -54,7 +54,7 @@
 }
 
 .zoom-fab:hover {
-    background-color: #128c7e;
+    background-color: #093d91;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
         0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
@@ -66,7 +66,7 @@
 }
 
 .zoom-btn-person {
-    background-color: #128c7e;
+    background-color: #093d91;
 }
 
 .zoom-btn-person:hover {

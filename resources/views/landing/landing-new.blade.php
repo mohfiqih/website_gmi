@@ -19,6 +19,75 @@
     <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    <!-- Lity CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css">
+    <style>
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px 15px;
+        }
+
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .pagination li {
+            display: inline-block;
+        }
+
+        .pagination li a,
+        .pagination li span {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 1px solid #046392;
+            background-color: white;
+            color: #046392;
+            font-weight: bold;
+        }
+
+        .pagination li a:hover {
+            background-color: #046392;
+            color: white;
+        }
+
+        .pagination li.active span {
+            background-color: #046392;
+            color: white;
+        }
+
+        .pagination li.disabled span {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .pagination-container {
+                padding: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .pagination li a,
+            .pagination li span {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -47,11 +116,11 @@
                         <a href="#location" class="nav-item nav-link">Location</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                Programs GMI Jepang</a>
+                                Program GMI
+                            </a>
                             <div class="dropdown-menu m-0">
-                                {{-- <a href="{{ url('/program-korea')}} " class="dropdown-item">Program GMI Korea</a> --}}
-                                <a href="{{ url('/program-jepang') }}" class="dropdown-item">Program Magang</a>
-                                <a href="#" class="dropdown-item">Program TG</a>
+                                <a href="#" class="dropdown-item">Program Magang Jepang</a>
+                                <a href="#" class="dropdown-item">Program Tokutei Ginou (TG)</a>
                             </div>
                         </div>
                         <a href="#contact" class="nav-item nav-link">Contact</a>
@@ -68,25 +137,31 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="{{ asset('img/sarpras5.jpg') }}" class="d-block w-100" alt="..."
-                                            style="border-radius: 10px;width: 370px;">
+                                            style="border-radius: 10px;width: 300px;" data-lity>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
-                                            alt="..." style="border-radius: 10px;width: 370px;">
+                                         style="border-radius: 10px;width: 370px;" data-lity>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
-                                            alt="..." style="border-radius: 10px;width: 370px;">
+                                         style="border-radius: 10px;width: 300px;" data-lity>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}"
-                                            class="d-block w-100" alt="..."
-                                            style="border-radius: 10px;width: 370px;">
+                                            class="d-block w-100"
+                                            style="border-radius: 10px;width: 300px;" data-lity>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
+                            <p class="justify-content-center text-white">
+                                Welcome to LPK GMI Jepang - Tegal 👋
+                            </p>
+                            
+                            <h2 class="text-white mb-4 animated slideInDown">LPK Garuda Mestakung Indonesia (GMI)</h2>
+
                             <a href="https://maps.app.goo.gl/FaqwnyLMjym9c4N16" target="_blank">
                                 <p style="color: white;text-align: left;" class="animated slideInDown"><i
                                         class="fa fa fa-search text-white mb-2"
@@ -94,43 +169,66 @@
                                     Kabupaten Tegal,
                                     Central Java </p>
                             </a>
-                            <h2 class="text-white mb-4 animated slideInDown">LPK Garuda Mestakung Indonesia (GMI)</h2>
 
                             <p class="text-white pb-1 animated slideInDown" style="text-align: justify;">
                                 LPK GMI (Garuda Mestakung Indonesia) memberikan kesempatan bagi anda yang ingin bekerja
-                                di luar negeri khususnya di Jepang, LPK GMI membuka Program Magang Jepang dan Program
-                                TG.
+                                di luar negeri khususnya di Jepang. LPK GMI telah
+                                membimbing dan
+                                membina banyak anak hingga berangkat bekerja di Luar Negeri khususnya Negara Jepang. LPK GMI memiliki program diantaranya
+                                Program Magang, Program Tokutei Ginou dan Matching Job, LPK GMI memiliki banyak Job dari berbagai sektor kerja di Jepang.
                             </p>
-                            <marquee style="color: white;padding-bottom: 10px;">Let's Join with LPK Garuda Mestakung
+                            <p class="text-white">
+                                Let's Join with LPK Garuda Mestakung
                                 Indonesia | Resmi &
                                 Terpercaya | Terdapat Dana
                                 Talangan | Proses
                                 Transparan | Amanah
-                            </marquee>
-                            <a href="{{ url('/program-jepang') }}" style="width: 100%;margin-top: 10px;"
-                                class="btn btn-secondary py-sm-2 px-sm-3 rounded-pill animated slideInRight"><i
-                                    class="fa fa fa-info mb-2" style="padding-right: 5px;"></i> Program GMI
-                                Jepang (Magang & TG)</a>
+                            </p>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <marquee scrollamount="10"><b>Announcement!</b> LPK Garuda Mestakung Indonesia (GMI) tidak membuka
+                                    cabang diwilayah
+                                    <b>Kota Tegal/sekitarnya!</b> apabila ada lembaga atau perorangan mengatasnamakan kami mohon
+                                    diklarifikasikan terlebih dahulu kepada kami, dan kami tidak bertanggung jawab apabila ada
+                                    oknum yang mengaku cabang kami! Terimakasih
+                                </marquee>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="https://forms.gle/hcRxJmkEWH9X7qkz6">
+                                        <button class="btn btn-secondary" style="width: 100%;">
+                                            <i class="bi bi-book" style="margin-right: 5px;"></i> Daftar Online
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="https://forms.gle/hcRxJmkEWH9X7qkz6">
+                                        <button class="btn btn-secondary" style="width: 100%;">
+                                            <i class="bi bi-instagram" style="margin-right: 5px;"></i> Instagram
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br/><br/>
 
-        <br /><br />
-        <div class="container-xxl py-2" style="padding-top: 20px;">
+        <div class="container-xxl py-2">
             <div class="container py-2 px-lg-5">
                 <div class="row g-4">
-                    <p class="section-title text-secondary">Program Magang<span></span></p>
+                    <p class="section-title text-secondary">Program LPK GMI<span></span></p>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item rounded text-center p-4"
                             style="background-color: #093d91;color: white;">
                             <i class="fa fa-3x fa-book text-white mb-4"></i>
                             <h5 class="mb-3" style="color: white">Program GMI Jepang</h5>
                             <a href="{{ url('program-jepang') }}">
-                                <p class="m-0" style="color: white">Program Magang Jepang | Dana Talangan | Proses
-                                    Transparan | Terpercaya & Amanah</p>
+                                <p class="m-0" style="color: white">Program Magang | Dana Talangan | Proses
+                                    Transparan | Terpercaya & Amanah
+                                </p>
                             </a>
                         </div>
                     </div>
@@ -141,16 +239,15 @@
                             <h5 class="mb-3" style="color: white">Program TG Jepang</h5>
                             <a href="{{ url('program-jepang') }}">
                                 <p class="m-0" style="color: white">Program TG Jepang | Dana Talangan | Proses
-                                    Transparan | Terpercaya & Amanah</p>
+                                    Transparan | Terpercaya & Amanah
+                                </p>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><br />
-        <!-- Feature End -->
+        </div><br/><br/>
 
-        <!-- About Start -->
         <div class="container-xxl py-2" id="about">
             <div class="container py-2 px-lg-5">
                 <div class="row g-5 align-items-center">
@@ -167,21 +264,22 @@
                             No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
                             kecamatan Pangkah Kabupaten Tegal. Dengan kewenangan utama melaksanakan pelatihan bahasa
                             yang berbasis kompetensi dalam rangka tujuan untuk membantu mengentaskan kemiskinan dan
-                            pengangguran di wilayah Jawa Tengah</p><br />
+                            pengangguran di wilayah Jawa Tengah
+                        </p><br />
                         <div class="row" style="padding-bottom: 10px;">
                             <div class="col-md-6" style="padding-bottom: 10px;">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#modalSarpras"><button
                                         type="button" class="btn btn-primary text-white"
                                         style="width: 100%;text-align: left;height: 50px;"><b><i
                                                 class="bi bi-building" style="padding-right: 10px;"></i>
-                                            Sarpras</b></button></a>
+                                            Sarana & Prasarana LPK GMI</b></button></a>
                             </div>
                             <div class="col-md-6" style="padding-bottom: 10px;">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <button type="button" class="btn btn-primary text-white"
                                         style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
                                                 style="padding-right: 10px;"></i>
-                                            Struktur Jepang</b>
+                                            Struktur Organisasi LPK GMI</b>
                                     </button>
                                 </a>
                             </div>
@@ -202,7 +300,7 @@
                                 <p class="mb-2">100%</p>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="100"
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="100"
                                     aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
@@ -212,7 +310,7 @@
                                 <p class="mb-2">100%</p>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="100"
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="100"
                                     aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
@@ -232,7 +330,7 @@
                                 <p class="mb-2">100%</p>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="100"
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="100"
                                     aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
@@ -244,12 +342,21 @@
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#modalKelebihan">
                                             <div class="icon-box">
                                                 <div class="icon"><i class="bx bx-tachometer"></i></div>
-
-                                                <h4>Kelebihan
-                                                    LPK GMI
-                                                </h4>
-
-                                                <p>Klik untuk melihat detail kelebihan LPK GMI</p>
+                                                <h4>Kelebihan LPK GMI</h4>
+                                                <div class="col-md-12">
+                                                    <p class="text-black">
+                                                        <i class="fa fa-check"></i> Pelatihan Bahasa Jepang Dari Awal
+                                                    </p>
+                                                    <p class="text-black">
+                                                        <i class="fa fa-check"></i> Bimbingan Dari Awal Hingga Keberangkatan
+                                                    </p>
+                                                    <p class="text-black">
+                                                        <i class="fa fa-check"></i> Kesempatan Bekerja di Jepang (Magang atau TG)
+                                                    </p>
+                                                    <p class="text-black">
+                                                        <i class="fa fa-check"></i> Pengalaman Tinggal di Jepang
+                                                    </p>
+                                                </div>
                                             </div>
                                         </a>
                                     </div>
@@ -271,19 +378,19 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;">
+                                        alt="..." style="border-radius: 10px;" data-lity>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;">
+                                        alt="..." style="border-radius: 10px;" data-lity>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{{ asset('templates/assets/img/GMI/gmi1.png') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;">
+                                        alt="..." style="border-radius: 10px;" data-lity>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{{ asset('sarpras5.jpg') }}" class="d-block w-100" alt="..."
-                                        style="border-radius: 10px;">
+                                        style="border-radius: 10px;" data-lity>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button"
@@ -298,19 +405,16 @@
                             </button>
                         </div><br />
 
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipMgWp-AOaGdVvClzC-h0NHDrNiljH0P3xta4CBb=s1360-w1360-h1020"
-                            class="img-fluid" alt="" style="border-radius: 10px;">
-                        <br /><br />
                         <img src="{{ asset('img/sarpras5.jpg') }}" class="img-fluid" alt=""
-                            style="border-radius: 10px;">
+                            style="border-radius: 10px;" data-lity>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
 
-        <div class="container py-5 px-lg-5">
-            <p class="section-title text-secondary justify-content-center"><span></span>Bussiness LPK GMI<span></span>
+        <div class="container-xxl py-5 px-lg-5" style="padding-right: 30px;padding-left: 30px;">
+            <p class="section-title text-secondary justify-content-center">
+                <span></span>Bussiness LPK GMI<span></span>
             </p>
             <div class="card">
                 <div class='sk-ww-google-business-profile' data-embed-id='25374831'></div>
@@ -318,36 +422,52 @@
             </div>
         </div>
 
-        {{-- <br />
-        <div class="container py-2 px-lg-5">
-            <p class="section-title text-secondary justify-content-center"><span></span>Galeri LPK GMI<span></span>
-            </p>
-            <div class='sk-ww-google-business-photo' data-embed-id='25420534'></div>
-            <script src='https://widgets.sociablekit.com/google-business-photos/widget.js' async defer></script>
-        </div> --}}
-
-        <section class="testimonials" id="galeri">
+        <div class="container-xxl position-relative p-0" id="home">
             <div class="container" data-aos="fade-up">
-                <div class="section-header">
-                    <h2>Galeri ACC GMI</h2>
-                </div>
-                <div class="row">
+                <center>
+                    <h2>Galeri GMI</h2>
+                </center><br/>
+                <div class="row" style="padding-right: 30px;padding-left: 30px;">
                     @foreach ($images_db as $image)
-                        <div class="col-md-3 mb-4">
-                            <div class="card" style="height: 250px;">
-                                <img src="{{ asset($image->filepath) }}" class="card-img-top" alt="Image"
-                                    style="height: 100%; object-fit: cover;">
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <div class="card">
                                 <div class="card-body">
-                                    <p class="card-text">
-                                        Date: {{ $image->created_at->format('d M Y H:i') }}
-                                    </p>
+                                    <img src="{{ asset('storage/' . $image->filepath) }}" class="card-img-top lazyload" data-lity alt="Image" style="height: 100%; object-fit: cover;height: 300px;">
                                 </div>
-                            </div>
+                                <div class="card-footer text-body-secondary">
+                                    <b>Date:</b> {{ $image->created_at }}<br/>
+                                    {{ \Carbon\Carbon::parse($image->created_at)->diffForHumans() }}
+                                </div>
+                            </div><br/>
                         </div>
                     @endforeach
                 </div>
+                <!-- Custom Pagination -->
+                <div class="pagination-container" style="padding: 0px;">
+                    <ul class="pagination">
+                        @if ($images_db->onFirstPage())
+                            <li class="disabled"><span>&lt;</span></li>
+                        @else
+                            <li><a class="text-white" style="background-color: #046392" href="{{ $images_db->previousPageUrl() }}#galeri" rel="prev">&lt;</a></li>
+                        @endif
+                
+                        @foreach ($images_db->links()->elements[0] as $page => $url)
+                            @if ($page == $images_db->currentPage())
+                                <li class="active"><span>{{ $page }}</span></li>
+                            @else
+                                <li><a href="{{ $url }}#galeri">{{ $page }}</a></li>
+                            @endif
+                        @endforeach
+                
+                        @if ($images_db->hasMorePages())
+                            <li><a class="text-white" style="background-color: #046392" href="{{ $images_db->nextPageUrl() }}#galeri" rel="next">&gt;</a></li>
+                        @else
+                            <li class="disabled"><span>&gt;</span></li>
+                        @endif
+                    </ul>
+                </div>   
             </div>
-        </section>
+        </div>
 
         <!-- Facts Start -->
         <div class="container-xxl bg-primary fact py-2 wow fadeInUp" data-wow-delay="0.1s">
@@ -476,7 +596,7 @@
 
 
         <!-- Projects Start -->
-        <div class="container-xxl py-5">
+        {{-- <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <p class="section-title text-secondary justify-content-center"><span></span>Our
@@ -515,7 +635,7 @@
                     @endforeach
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Projects End -->
 
 
@@ -578,12 +698,7 @@
             </div>
         </div>
 
-
-        <!-- Footer Start -->
-
-        <!-- Footer End -->
         @include('landing.footer')
-        <!-- Back to Top -->
 
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
                 class="bi bi-arrow-up"></i></a>
@@ -639,7 +754,7 @@
 
     {{-- Sarana & Prasarana --}}
     <div class="modal fade" id="modalSarpras" tabindex="-1" aria-labelledby="modalSarpras" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="modalSarpras">Sarana & Prasarana</h1>
@@ -663,7 +778,7 @@
     </div>
 
     {{-- Kelebihan --}}
-    <div class="modal fade" id="modalKelebihan" tabindex="-1" aria-labelledby="modalKelebihan" aria-hidden="true">
+    {{-- <div class="modal fade" id="modalKelebihan" tabindex="-1" aria-labelledby="modalKelebihan" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -693,7 +808,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     {{-- JavaScript --}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -758,6 +873,8 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('landing/js/main.js') }}"></script>
+    <!-- Lity JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
 </body>
 
 </html>
