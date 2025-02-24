@@ -1,243 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Image GMI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        :root {
-            --c-action-primary: #2e44ff;
-            --c-action-primary-accent: #e9e5ff;
-            --c-action-secondary: #e5e5e5;
-            --c-text-primary: #0d0f21;
-            --c-text-secondary: #6a6b76;
-            --c-background-primary: #d0d1de;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            color: var(--c-text-primary);
-            background-color: var(--c-background-primary);
-            line-height: 1.5;
-            padding: 10px;
-        }
-
-        input,
-        button,
-        select,
-        textarea {
-            font: inherit;
-        }
-
-        .modal {
-            width: 90%;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 6vh;
-            margin-bottom: 10vh;
-            background-color: #FFF;
-            border-radius: 0.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal-header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 1.5rem 1.5rem 1rem;
-        }
-
-        .logo-circle {
-            width: 3.5rem;
-            height: 3.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-color: var(--c-action-primary-accent);
-        }
-
-        .logo-circle svg {
-            max-width: 1.5rem;
-        }
-
-        .btn-close {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.25rem;
-            height: 2.25rem;
-            border-radius: 0.25rem;
-            border: none;
-            background-color: transparent;
-        }
-
-        .btn-close:hover,
-        .btn-close:focus {
-            background-color: var(--c-action-primary-accent);
-        }
-
-        .modal-body {
-            padding: 1rem 1.5rem;
-        }
-
-        .modal-title {
-            font-weight: 700;
-        }
-
-        .modal-description {
-            color: var(--c-text-secondary);
-        }
-
-        .upload-area {
-            margin-top: 1.25rem;
-            border: none;
-            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ccc' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-            background-color: transparent;
-            padding: 2rem;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .upload-area:hover,
-        .upload-area:focus {
-            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232e44ff' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-        }
-
-        .upload-area-icon {
-            display: block;
-            width: 2.25rem;
-            height: 2.25rem;
-        }
-
-        .upload-area-title {
-            margin-top: 1rem;
-            display: block;
-            font-weight: 700;
-            color: var(--c-text-primary);
-            text-align: center;
-        }
-
-        .upload-area-description {
-            display: block;
-            color: var(--c-text-secondary);
-            text-align: center;
-        }
-
-        .modal-footer {
-            padding: 1rem 1.5rem 1.5rem;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .modal-footer [class*=btn-] {
-            margin-left: 0.75rem;
-        }
-
-        .btn-secondary,
-        .btn-primary {
-            padding: 0.5rem 1rem;
-            font-weight: 500;
-            border: 2px solid var(--c-action-secondary);
-            border-radius: 0.25rem;
-            background-color: transparent;
-        }
-
-        .btn-primary {
-            color: #FFF;
-            background-color: var(--c-action-primary);
-            border-color: var(--c-action-primary);
-        }
-
-        .file-upload-wrapper {
-            position: relative;
-            text-align: center;
-        }
-
-        .file-upload-label {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 10px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        #images {
-            display: none;
-        }
-
-        @media (max-width: 600px) {
-            .upload-area {
-                padding: 1rem;
-            }
-
-            .modal-header {
-                padding: 1rem;
-            }
-
-            .modal-body {
-                padding: 1rem;
-            }
-        }
-    </style>
-</head>
-
-<body style="padding-bottom: 0px;margin-bottom: 0px;background-color: #1e6c93;">
-    <div class="modal">
-        <div class="modal-body">
-            <h2 class="modal-title">Upload a file</h2>
-            <p class="modal-description">Attach the file below</p>
-            @if (session('success'))
-                <div class="alert alert-success">{{ session('success') }}</div>
-            @endif
-            <form id="uploadForm" action="{{ route('images.store') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="form-group">
-                    <label for="images" class="upload-area" style="cursor: pointer;">
-                        <span class="upload-area-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="340.531" height="419.116"
-                                viewBox="0 0 340.531 419.116">
-                                <!-- SVG Content -->
-                            </svg>
-                        </span>
-                        <span class="upload-area-title">Drag file(s) here to upload.</span>
-                        <span class="upload-area-description">
-                            Alternatively, you can select a file by <br />
-                        </span>
-                        <div class="file-upload-wrapper">
-                            <label for="images" class="file-upload-label">Choose Image</label>
-                            <input type="file" name="images[]" id="images" class="d-none" multiple required>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="modal-footer" style="margin-top: 10px;">
-                    <button type="submit" class="btn btn-primary">Upload</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
-
-</html> --}}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -247,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -597,8 +358,9 @@
                                                     </span>
                                                     <span class="upload-area-title">Drag file(s) here to upload.</span>
                                                     <span class="upload-area-description">
-                                                        Alternatively, you can select a file by <br />
+                                                        Please select image for upload.<br />
                                                     </span>
+                                                    <p id="fileCount" style="margin-top: 10px;">No file selected</p>
                                                     <div class="file-upload-wrapper">
                                                         <label for="images" class="file-upload-label">Choose Image</label>
                                                         <input type="file" name="images[]" id="images" class="d-none" multiple required>
@@ -616,8 +378,171 @@
                     </div>
                 </div>
             </div>
+
+            <section class="testimonials" id="galeri" style="padding-top: 20px;">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-header">
+                        <center>
+                            <h2>LPK GMI Japan</h2>
+                        </center>
+                    </div>
+                    <div class="row">
+                        @foreach ($images_db as $image)
+                            <div class="col-sm-3 mb-3 mb-sm-0">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="{{ asset('storage/' . $image->filepath) }}" data-lity class="card-img-top lazyload" alt="Image" style="height: 100%; object-fit: cover;height: 300px;">
+                                    </div>
+                                    <div class="card-footer text-body-secondary">
+                                        <b>Date:</b> {{ $image->created_at }}<br/>
+                                        {{ \Carbon\Carbon::parse($image->created_at)->diffForHumans() }}
+                                        <button class="btn btn-danger btn-sm delete-image" data-id="{{ $image->id }}" style="float: right;">
+                                            Delete
+                                        </button>
+                                    </div>
+                                </div><br/>
+                            </div>
+                        @endforeach
+                    </div>
+            
+                    <!-- Custom Pagination -->
+                    <div class="pagination-container" style="padding: 0px;">
+                        <ul class="pagination">
+                            @if ($images_db->onFirstPage())
+                                <li class="disabled"><span>&lt;</span></li>
+                            @else
+                                <li><a class="text-white" style="background-color: #046392" href="{{ $images_db->previousPageUrl() }}#galeri" rel="prev">&lt;</a></li>
+                            @endif
+                    
+                            @foreach ($images_db->links()->elements[0] as $page => $url)
+                                @if ($page == $images_db->currentPage())
+                                    <li class="active"><span>{{ $page }}</span></li>
+                                @else
+                                    <li><a href="{{ $url }}#galeri">{{ $page }}</a></li>
+                                @endif
+                            @endforeach
+                    
+                            @if ($images_db->hasMorePages())
+                                <li><a class="text-white" style="background-color: #046392" href="{{ $images_db->nextPageUrl() }}#galeri" rel="next">&gt;</a></li>
+                            @else
+                                <li class="disabled"><span>&gt;</span></li>
+                            @endif
+                        </ul>
+                    </div>            
+                </div>
+            </section> 
         </div>
     </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function() {
+            $("#images").on("change", function() {
+                let fileCount = this.files.length;
+                
+                if (fileCount > 10) {
+                    Swal.fire("Warning!", "Maksimal 10 file yang bisa diupload!", "warning");
+                    this.value = "";
+                    fileCount = 0;
+                }
+
+                let fileCountText = fileCount > 0 ? `${fileCount} file(s) selected` : "No file selected";
+                $("#fileCount").text(fileCountText);
+            });
+
+            // Upload
+            $("#uploadForm").on("submit", function(e) {
+                e.preventDefault();
+
+                let formData = new FormData(this);
+
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "Do you want to upload these files?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#046392",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Upload"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: "{{ route('images.store') }}",
+                            type: "POST",
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                Swal.fire({
+                                    title: "Success!",
+                                    text: "Your files have been uploaded.",
+                                    icon: "success",
+                                    confirmButtonText: "OK"
+                                }).then(() => {
+                                    location.reload();
+                                });
+
+                                $("#uploadForm")[0].reset();
+                                $("#fileCount").text("No file selected");
+                            },
+                            error: function(xhr) {
+                                Swal.fire({
+                                    title: "Error!",
+                                    text: "Failed to upload files. Please try again.",
+                                    icon: "error",
+                                    confirmButtonText: "OK"
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Delete
+            $(".delete-image").on("click", function () {
+                let imageId = $(this).data("id");
+                let token = $('meta[name="csrf-token"]').attr("content");
+
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "Hapus file tersebut! hanya terhapus di database.",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "OK",
+                    cancelButtonText: "Batal",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: "/images/" + imageId,
+                            type: "DELETE",
+                            data: {
+                                _token: token
+                            },
+                            success: function (response) {
+                                if (response.success) {
+                                    $(".image-card-" + imageId).fadeOut("slow", function () {
+                                        $(this).remove();
+                                    });
+                                    Swal.fire("Dihapus!", "Gambar berhasil dihapus.", "success").then(() => {
+                                        location.reload();
+                                    });
+                                } else {
+                                    Swal.fire("Gagal!", "Gagal menghapus gambar.", "error");
+                                }
+                            },
+                            error: function () {
+                                Swal.fire("Error!", "Terjadi kesalahan saat menghapus.", "error");
+                            },
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>

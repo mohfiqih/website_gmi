@@ -10,7 +10,8 @@ class ImageUploadController extends Controller
 {
     public function index()
     {
-        return view('upload.index');
+        $images_db = Image::orderBy('created_at', 'desc')->paginate(12);
+        return view('upload.index', ['images_db' => $images_db]);
     }
 
     public function store(Request $request)
@@ -31,5 +32,18 @@ class ImageUploadController extends Controller
         }
 
         return back()->with('success', 'Images uploaded successfully');
+    }
+
+    public function delete($id)
+    {
+        $image = Image::find($id);
+
+        if (!$image) {
+            return response()->json(['success' => false, 'message' => 'Gambar tidak ditemukan.']);
+        }
+
+        $image->delete();
+
+        return response()->json(['success' => true, 'message' => 'Gambar berhasil dihapus.']);
     }
 }

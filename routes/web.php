@@ -47,3 +47,4 @@ Route::get('/program-jepang', [LandingPageController::class, 'program_jepang'])-
 
 Route::get('/upload', [ImageUploadController::class, 'index'])->name('images.index');
 Route::post('/upload', [ImageUploadController::class, 'store'])->name('images.store');
+Route::delete('/images/{id}', [ImageUploadController::class, 'delete'])->name('images.delete');
