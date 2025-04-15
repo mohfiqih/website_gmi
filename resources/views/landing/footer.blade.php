@@ -39,7 +39,7 @@
                     Copyright
                     &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK GMI JAPAN
                         TEGAL</a><br />
-                    <p style="margin-top: 10px;">Website Version v.1.3.1</p>
+                    <p style="margin-top: 10px;">Website Version v.1.3.2</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
