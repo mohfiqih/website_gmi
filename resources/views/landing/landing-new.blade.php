@@ -211,7 +211,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a target="_blank">
+                                    <a href="{{ url('/pendaftaran-siswa-baru') }}" target="_blank">
                                         <button class="btn btn-warning" style="width: 100%;height: 50px;">
                                             <i class="bi bi-book"></i>
                                             Pendaftaran
