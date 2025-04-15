@@ -526,9 +526,9 @@
                                     <label class="text-label" style="font-weight: bold">ALAMAT LENGKAP:</label>
                                     <p class="text-danger" style="font-size: 11px;">*) Mohon gunakan huruf KAPITAL,
                                         isian
-                                        wajib. <br /> *) (e.g: JL. BAWAL GITUNG RT 01/RW 02, DESA HARJOSARI LOR,
+                                        wajib. <br /> *) (e.g: KAIBUN RT 03/RW 03, DESA BALAMOA,
                                         KECAMATAN
-                                        ADIWERNA, KABUPATEN TEGAL, JAWA TENGAH, INDONESIA)</p>
+                                        PANGKAH, KABUPATEN TEGAL, JAWA TENGAH, INDONESIA)</p>
                                     <input type="text" class="form-control" name="alamat"
                                         placeholder="Masukan alamat anda" required>
                                 </div>
