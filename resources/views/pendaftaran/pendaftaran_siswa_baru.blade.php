@@ -22,90 +22,18 @@
     <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Tagify CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
+
     <!-- Lity CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css">
 
-    <style>
-        .pagination-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            padding: 10px 15px;
-        }
-
-        .pagination {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            gap: 5px;
-            flex-wrap: wrap;
-        }
-
-        .pagination li {
-            display: inline-block;
-        }
-
-        .pagination li a,
-        .pagination li span {
-            display: inline-block;
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            border: 1px solid #093d91;
-            background-color: white;
-            color: #093d91;
-            font-weight: bold;
-        }
-
-        .pagination li a:hover {
-            background-color: #093d91;
-            color: white;
-        }
-
-        .pagination li.active span {
-            background-color: #093d91;
-            color: white;
-        }
-
-        .pagination li.disabled span {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        @media (max-width: 768px) {
-            .pagination-container {
-                padding: 10px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .pagination {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .pagination li a,
-            .pagination li span {
-                padding: 6px 10px;
-                font-size: 14px;
-            }
-        }
-
-        .banner-video {
-            width: 90%;
-            height: 300px;
-            overflow: hidden;
-            border-radius: 5px;
-            position: relative;
-        }
-
-        .banner-video video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    {{-- Year Picker --}}
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 
     <style>
         .text-label {
@@ -358,6 +286,86 @@
         .text-white {
             color: white;
             text-decoration: none;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px 15px;
+        }
+
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .pagination li {
+            display: inline-block;
+        }
+
+        .pagination li a,
+        .pagination li span {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 1px solid #093d91;
+            background-color: white;
+            color: #093d91;
+            font-weight: bold;
+        }
+
+        .pagination li a:hover {
+            background-color: #093d91;
+            color: white;
+        }
+
+        .pagination li.active span {
+            background-color: #093d91;
+            color: white;
+        }
+
+        .pagination li.disabled span {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .pagination-container {
+                padding: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .pagination li a,
+            .pagination li span {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+        }
+
+        .banner-video {
+            width: 90%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .banner-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -1651,7 +1659,17 @@
 
     <script src='https://widgets.sociablekit.com/google-business-profile/widget.js' async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{ asset('templates/assets/js/kc.fab.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/js/kc.fab.js') }}"></script>
     <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+    <script src="{{ asset('templates/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('templates/assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('templates/assets/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
     <!-- Lity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
