@@ -420,7 +420,7 @@
 
             <div class="container-xxl bg-primary hero-header">
                 <div class="col-lg-12 text-center text-lg-start">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide justify-content-center"
+                    <div id="carouselExampleSlidesOnly" class="carousel slide justify-content-center ml-2 mr-2"
                         data-bs-ride="carousel">
                         <center>
                             <div class="banner-video">
@@ -433,7 +433,7 @@
                             <h2 class="text-white">
                                 DATA PENDAFTARAN SISWA BARU (CV) LPK GMI JAPAN TEGAL
                             </h2>
-                            <p class="text-white">LPK GMI Japan Berlokasi di RT.03/RW.03, Kaibun, Balamoa,
+                            <p class="text-white" style="padding-left: 10px;padding-right: 10px;">LPK GMI Japan Berlokasi di RT.03/RW.03, Kaibun, Balamoa,
                                 Kec.
                                 Pangkah, Kabupaten Tegal, Jawa Tengah 5247.
                             </p>

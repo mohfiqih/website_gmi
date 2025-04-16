@@ -200,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 text-center text-lg-start">
+                        <div class="col-lg-6 text-center text-lg-start mr-2 ml-2">
                             <p class="justify-content-center text-white">
                                 Welcome to Data Pendaftaran LPK GMI Japan 👋
                             </p>

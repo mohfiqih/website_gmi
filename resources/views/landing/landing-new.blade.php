@@ -213,16 +213,16 @@
                                 <div class="col-md-6">
                                     <a href="{{ url('/pendaftaran-siswa-baru') }}" target="_blank">
                                         <button class="btn btn-warning" style="width: 100%;height: 50px;">
-                                            <i class="bi bi-book"></i>
-                                            Pendaftaran
+                                            <i class="bi bi-book" style="margin-right: 5px;"></i>
+                                            <b>Pendaftaran</b>
                                         </button>
                                     </a>
                                 </div>
                                 <div class="col-md-6">
                                     <a href="https://forms.gle/hcRxJmkEWH9X7qkz6">
                                         <button class="btn btn-warning" style="width: 100%;height: 50px;">
-                                            <i class="bi bi-instagram"></i>
-                                            Instagram
+                                            <i class="bi bi-instagram" style="margin-right: 5px;"></i>
+                                            <b>Instagram</b>
                                         </button>
                                     </a>
                                 </div>
