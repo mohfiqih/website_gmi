@@ -24,6 +24,7 @@
 
     <!-- Lity CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
 
     <style>
         .pagination-container {
@@ -214,7 +215,7 @@
                                     Tengah 5247
                                 </li>
                                 <li class="text-white pb-1 animated slideInDown" style="text-align: justify;">
-                                    LPK ACC GMI Japan lembaga Resmi, Amanah dan Legal.
+                                    LPK GMI JAPAN lembaga Resmi, Amanah dan Legal.
                                 </li>
                             </ul>
                             <div class="row">
@@ -371,8 +372,15 @@
     </div>
 
     {{-- JavaScript --}}
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(["_setAccount", "UA-36251023-1"]);
@@ -421,8 +429,6 @@
         });
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('landing/lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('landing/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('landing/lib/waypoints/waypoints.min.js') }}"></script>
@@ -435,12 +441,6 @@
     <script src="{{ asset('landing/js/main.js') }}"></script>
     <!-- Lity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
-
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
     <script>
         // Refresh tabel

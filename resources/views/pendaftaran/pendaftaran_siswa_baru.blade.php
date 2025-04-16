@@ -137,16 +137,6 @@
             z-index: -2;
         }
 
-        .banner-img {
-            background-image: url('https://amanahcitracemerlang.id/templates/assets/img/acc.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 300px;
-            border-radius: 5px;
-        }
-
         .banner-video {
             width: 90%;
             height: 300px;
@@ -1192,10 +1182,8 @@
                                 <div class="form-group">
                                     <label class="text-label" style="font-weight: bold">NOMOR HP KELUARGA
                                         (AKTIF):</label>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi pekerjaan ibu gunakan
-                                        huruf
-                                        KAPITAL, isian wajib.</p>
-                                    <input type="text" class="form-control" name="no_hp_keluarga"
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi nomor HP Keluarga, isian wajib.</p>
+                                    <input type="number" class="form-control" name="no_hp_keluarga"
                                         placeholder="Masukan nomor hp keluarga" required>
                                 </div>
 
@@ -1462,7 +1450,7 @@
                                 if (response.success) {
                                     Swal.fire({
                                         title: 'Berhasil!',
-                                        text: 'Berhasil daftar di LPK ACC Japan Centre!',
+                                        text: 'Berhasil daftar di LPK GMI JAPAN!',
                                         icon: 'success',
                                         timer: 3000,
                                         showConfirmButton: false,
