@@ -118,9 +118,7 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- <h1 class="sitename">Impact</h1> -->
-           <a href="/">
             <img src="https://garudamestakungindonesia.my.id/img/logo-jepang-removebg.jpg" width="80" height="80" alt="">
-           </a>
           <span>.</span>
         </a>
 
@@ -391,14 +389,14 @@
 
           <div class="col-lg-4">
             <div class="pricing-item">
-              <h3>Biaya Proses Job</h3>
+              <h3>Biaya Proses Job Order</h3>
               <div class="icon">
                 <i class="bi bi-send"></i>
               </div>
-              <h4>Administrasi</span></h4>
+              <h4>35 - 70 Jt<span> / Job</span></h4>
               <ul>
                 <li><i class="bi bi-check"></i> <span>
-                    Biaya Proses Rp. 35.000.000 - Rp. 55.000.000 (Administrasi)
+                    Biaya Proses Rp. 35.000.000 - Rp. 70.000.000 (Administrasi)
                     </span>
                 </li>
                 <li><i class="bi bi-check"></i> <span>Dana Talangan dari Bank 80% (Jaminan)</span></li>
