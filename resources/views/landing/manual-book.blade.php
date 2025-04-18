@@ -118,7 +118,9 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- <h1 class="sitename">Impact</h1> -->
-           <img src="https://garudamestakungindonesia.my.id/img/logo-jepang-removebg.jpg" width="80" height="80" alt="">
+           <a href="/">
+            <img src="https://garudamestakungindonesia.my.id/img/logo-jepang-removebg.jpg" width="80" height="80" alt="">
+           </a>
           <span>.</span>
         </a>
 
@@ -147,6 +149,7 @@
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h2><span>Informasi LPK GMI JAPAN TEGAL</h2>
             <p class="text-justify">Informasi seputar LPK GMI JAPAN, Info Pendaftaran, Persyaratan, Job, Biaya dan Fasilitas. <b>Lokasi:</b> RT.03/RW.03, Kaibun, Balamoa, Kec. Pangkah, Kabupaten Tegal, Jawa Tengah 5247</p>
+            <p>Klik Website LPK GMI : <a href="/">https://garudamestakungindonesia.my.id/</a></p>
             <div class="d-flex">
               <a target="_blank" href="{{ asset('book/manual_book_gmi.pdf') }}" class="btn-get-started">PDF Manual Book</a>
               <a href="https://garudamestakungindonesia.my.id/img/gmi.mp4" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch GMI</span></a>

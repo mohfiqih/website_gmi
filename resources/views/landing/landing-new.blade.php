@@ -219,10 +219,10 @@
                                     </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="https://forms.gle/hcRxJmkEWH9X7qkz6">
+                                    <a href="/manual-book">
                                         <button class="btn btn-warning" style="width: 100%;height: 50px;">
-                                            <i class="bi bi-instagram" style="margin-right: 5px;"></i>
-                                            <b>Instagram</b>
+                                            <i class="bi bi-book" style="margin-right: 5px;"></i>
+                                            <b>Manual Book</b>
                                         </button>
                                     </a>
                                 </div>
@@ -608,25 +608,24 @@
         </a>
 
         <div class="zoom">
-            <a class="zoom-fab zoom-btn-large bg-success" id="zoomBtn"><i class="fa fa-whatsapp"></i></a>
+            <a class="zoom-fab zoom-btn-large bg-success" id="zoomBtn"><i class="bi bi-whatsapp"></i></a>
             <ul class="zoom-menu">
                 <li>
                     <a target="_blank" href="https://wa.me/6282324353371"
                         class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out bg-success">
-                        <i class="fas fa-whatsapp" style="margin-top: 5px;">
-                        </i>
+                        <i class="bi bi-whatsapp"></i>
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="https://www.instagram.com/lpk.gmijapanofficial?igsh=MXVyempkOTIxeWRiMQ=="
                         class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition scale-out">
-                        <i class="fa fa-instagram"></i>
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA"
                         class="zoom-fab zoom-btn-sm zoom-btn-tangram scale-transition scale-out">
-                        <i class="fas fa-youtube"></i>
+                        <i class="bi bi-youtube"></i>
                     </a>
                 </li>
                 <li>
