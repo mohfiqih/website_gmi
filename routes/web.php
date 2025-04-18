@@ -9,6 +9,9 @@ use App\Http\Controllers\PendaftaranController;
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.index');
 Route::get('/program-jepang', [LandingPageController::class, 'program_jepang'])->name('landing.program_jepang');
 
+# manual book
+Route::get('/manual-book', [LandingPageController::class, 'manual_book'])->name('landing.manual_book');
+
 # upload image
 Route::get('/upload', [ImageUploadController::class, 'index'])->name('images.index');
 Route::post('/upload', [ImageUploadController::class, 'store'])->name('images.store');
