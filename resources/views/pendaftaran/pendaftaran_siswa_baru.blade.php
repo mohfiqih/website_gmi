@@ -454,7 +454,7 @@
                                 <a class="nav-link disabled" id="nav-step-2" href="javascript:void(0)">2.
                                     Kesehatan
                                     <br>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                    <p class="text-danger warning-text" style="font-size: 11px;">*) Mohon isi tab yang active
                                         terlebih dahulu.</p>
                                 </a>
                             </li>
@@ -462,7 +462,7 @@
                                 <a class="nav-link disabled" id="nav-step-3" href="javascript:void(0)">3.
                                     Motivasi
                                     <br>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                    <p class="text-danger warning-text" style="font-size: 11px;">*) Mohon isi tab yang active
                                         terlebih dahulu.</p>
                                 </a>
                             </li>
@@ -470,7 +470,7 @@
                                 <a class="nav-link disabled" id="nav-step-4" href="javascript:void(0)">4.
                                     Pendidikan
                                     <br>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                    <p class="text-danger warning-text" style="font-size: 11px;">*) Mohon isi tab yang active
                                         terlebih dahulu.</p>
                                 </a>
                             </li>
@@ -479,7 +479,7 @@
                                     &
                                     Lain-lain
                                     <br>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                    <p class="text-danger warning-text" style="font-size: 11px;">*) Mohon isi tab yang active
                                         terlebih dahulu.</p>
                                 </a>
                             </li>
@@ -488,7 +488,7 @@
                                     Keluarga &
                                     Ukuran
                                     <br>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                    <p class="text-danger warning-text" style="font-size: 11px;">*) Mohon isi tab yang active
                                         terlebih dahulu.</p>
                                 </a>
                             </li>
