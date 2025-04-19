@@ -364,7 +364,7 @@
     <div class="container-xxl bg-white p-0">
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="/" class="navbar-brand p-0">
                     <img src="img/logo-jepang-removebg.jpg" alt="Logo" width="100px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -373,7 +373,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -423,7 +423,8 @@
                             <h2 class="text-white">
                                 DATA PENDAFTARAN SISWA BARU (CV) LPK GMI JAPAN TEGAL
                             </h2>
-                            <p class="text-white" style="padding-left: 10px;padding-right: 10px;">LPK GMI Japan Berlokasi di RT.03/RW.03, Kaibun, Balamoa,
+                            <p class="text-white" style="padding-left: 10px;padding-right: 10px;">LPK GMI Japan
+                                Berlokasi di RT.03/RW.03, Kaibun, Balamoa,
                                 Kec.
                                 Pangkah, Kabupaten Tegal, Jawa Tengah 5247.
                             </p>
@@ -451,25 +452,45 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" id="nav-step-2" href="javascript:void(0)">2.
-                                    Kesehatan</a>
+                                    Kesehatan
+                                    <br>
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                        terlebih dahulu.</p>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" id="nav-step-3" href="javascript:void(0)">3.
-                                    Motivasi</a>
+                                    Motivasi
+                                    <br>
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                        terlebih dahulu.</p>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" id="nav-step-4" href="javascript:void(0)">4.
-                                    Pendidikan</a>
+                                    Pendidikan
+                                    <br>
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                        terlebih dahulu.</p>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" id="nav-step-5" href="javascript:void(0)">5. Pengalaman
                                     &
-                                    Lain-lain</a>
+                                    Lain-lain
+                                    <br>
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                        terlebih dahulu.</p>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" id="nav-step-6" href="javascript:void(0)">6. Data
                                     Keluarga &
-                                    Ukuran</a>
+                                    Ukuran
+                                    <br>
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi tab yang active
+                                        terlebih dahulu.</p>
+                                </a>
                             </li>
                         </ul>
 
@@ -1182,7 +1203,8 @@
                                 <div class="form-group">
                                     <label class="text-label" style="font-weight: bold">NOMOR HP KELUARGA
                                         (AKTIF):</label>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi nomor HP Keluarga, isian wajib.</p>
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi nomor HP Keluarga,
+                                        isian wajib.</p>
                                     <input type="number" class="form-control" name="no_hp_keluarga"
                                         placeholder="Masukan nomor hp keluarga" required>
                                 </div>
@@ -1308,10 +1330,14 @@
         function enableStepNavLinks() {
             for (let i = 1; i <= totalSteps; i++) {
                 const navLink = document.getElementById(`nav-step-${i}`);
+                const warningText = navLink.parentElement.querySelector('.warning-text'); // <-- di sini ubahannya
+
                 if (i <= maxStepReached) {
                     navLink.classList.remove('disabled');
+                    if (warningText) warningText.classList.add('d-none');
                 } else {
                     navLink.classList.add('disabled');
+                    if (warningText) warningText.classList.remove('d-none');
                 }
             }
         }
