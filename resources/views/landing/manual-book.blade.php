@@ -158,8 +158,11 @@
                             Tegal, Jawa Tengah 5247</p>
                         <p>Klik Website LPK GMI : <a href="/">https://garudamestakungindonesia.my.id/</a></p>
                         <div class="d-flex">
-                            <a target="_blank" href="{{ asset('book/manual_book_gmi.pdf') }}"
-                                class="btn-get-started">PDF Manual Book</a>
+                            <a href="{{ asset('book/manual_book_gmi.pdf') }}" 
+                                class="btn-get-started"
+                                download>
+                                PDF Manual Book
+                            </a>
                             <a href="https://garudamestakungindonesia.my.id/img/gmi.mp4"
                                 class="glightbox btn-watch-video d-flex align-items-center"><i
                                     class="bi bi-play-circle"></i><span>Watch GMI</span></a>
