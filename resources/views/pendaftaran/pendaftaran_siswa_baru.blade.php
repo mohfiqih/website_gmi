@@ -1050,8 +1050,7 @@
                                         pernah klik
                                         <b>Tidak</b>, isian wajib.
                                     </p>
-                                    <select name="kerabat_dijepang" class="form-control" id="kerabat_dijepang"
-                                        required>
+                                    <select name="kerabat_dijepang" class="form-control" id="kerabat_dijepang">
                                         <option value="" disabled selected>Pilih opsi pertanyaan</option>
                                         <option value="YA">YA</option>
                                         <option value="TIDAK">TIDAK</option>
@@ -1065,7 +1064,7 @@
                                     <p class="text-danger" style="font-size: 11px;">*) Mohon pilih jika ada, jika
                                         tidak ada
                                         kosongkan saja.</p>
-                                    <select name="hubungan_kerabat_dijepang" class="form-control" required>
+                                    <select name="hubungan_kerabat_dijepang" class="form-control">
                                         <option value="" disabled selected>Pilih Hubungan Kerabat</option>
                                         <option value="TEMAN">TEMAN</option>
                                         <option value="KELUARGA">KELUARGA</option>
@@ -1090,7 +1089,7 @@
                                     <p class="text-danger" style="font-size: 11px;">*) Mohon pilih buku yang
                                         digunakan, jika
                                         belum kosongkan.</p>
-                                    <select name="buku_yang_dipakai" class="form-control" required>
+                                    <select name="buku_yang_dipakai" class="form-control">
                                         <option value="" disabled selected>Pilih Buku yang digunakan</option>
                                         <option value="NIHONGO">NIHONGO</option>
                                     </select>
@@ -1121,14 +1120,14 @@
                                     <label class="text-label" style="font-weight: bold">NAMA AYAH:</label>
                                     <p class="text-danger" style="font-size: 11px;">*) Mohon isi nama ayah gunakan
                                         huruf
-                                        KAPITAL, jika tidak ada kosongkan saja.</p>
+                                        Kapital, jika tidak ada kosongkan saja.</p>
                                     <input type="text" class="form-control" name="nama_ayah"
-                                        placeholder="Masukan nama lengkap ayah" required>
+                                        placeholder="Masukan nama lengkap ayah">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="text-label" style="font-weight: bold">USIA AYAH:</label>
-                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi usia ibu, jika tidak
+                                    <p class="text-danger" style="font-size: 11px;">*) Mohon isi usia ayah, jika tidak
                                         ada
                                         kosongkan saja</p>
                                     <input type="number" class="form-control" name="usia_ayah"
@@ -1139,7 +1138,7 @@
                                     <label class="text-label" style="font-weight: bold">PEKERJAAN AYAH:</label>
                                     <p class="text-danger" style="font-size: 11px;">*) Mohon isi pekerjaan ayah
                                         gunakan huruf
-                                        KAPITAL, jika tidak ada kosongkan saja</p>
+                                        Kapital, jika tidak ada kosongkan saja</p>
                                     <input type="text" class="form-control" name="pekerjaan_ayah"
                                         placeholder="Masukan pekerjaan ayah">
                                 </div>
@@ -1165,7 +1164,7 @@
                                     <label class="text-label" style="font-weight: bold">PEKERJAAN IBU:</label>
                                     <p class="text-danger" style="font-size: 11px;">*) Mohon isi pekerjaan ibu gunakan
                                         huruf
-                                        KAPITAL, jika tidak kosongkan saja</p>
+                                        Kapital, jika tidak kosongkan saja</p>
                                     <input type="text" class="form-control" name="pekerjaan_ibu"
                                         placeholder="Masukan pekerjaan ibu">
                                 </div>
