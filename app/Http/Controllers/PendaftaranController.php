@@ -28,8 +28,27 @@ class PendaftaranController extends Controller
 
     public function store_pendaftaran_baru(Request $request)
     {
+        $response  = Http::get($this->googleScriptUrl);
+        $data_list = array_reverse($response->json());
+
         try {
             $input = $request->all();
+
+            $email_input = strtolower(trim($input['email'] ?? ''));
+            $nama_input  = strtoupper(trim($input['nama_indonesia'] ?? ''));
+
+            foreach ($data_list as $row) {
+                $email_lama = strtolower(trim($row['EMAIL'] ?? ''));
+                $nama_lama  = strtoupper(trim($row['NAMA (INDONESIA)'] ?? ''));
+
+                if ($email_lama === $email_input || $nama_lama === $nama_input) {
+                    return response()->json([
+                        'success'   => false,
+                        'duplicate' => true,
+                        'message'   => 'Data anda sudah terdaftar di LPK GMI JAPAN!'
+                    ]);
+                }
+            }
 
             $pengalamanList = [];
             $perguruanList  = [];
