@@ -234,7 +234,7 @@
             </div>
         </div><br /><br />
 
-        <div class="container-xxl py-2 table-wrapper">
+        {{-- <div class="container-xxl py-2 table-wrapper">
             <div class="card">
                 <div class="card-body" style="padding: 30px; border-radius: 10px;">
                     <div class="d-flex justify-content-between mb-3">
@@ -361,6 +361,233 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+
+        {{-- Data Pendaftaran --}}
+        <div class="container mt-4">
+            <div class="card">
+                <div class="card-body" style="padding: 20px; border-radius: 10px;">
+                    {{-- <div class="d-flex justify-content-between mb-3">
+                        <div>
+                            <label>
+                                Show 
+                                <select id="entriesSelect" class="form-control d-inline-block w-auto">
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="text" id="tableSearch" class="form-control" placeholder="Search...">
+                        </div>
+                    </div> --}}
+
+                    {{-- <form action="{{ route('data-pendaftaran.export-pdf') }}" method="GET"
+                        class="d-flex align-items-center mb-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label><b>Dari Tanggal</b></label>
+                                <input type="date" name="start_date" class="form-control me-2 mb-2" required>
+                                <label><b>Sampai Tanggal</b></label>
+                                <input type="date" name="end_date" class="form-control me-2 mb-2" required>
+                            </div>
+                            <div class="col md-12">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fa fa-download"></i> Export PDF
+                                </button>
+                            </div>
+                        </div>
+                    </form> --}}
+
+                    {{-- <div class="table-responsive">
+                        <div id="refreshIndicator" style="display: none; font-size: 15px; color: #888; margin-right: 10px;">
+                            🔄 Refreshing data...
+                        </div>
+                        <br/>
+                        <table id="mentorDataTable" class="table table-striped table-bordered fixed-header-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Download CV</th>
+                                    <th>Timestamp</th>
+                                    <th>EMAIL</th>
+                                    <th>NAMA (KATAKANA)</th>
+                                    <th>NAMA (INDONESIA)</th>
+                                    <th>ALAMAT</th>
+                                    <th>TANGGAL LAHIR</th>
+                                    <th>USIA</th>
+                                    <th>KELAMIN</th>
+                                    <th>NO HP AKTIF</th>
+                                    <th>AGAMA</th>
+                                    <th>TINGGI</th>
+                                    <th>BERAT</th>
+                                    <th>GOL DARAH</th>
+                                    <th>BUTA WARNA</th>
+                                    <th>MATA KIRI</th>
+                                    <th>MATA KANAN</th>
+                                    <th>PERNAH OPERASI</th>
+                                    <th>APAKAH SEDANG MINUM</th>
+                                    <th>TANGAN</th>
+                                    <th>MEROKOK</th>
+                                    <th>PENYAKIT DALAM</th>
+                                    <th>KEAHLIAN</th>
+                                    <th>SIFAT/KEPRIBADIAN</th>
+                                    <th>KELEBIHAN</th>
+                                    <th>KELEMAHAN</th>
+                                    <th>STATUS</th>
+                                    <th>HOBI</th>
+                                    <th>MOTIVASI</th>
+                                    <th>SELAMA 3 TAHUN DI JEPANG MAU NABUNG BERAPA</th>
+                                    <th>SETELAH PULANG JEPANG, APA YANG AKAN DILAKUKAN</th>
+                                    <th>APAKAH ANDA PERNAH TINGGAL/BEKERJA DI JEPANG</th>
+                                    <th>JIKA YA, KUALIFIKASI APA YANG ANDA LAMAR</th>
+                                    <th>SEKOLAH DASAR (SD)</th>
+                                    <th>TAHUN MASUK SEKOLAH (SD)</th>
+                                    <th>TAHUN KELUAR SEKOLAH (SD)</th>
+                                    <th>SEKOLAH MENENGAH PERTAMA (SMP)</th>
+                                    <th>TAHUN MASUK SEKOLAH (SMP)</th>
+                                    <th>TAHUN KELUAR SEKOLAH (SMP)</th>
+                                    <th>SEKOLAH MENENGAH ATAS/KEJURUAN (SMA/SMK)</th>
+                                    <th>TAHUN MASUK SEKOLAH (SMA/SMK)</th>
+                                    <th>TAHUN KELUAR SEKOLAH (SMA/SMK)</th>
+                                    <th>JURUSAN (SMA/SMK)</th>
+                                    <th>PERGURUAN TINGGI</th>
+                                    <th>PENGALAMAN KERJA</th>
+                                    <th>BAHASA ASING YANG DIKUASAI</th>
+                                    <th>PERNAH KE JEPANG</th>
+                                    <th>JIKA YA, SEBUTKAN TGL/BLN/THN</th>
+                                    <th>PERNAH LUAR NEGERI LAINNYA</th>
+                                    <th>JIKA YA, NEGARA APA</th>
+                                    <th>APAKAH ADA KERABAT DI JEPANG</th>
+                                    <th>APA HUBUNGAN KERABAT YANG DI JEPANG</th>
+                                    <th>BELAJAR BAHASA</th>
+                                    <th>BUKU YANG DI PAKAI</th>
+                                    <th>BAB YANG DI PELAJARI</th>
+                                    <th>NAMA AYAH</th>
+                                    <th>HUBUNGAN AYAH</th>
+                                    <th>USIA AYAH</th>
+                                    <th>PEKERJAAN AYAH</th>
+                                    <th>NAMA IBU</th>
+                                    <th>HUBUNGAN IBU</th>
+                                    <th>USIA IBU</th>
+                                    <th>PEKERJAAN IBU</th>
+                                    <th>NAMA SAUDARA</th>
+                                    <th>PENDAPAT KELUARGA</th>
+                                    <th>NO HP KELUARGA</th>
+                                    <th>NAMA MENTOR</th>
+                                    <th>UKURAN BAJU</th>
+                                    <th>NOMOR SEPATU</th>
+                                    <th>ID</th>
+                                    <th>PILIH PROGRAM</th>
+                                    <th>PILIH KELAS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td colspan="74" class="text-center">Sedang proses menampilkan data...</td></tr>
+                            </tbody>
+                        </table>
+                    </div> --}}
+
+                    <div class="table-responsive">
+    <div id="refreshIndicator" style="display: none; font-size: 15px; color: #888; margin-right: 10px;">
+        🔄 Refreshing data...
+    </div>
+    <br/>
+    <table id="mentorDataTable" class="table table-striped table-bordered fixed-header-table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Download CV</th>
+                <th>Timestamp</th>
+                <th>EMAIL</th>
+                <th>NAMA (KATAKANA)</th>
+                <th>NAMA (INDONESIA)</th>
+                <th>ALAMAT</th>
+                <th>TANGGAL LAHIR</th>
+                <th>USIA</th>
+                <th>KELAMIN</th>
+                <th>NO HP AKTIF</th>
+                <th>AGAMA</th>
+                <th>TINGGI</th>
+                <th>BERAT</th>
+                <th>GOL DARAH</th>
+                <th>BUTA WARNA</th>
+                <th>MATA KIRI</th>
+                <th>MATA KANAN</th>
+                <th>PERNAH OPERASI</th>
+                <th>APAKAH SEDANG MINUM</th>
+                <th>TANGAN</th>
+                <th>MEROKOK</th>
+                <th>PENYAKIT DALAM</th>
+                <th>KEAHLIAN</th>
+                <th>SIFAT/KEPRIBADIAN</th>
+                <th>KELEBIHAN</th>
+                <th>KELEMAHAN</th>
+                <th>STATUS</th>
+                <th>HOBI</th>
+                <th>MOTIVASI</th>
+                <th>SELAMA 3 TAHUN DI JEPANG MAU NABUNG BERAPA</th>
+                <th>SETELAH PULANG JEPANG, APA YANG AKAN DILAKUKAN</th>
+                <th>APAKAH ANDA PERNAH TINGGAL/BEKERJA DI JEPANG</th>
+                <th>JIKA YA, KUALIFIKASI APA YANG ANDA LAMAR</th>
+                <th>SEKOLAH DASAR (SD)</th>
+                <th>TAHUN MASUK SEKOLAH (SD)</th>
+                <th>TAHUN KELUAR SEKOLAH (SD)</th>
+                <th>SEKOLAH MENENGAH PERTAMA (SMP)</th>
+                <th>TAHUN MASUK SEKOLAH (SMP)</th>
+                <th>TAHUN KELUAR SEKOLAH (SMP)</th>
+                <th>SEKOLAH MENENGAH ATAS/KEJURUAN (SMA/SMK)</th>
+                <th>TAHUN MASUK SEKOLAH (SMA/SMK)</th>
+                <th>TAHUN KELUAR SEKOLAH (SMA/SMK)</th>
+                <th>JURUSAN (SMA/SMK)</th>
+                <th>PERGURUAN TINGGI</th>
+                <th>PENGALAMAN KERJA</th>
+                <th>BAHASA ASING YANG DIKUASAI</th>
+                <th>PERNAH KE JEPANG</th>
+                <th>JIKA YA, SEBUTKAN TGL/BLN/THN</th>
+                <th>PERNAH LUAR NEGERI LAINNYA</th>
+                <th>JIKA YA, NEGARA APA</th>
+                <th>APAKAH ADA KERABAT DI JEPANG</th>
+                <th>APA HUBUNGAN KERABAT YANG DI JEPANG</th>
+                <th>BELAJAR BAHASA</th>
+                <th>BUKU YANG DI PAKAI</th>
+                <th>BAB YANG DI PELAJARI</th>
+                <th>NAMA AYAH</th>
+                <th>HUBUNGAN AYAH</th>
+                <th>USIA AYAH</th>
+                <th>PEKERJAAN AYAH</th>
+                <th>NAMA IBU</th>
+                <th>HUBUNGAN IBU</th>
+                <th>USIA IBU</th>
+                <th>PEKERJAAN IBU</th>
+                <th>NAMA SAUDARA</th>
+                <th>PENDAPAT KELUARGA</th>
+                <th>NO HP KELUARGA</th>
+                <th>NAMA MENTOR</th>
+                <th>UKURAN BAJU</th>
+                <th>NOMOR SEPATU</th>
+                <th>ID</th>
+                <th>PILIH PROGRAM</th>
+                <th>PILIH KELAS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="74" class="text-center">Sedang proses menampilkan data...</td></tr>
+        </tbody>
+    </table>
+</div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span id="tableInfo"></span>
+                        <div class="d-flex align-items-center ms-auto">
+                            <ul class="pagination pagination-sm mb-0" id="paginationControls"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         @include('landing.footer')
@@ -371,15 +598,322 @@
         </a>
     </div>
 
-    {{-- JavaScript --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
-
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
 
     <!-- DataTables -->
-    {{-- <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script> --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    {{-- data tabel --}}
+    {{-- <script>
+        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyAeVB2nMKZHHEdaSDvLzX68kPCSLdov7TezN7k2vEKKyGvvjDgghC0i02KP5Eqd6hoIA/exec';
+
+        let allData = [];
+
+        function fetchData() {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Sedang load data, mohon tunggu sebentar..',
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                didOpen: () => Swal.showLoading()
+            });
+
+            fetch(googleScriptUrl)
+                .then(res => res.text())
+                .then(text => {
+                    let data;
+                    try { data = JSON.parse(text); } 
+                    catch(e) { throw new Error('Response bukan JSON valid'); }
+                    return data;
+                })
+                .then(data => {
+                    allData = data.map(row => {
+                        row.Timestamp = row.Timestamp ? row.Timestamp.substring(0,10) : '';
+                        return row;
+                    });
+                    renderTable();
+                    Swal.fire({ icon:'success', title:'Data berhasil dimuat!', toast:true, position:'top', timer:2000, showConfirmButton:false });
+                })
+                .catch(err => {
+                    console.error(err);
+                    Swal.fire('Error', 'Gagal mengambil data: ' + err.message, 'error');
+                })
+                .finally(() => Swal.close());
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            const d = new Date(dateString);
+            if (isNaN(d)) return dateString;
+            return d.toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        }
+
+        function renderTable() {
+            if ($.fn.DataTable.isDataTable('#mentorDataTable')) {
+                $('#mentorDataTable').DataTable().destroy();
+            }
+
+            const tbody = $('#mentorDataTable tbody');
+            tbody.empty();
+
+            allData.forEach((row, idx) => {
+                const columns = [
+                    idx+1,
+                    `<button class="btn btn-sm btn-success btn-download-cv" data-id="${row['ID'] || idx}" data-nama="${row['NAMA (INDONESIA)'] || ''}">
+                        <i class="fa fa-download"></i> Download CV
+                    </button>`,
+                    formatDate(row['Timestamp']) || '',
+                    row['EMAIL'] || '',
+                    row['NAMA (KATAKANA)'] || '',
+                    row['NAMA (INDONESIA)'] || '',
+                    row['ALAMAT'] || '',
+                    formatDate(row['TANGGAL LAHIR']) || '',
+                    row['USIA'] || '',
+                    row['KELAMIN'] || '',
+                    row['NO HP AKTIF'] || '',
+                    row['AGAMA'] || '',
+                    row['TINGGI'] || '',
+                    row['BERAT'] || '',
+                    row['GOL DARAH'] || '',
+                    row['BUTA WARNA'] || '',
+                    row['MATA KIRI'] || '',
+                    row['MATA KANAN'] || '',
+                    row['PERNAH OPERASI'] || '',
+                    row['APAKAH SEDANG MINUM'] || '',
+                    row['TANGAN'] || '',
+                    row['MEROKOK'] || '',
+                    row['PENYAKIT DALAM'] || '',
+                    row['KEAHLIAN'] || '',
+                    row['SIFAT/KEPRIBADIAN'] || '',
+                    row['KELEBIHAN'] || '',
+                    row['KELEMAHAN'] || '',
+                    row['STATUS'] || '',
+                    row['HOBI'] || '',
+                    row['MOTIVASI'] || '',
+                    row['SELAMA 3 TAHUN DI JEPANG MAU NABUNG BERAPA'] || '',
+                    row['SETELAH PULANG JEPANG, APA YANG AKAN DILAKUKAN'] || '',
+                    row['APAKAH ANDA PERNAH TINGGAL/BEKERJA DI JEPANG'] || '',
+                    row['JIKA YA, KUALIFIKASI APA YANG ANDA LAMAR'] || '',
+                    row['SEKOLAH DASAR (SD)'] || '',
+                    row['TAHUN MASUK SEKOLAH (SD)'] || '',
+                    row['TAHUN KELUAR SEKOLAH (SD)'] || '',
+                    row['SEKOLAH MENENGAH PERTAMA (SMP)'] || '',
+                    row['TAHUN MASUK SEKOLAH (SMP)'] || '',
+                    row['TAHUN KELUAR SEKOLAH (SMP)'] || '',
+                    row['SEKOLAH MENENGAH ATAS/KEJURUAN (SMA/SMK)'] || '',
+                    row['TAHUN MASUK SEKOLAH (SMA/SMK)'] || '',
+                    row['TAHUN KELUAR SEKOLAH (SMA/SMK)'] || '',
+                    row['JURUSAN (SMA/SMK)'] || '',
+                    row['PERGURUAN TINGGI'] || '',
+                    row['PENGALAMAN KERJA'] || '',
+                    row['BAHASA ASING YANG DIKUASAI'] || '',
+                    row['PERNAH KE JEPANG'] || '',
+                    row['JIKA YA, SEBUTKAN TGL/BLN/THN'] || '',
+                    row['PERNAH LUAR NEGERI LAINNYA'] || '',
+                    row['JIKA YA, NEGARA APA'] || '',
+                    row['APAKAH ADA KERABAT DI JEPANG'] || '',
+                    row['APA HUBUNGAN KERABAT YANG DI JEPANG'] || '',
+                    row['BELAJAR BAHASA'] || '',
+                    row['BUKU YANG DI PAKAI'] || '',
+                    row['BAB YANG DI PELAJARI'] || '',
+                    row['NAMA AYAH'] || '',
+                    row['HUBUNGAN AYAH'] || '',
+                    row['USIA AYAH'] || '',
+                    row['PEKERJAAN AYAH'] || '',
+                    row['NAMA IBU'] || '',
+                    row['HUBUNGAN IBU'] || '',
+                    row['USIA IBU'] || '',
+                    row['PEKERJAAN IBU'] || '',
+                    row['NAMA SAUDARA'] || '',
+                    row['PENDAPAT KELUARGA'] || '',
+                    row['NO HP KELUARGA'] || '',
+                    row['NAMA MENTOR'] || '',
+                    row['UKURAN BAJU'] || '',
+                    row['NOMOR SEPATU'] || '',
+                    row['ID'] || '',
+                    row['PILIH PROGRAM'] || '',
+                    row['PILIH KELAS'] || ''
+                ];
+
+                tbody.append(`<tr>${columns.map(c => `<td>${c}</td>`).join('')}</tr>`);
+            });
+
+            $('#mentorDataTable').DataTable({
+                pageLength: parseInt($('#entriesSelect').val()) || 10,
+                lengthMenu: [5, 10, 25, 50, 100],
+                ordering: false,
+                responsive: true,
+                autoWidth: false
+            });
+
+            $('#entriesSelect').on('change', function() {
+                const val = parseInt($(this).val());
+                $('#mentorDataTable').DataTable().page.len(val).draw();
+            });
+        }
+
+        fetchData();
+    </script> --}}
+
+    <script>
+        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyAeVB2nMKZHHEdaSDvLzX68kPCSLdov7TezN7k2vEKKyGvvjDgghC0i02KP5Eqd6hoIA/exec';
+        let allData = [];
+
+        function fetchData() {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Sedang load data, mohon tunggu sebentar..',
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                didOpen: () => Swal.showLoading()
+            });
+
+            fetch(googleScriptUrl)
+                .then(res => res.text())
+                .then(text => {
+                    let data;
+                    try { data = JSON.parse(text); } 
+                    catch(e) { throw new Error('Response bukan JSON valid'); }
+                    return data;
+                })
+                .then(data => {
+                    allData = data.map(row => {
+                        row.Timestamp = row.Timestamp ? row.Timestamp.substring(0,10) : '';
+                        row['TANGGAL LAHIR'] = row['TANGGAL LAHIR'] ? row['TANGGAL LAHIR'].substring(0,10) : '';
+                        return row;
+                    });
+                    renderTable();
+                    Swal.fire({ icon:'success', title:'Data berhasil dimuat!', toast:true, position:'top', timer:2000, showConfirmButton:false });
+                })
+                .catch(err => {
+                    console.error(err);
+                    Swal.fire('Error', 'Gagal mengambil data: ' + err.message, 'error');
+                })
+                .finally(() => Swal.close());
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            const d = new Date(dateString);
+            if (isNaN(d)) return dateString;
+            return d.toLocaleDateString('id-ID', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        }
+
+        function renderTable() {
+            // Destroy DataTable jika sudah ada
+            if ($.fn.DataTable.isDataTable('#mentorDataTable')) {
+                $('#mentorDataTable').DataTable().clear().destroy();
+            }
+
+            const tbody = $('#mentorDataTable tbody');
+            tbody.empty();
+
+            allData.forEach((row, idx) => {
+                const cols = [
+                    idx+1,
+                    `<button class="btn btn-sm btn-success btn-download-cv" data-id="${row['ID'] || idx}" data-nama="${row['NAMA (INDONESIA)'] || ''}">
+                        <i class="fa fa-download"></i> Download CV
+                    </button>`,
+                    formatDate(row['Timestamp']),
+                    row['EMAIL'] || '',
+                    row['NAMA (KATAKANA)'] || '',
+                    row['NAMA (INDONESIA)'] || '',
+                    row['ALAMAT'] || '',
+                    formatDate(row['TANGGAL LAHIR']),
+                    row['USIA'] || '',
+                    row['KELAMIN'] || '',
+                    row['NO HP AKTIF'] || '',
+                    row['AGAMA'] || '',
+                    row['TINGGI'] || '',
+                    row['BERAT'] || '',
+                    row['GOL DARAH'] || '',
+                    row['BUTA WARNA'] || '',
+                    row['MATA KIRI'] || '',
+                    row['MATA KANAN'] || '',
+                    row['PERNAH OPERASI'] || '',
+                    row['APAKAH SEDANG MINUM'] || '',
+                    row['TANGAN'] || '',
+                    row['MEROKOK'] || '',
+                    row['PENYAKIT DALAM'] || '',
+                    row['KEAHLIAN'] || '',
+                    row['SIFAT/KEPRIBADIAN'] || '',
+                    row['KELEBIHAN'] || '',
+                    row['KELEMAHAN'] || '',
+                    row['STATUS'] || '',
+                    row['HOBI'] || '',
+                    row['MOTIVASI'] || '',
+                    row['SELAMA 3 TAHUN DI JEPANG MAU NABUNG BERAPA'] || '',
+                    row['SETELAH PULANG JEPANG, APA YANG AKAN DILAKUKAN'] || '',
+                    row['APAKAH ANDA PERNAH TINGGAL/BEKERJA DI JEPANG'] || '',
+                    row['JIKA YA, KUALIFIKASI APA YANG ANDA LAMAR'] || '',
+                    row['SEKOLAH DASAR (SD)'] || '',
+                    row['TAHUN MASUK SEKOLAH (SD)'] || '',
+                    row['TAHUN KELUAR SEKOLAH (SD)'] || '',
+                    row['SEKOLAH MENENGAH PERTAMA (SMP)'] || '',
+                    row['TAHUN MASUK SEKOLAH (SMP)'] || '',
+                    row['TAHUN KELUAR SEKOLAH (SMP)'] || '',
+                    row['SEKOLAH MENENGAH ATAS/KEJURUAN (SMA/SMK)'] || '',
+                    row['TAHUN MASUK SEKOLAH (SMA/SMK)'] || '',
+                    row['TAHUN KELUAR SEKOLAH (SMA/SMK)'] || '',
+                    row['JURUSAN (SMA/SMK)'] || '',
+                    row['PERGURUAN TINGGI'] || '',
+                    row['PENGALAMAN KERJA'] || '',
+                    row['BAHASA ASING YANG DIKUASAI'] || '',
+                    row['PERNAH KE JEPANG'] || '',
+                    row['JIKA YA, SEBUTKAN TGL/BLN/THN'] || '',
+                    row['PERNAH LUAR NEGERI LAINNYA'] || '',
+                    row['JIKA YA, NEGARA APA'] || '',
+                    row['APAKAH ADA KERABAT DI JEPANG'] || '',
+                    row['APA HUBUNGAN KERABAT YANG DI JEPANG'] || '',
+                    row['BELAJAR BAHASA'] || '',
+                    row['BUKU YANG DI PAKAI'] || '',
+                    row['BAB YANG DI PELAJARI'] || '',
+                    row['NAMA AYAH'] || '',
+                    row['HUBUNGAN AYAH'] || '',
+                    row['USIA AYAH'] || '',
+                    row['PEKERJAAN AYAH'] || '',
+                    row['NAMA IBU'] || '',
+                    row['HUBUNGAN IBU'] || '',
+                    row['USIA IBU'] || '',
+                    row['PEKERJAAN IBU'] || '',
+                    row['NAMA SAUDARA'] || '',
+                    row['PENDAPAT KELUARGA'] || '',
+                    row['NO HP KELUARGA'] || '',
+                    row['NAMA MENTOR'] || '',
+                    row['UKURAN BAJU'] || '',
+                    row['NOMOR SEPATU'] || '',
+                    row['ID'] || '',
+                    row['PILIH PROGRAM'] || '',
+                    row['PILIH KELAS'] || ''
+                ];
+
+                tbody.append(`<tr>${cols.map(c => `<td>${c}</td>`).join('')}</tr>`);
+            });
+
+            $('#mentorDataTable').DataTable({
+                pageLength: 10,
+                lengthMenu: [5,10,25,50,100],
+                ordering: false,
+                responsive: true,
+                autoWidth: false
+            });
+        }
+
+        fetchData();
+    </script>
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -398,9 +932,7 @@
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(ga, s);
         })();
-    </script>
 
-    <script>
         $('#zoomBtn').click(function() {
             $('.zoom-btn-sm').toggleClass('scale-out');
             if (!$('.zoom-card').hasClass('scale-out')) {

@@ -26,251 +26,257 @@ class PendaftaranController extends Controller
         ]);
     }
 
-    public function store_pendaftaran_baru(Request $request)
-    {
-        $response  = Http::get($this->googleScriptUrl);
-        $data_list = array_reverse($response->json());
+    // public function store_pendaftaran_baru(Request $request)
+    // {
+    //     $response  = Http::get($this->googleScriptUrl);
+    //     $data_list = array_reverse($response->json());
 
-        try {
-            $input = $request->all();
+    //     try {
+    //         $input = $request->all();
 
-            $email_input = strtolower(trim($input['email'] ?? ''));
-            $nama_input  = strtoupper(trim($input['nama_indonesia'] ?? ''));
+    //         $email_input = strtolower(trim($input['email'] ?? ''));
+    //         $nama_input  = strtoupper(trim($input['nama_indonesia'] ?? ''));
 
-            foreach ($data_list as $row) {
-                $email_lama = strtolower(trim($row['EMAIL'] ?? ''));
-                $nama_lama  = strtoupper(trim($row['NAMA (INDONESIA)'] ?? ''));
+    //         foreach ($data_list as $row) {
+    //             $email_lama = strtolower(trim($row['EMAIL'] ?? ''));
+    //             $nama_lama  = strtoupper(trim($row['NAMA (INDONESIA)'] ?? ''));
 
-                if ($email_lama === $email_input || $nama_lama === $nama_input) {
-                    return response()->json([
-                        'success'   => false,
-                        'duplicate' => true,
-                        'message'   => 'Data anda sudah terdaftar di LPK GMI JAPAN!'
-                    ]);
-                }
-            }
+    //             if ($email_lama === $email_input || $nama_lama === $nama_input) {
+    //                 return response()->json([
+    //                     'success'   => false,
+    //                     'duplicate' => true,
+    //                     'message'   => 'Data anda sudah terdaftar di LPK GMI JAPAN!'
+    //                 ]);
+    //             }
+    //         }
 
-            $pengalamanList = [];
-            $perguruanList  = [];
+    //         $pengalamanList = [];
+    //         $perguruanList  = [];
 
-            # pengalaman
-            if ($request->has('tahun_awal')) {
-                foreach ($request->tahun_awal as $i => $tahunAwal) {
-                    $tahunAkhir     = $request->tahun_akhir[$i] ?? '-';
-                    $perusahaan     = $request->nama_perusahaan[$i] ?? '-';
-                    $bagian         = $request->bagian[$i] ?? '-';
+    //         # pengalaman
+    //         if ($request->has('tahun_awal')) {
+    //             foreach ($request->tahun_awal as $i => $tahunAwal) {
+    //                 $tahunAkhir     = $request->tahun_akhir[$i] ?? '-';
+    //                 $perusahaan     = $request->nama_perusahaan[$i] ?? '-';
+    //                 $bagian         = $request->bagian[$i] ?? '-';
 
-                    $pengalamanList[] = "{$tahunAwal} - {$tahunAkhir} - {$perusahaan} - {$bagian}";
-                }
-            }
+    //                 $pengalamanList[] = "{$tahunAwal} - {$tahunAkhir} - {$perusahaan} - {$bagian}";
+    //             }
+    //         }
 
-            $input['pengalaman_kerja'] = implode(', ', $pengalamanList);
+    //         $input['pengalaman_kerja'] = implode(', ', $pengalamanList);
 
-            # perguruan tinggi
-            if ($request->has('nama_perguruan')) {
-                foreach ($request->nama_perguruan as $i => $nama_perguruan) {
-                    $prodi = $request->program_studi[$i] ?? '-';
-                    $perguruanList[] = "{$nama_perguruan} - {$prodi}";
-                }
-            }
-            $input['perguruan_tinggi'] = implode(', ', $perguruanList);
+    //         # perguruan tinggi
+    //         if ($request->has('nama_perguruan')) {
+    //             foreach ($request->nama_perguruan as $i => $nama_perguruan) {
+    //                 $prodi = $request->program_studi[$i] ?? '-';
+    //                 $perguruanList[] = "{$nama_perguruan} - {$prodi}";
+    //             }
+    //         }
+    //         $input['perguruan_tinggi'] = implode(', ', $perguruanList);
 
 
-            $fieldJsonFields = ['nama_keluarga', 'bahasa_asing'];
-            foreach ($fieldJsonFields as $field) {
-                if (isset($input[$field])) {
-                    $input[$field] = $this->convertJsonToText($input[$field]);
-                }
-            }
+    //         $fieldJsonFields = ['nama_keluarga', 'bahasa_asing'];
+    //         foreach ($fieldJsonFields as $field) {
+    //             if (isset($input[$field])) {
+    //                 $input[$field] = $this->convertJsonToText($input[$field]);
+    //             }
+    //         }
 
-            $request->merge($input);
+    //         $request->merge($input);
 
-            $request->validate([
-                'email'                      => 'nullable|string',
-                'nama_katakana'              => 'nullable|string',
-                'nama_indonesia'             => 'nullable|string',
-                'alamat'                     => 'nullable|string',
-                'tanggal_lahir'              => 'nullable|string',
-                'usia'                       => 'nullable|string',
-                'jenis_kelamin'              => 'nullable|string',
-                'no_hp_aktif'                => 'nullable|string',
-                'agama'                      => 'nullable|string',
-                'tinggi_badan'               => 'nullable|string',
-                'berat_badan'                => 'nullable|string',
-                'golongan_darah'             => 'nullable|string',
-                'buta_warna'                 => 'nullable|string',
-                'mata_kanan'                 => 'nullable|string',
-                'mata_kiri'                  => 'nullable|string',
-                'pernah_operasi'             => 'nullable|string',
-                'apakah_sedang_minum'        => 'nullable|string',
-                'tangan'                     => 'nullable|string',
-                'merokok'                    => 'nullable|string',
-                'penyakit_dalam'             => 'nullable|string',
-                'keahlian'                   => 'nullable|string',
-                'sifat_kepribadian'          => 'nullable|string',
-                'kelebihan'                  => 'nullable|string',
-                'kelemahan'                  => 'nullable|string',
-                'status'                     => 'nullable|string',
-                'hobi'                       => 'nullable|string',
-                'motivasi'                   => 'nullable|string',
-                'nabung_berapa'              => 'nullable|string',
-                'apa_yang_akan_dilakukan'    => 'nullable|string',
-                'pernah_tinggal_dijepang'    => 'nullable|string',
-                'kualifikasi'                => 'nullable|string',
-                'sekolah_dasar'              => 'nullable|string',
-                'tahun_masuk_sd'             => 'nullable|string',
-                'tahun_keluar_sd'            => 'nullable|string',
-                'sekolah_menengah_pertama'   => 'nullable|string',
-                'tahun_masuk_smp'            => 'nullable|string',
-                'tahun_keluar_smp'           => 'nullable|string',
-                'sekolah_menengah_atas'      => 'nullable|string',
-                'tahun_masuk_smak'           => 'nullable|string',
-                'tahun_keluar_smak'          => 'nullable|string',
-                'jurusan'                    => 'nullable|string',
-                'perguruan_tinggi'           => 'nullable|string',
-                'pengalaman_kerja'           => 'nullable|string',
-                'bahasa_asing'               => 'nullable|string',
-                'pernah_keluar_negeri'       => 'nullable|string',
-                'tanggal_keluar_negeri'      => 'nullable|string',
-                'pernah_keluar_negeri_lain'  => 'nullable|string',
-                'negara'                     => 'nullable|string',
-                'kerabat_dijepang'           => 'nullable|string',
-                'hubungan_kerabat_dijepang'  => 'nullable|string',
-                'belajar_bahasa'             => 'nullable|string',
-                'buku_yang_dipakai'          => 'nullable|string',
-                'bab_yang_dipelajari'        => 'nullable|string',
-                'nama_ayah'                  => 'nullable|string',
-                'hubungan_ayah'              => 'nullable|string',
-                'usia_ayah'                  => 'nullable|string',
-                'pekerjaan_ayah'             => 'nullable|string',
-                'nama_ibu'                   => 'nullable|string',
-                'hubungan_ibu'               => 'nullable|string',
-                'usia_ibu'                   => 'nullable|string',
-                'pekerjaan_ibu'              => 'nullable|string',
-                'nama_saudara'               => 'nullable|string',
-                'pendapat_keluarga'          => 'nullable|string',
-                'no_hp_keluarga'             => 'nullable|string',
-                'nama_mentor'                => 'nullable|string',
-                'ukuran_baju'                => 'nullable|string',
-                'ukuran_sepatu'              => 'nullable|string',
-                'id'                         => 'nullable|string'
-            ]);
+    //         $request->validate([
+    //             'email'                      => 'nullable|string',
+    //             'nama_katakana'              => 'nullable|string',
+    //             'nama_indonesia'             => 'nullable|string',
+    //             'alamat'                     => 'nullable|string',
+    //             'tanggal_lahir'              => 'nullable|string',
+    //             'usia'                       => 'nullable|string',
+    //             'jenis_kelamin'              => 'nullable|string',
+    //             'no_hp_aktif'                => 'nullable|string',
+    //             'agama'                      => 'nullable|string',
+    //             'tinggi_badan'               => 'nullable|string',
+    //             'berat_badan'                => 'nullable|string',
+    //             'golongan_darah'             => 'nullable|string',
+    //             'buta_warna'                 => 'nullable|string',
+    //             'mata_kanan'                 => 'nullable|string',
+    //             'mata_kiri'                  => 'nullable|string',
+    //             'pernah_operasi'             => 'nullable|string',
+    //             'apakah_sedang_minum'        => 'nullable|string',
+    //             'tangan'                     => 'nullable|string',
+    //             'merokok'                    => 'nullable|string',
+    //             'penyakit_dalam'             => 'nullable|string',
+    //             'keahlian'                   => 'nullable|string',
+    //             'sifat_kepribadian'          => 'nullable|string',
+    //             'kelebihan'                  => 'nullable|string',
+    //             'kelemahan'                  => 'nullable|string',
+    //             'status'                     => 'nullable|string',
+    //             'hobi'                       => 'nullable|string',
+    //             'motivasi'                   => 'nullable|string',
+    //             'nabung_berapa'              => 'nullable|string',
+    //             'apa_yang_akan_dilakukan'    => 'nullable|string',
+    //             'pernah_tinggal_dijepang'    => 'nullable|string',
+    //             'kualifikasi'                => 'nullable|string',
+    //             'sekolah_dasar'              => 'nullable|string',
+    //             'tahun_masuk_sd'             => 'nullable|string',
+    //             'tahun_keluar_sd'            => 'nullable|string',
+    //             'sekolah_menengah_pertama'   => 'nullable|string',
+    //             'tahun_masuk_smp'            => 'nullable|string',
+    //             'tahun_keluar_smp'           => 'nullable|string',
+    //             'sekolah_menengah_atas'      => 'nullable|string',
+    //             'tahun_masuk_smak'           => 'nullable|string',
+    //             'tahun_keluar_smak'          => 'nullable|string',
+    //             'jurusan'                    => 'nullable|string',
+    //             'perguruan_tinggi'           => 'nullable|string',
+    //             'pengalaman_kerja'           => 'nullable|string',
+    //             'bahasa_asing'               => 'nullable|string',
+    //             'pernah_keluar_negeri'       => 'nullable|string',
+    //             'tanggal_keluar_negeri'      => 'nullable|string',
+    //             'pernah_keluar_negeri_lain'  => 'nullable|string',
+    //             'negara'                     => 'nullable|string',
+    //             'kerabat_dijepang'           => 'nullable|string',
+    //             'hubungan_kerabat_dijepang'  => 'nullable|string',
+    //             'belajar_bahasa'             => 'nullable|string',
+    //             'buku_yang_dipakai'          => 'nullable|string',
+    //             'bab_yang_dipelajari'        => 'nullable|string',
+    //             'nama_ayah'                  => 'nullable|string',
+    //             'hubungan_ayah'              => 'nullable|string',
+    //             'usia_ayah'                  => 'nullable|string',
+    //             'pekerjaan_ayah'             => 'nullable|string',
+    //             'nama_ibu'                   => 'nullable|string',
+    //             'hubungan_ibu'               => 'nullable|string',
+    //             'usia_ibu'                   => 'nullable|string',
+    //             'pekerjaan_ibu'              => 'nullable|string',
+    //             'nama_saudara'               => 'nullable|string',
+    //             'pendapat_keluarga'          => 'nullable|string',
+    //             'no_hp_keluarga'             => 'nullable|string',
+    //             'nama_mentor'                => 'nullable|string',
+    //             'ukuran_baju'                => 'nullable|string',
+    //             'ukuran_sepatu'              => 'nullable|string',
+    //             'id'                         => 'nullable|string'
+    //         ]);
 
-            $data = $request->all();
+    //         $data = $request->all();
 
-            foreach ($data as $key => $value) {
-                if ($key === 'email') continue;
-                if (is_string($value)) {
-                    $data[$key] = strtoupper($value);
-                }
-            }
+    //         foreach ($data as $key => $value) {
+    //             if ($key === 'email') continue;
+    //             if (is_string($value)) {
+    //                 $data[$key] = strtoupper($value);
+    //             }
+    //         }
 
-            if (!empty($data['hubungan_ayah'])) {
-                $data['hubungan_ayah'] = 'AYAH';
-            }
-            if (!empty($data['hubungan_ibu'])) {
-                $data['hubungan_ibu'] = 'IBU';
-            }
+    //         if (!empty($data['hubungan_ayah'])) {
+    //             $data['hubungan_ayah'] = 'AYAH';
+    //         }
+    //         if (!empty($data['hubungan_ibu'])) {
+    //             $data['hubungan_ibu'] = 'IBU';
+    //         }
 
-            $data['id']             = mt_rand(10000000, 99999999);
-            $data['no_hp_aktif']    = "'" . $data['no_hp_aktif'];
-            $data['no_hp_keluarga'] = "'" . $data['no_hp_keluarga'];
+    //         $data['id']             = mt_rand(10000000, 99999999);
+    //         $data['no_hp_aktif']    = "'" . $data['no_hp_aktif'];
+    //         $data['no_hp_keluarga'] = "'" . $data['no_hp_keluarga'];
 
-            # nama saudara
-            if (!empty($data['nama_saudara'])) {
-                $saudaraList   = explode(';', $data['nama_saudara']);
-                $formattedList = [];
+    //         # nama saudara
+    //         if (!empty($data['nama_saudara'])) {
+    //             $saudaraList   = explode(';', $data['nama_saudara']);
+    //             $formattedList = [];
 
-                foreach ($saudaraList as $saudara) {
-                    $parts = array_map('trim', explode(',', $saudara));
+    //             foreach ($saudaraList as $saudara) {
+    //                 $parts = array_map('trim', explode(',', $saudara));
 
-                    $hubungan  = isset($parts[0]) && $parts[0] !== '' ? strtoupper($parts[0]) : '';
-                    $nama      = isset($parts[1]) && $parts[1] !== '' ? strtoupper($parts[1]) : '';
-                    $usia      = isset($parts[2]) && $parts[2] !== '' ? $parts[2] : '';
-                    $pekerjaan = isset($parts[3]) && $parts[3] !== '' ? strtoupper($parts[3]) : '';
+    //                 $hubungan  = isset($parts[0]) && $parts[0] !== '' ? strtoupper($parts[0]) : '';
+    //                 $nama      = isset($parts[1]) && $parts[1] !== '' ? strtoupper($parts[1]) : '';
+    //                 $usia      = isset($parts[2]) && $parts[2] !== '' ? $parts[2] : '';
+    //                 $pekerjaan = isset($parts[3]) && $parts[3] !== '' ? strtoupper($parts[3]) : '';
 
-                    $filteredParts = array_filter([$hubungan, $nama, $usia, $pekerjaan], function ($value) {
-                        return $value !== '';
-                    });
+    //                 $filteredParts = array_filter([$hubungan, $nama, $usia, $pekerjaan], function ($value) {
+    //                     return $value !== '';
+    //                 });
 
-                    $formattedList[] = implode(' - ', $filteredParts);
-                }
+    //                 $formattedList[] = implode(' - ', $filteredParts);
+    //             }
 
-                $data['nama_saudara'] = implode(', ', $formattedList);
-            }
+    //             $data['nama_saudara'] = implode(', ', $formattedList);
+    //         }
 
-            $response = Http::withHeaders([
-                'Content-Type' => 'application/json'
-            ])->post($this->googleScriptUrl, $data);
+    //         $response = Http::withHeaders([
+    //             'Content-Type' => 'application/json'
+    //         ])->post($this->googleScriptUrl, $data);
 
-            if ($response->successful()) {
-                return response()->json(['success' => true]);
-            } else {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Gagal mengirim ke Google Script.',
-                    'debug_response' => $response->body()
-                ]);
-            }
-        } catch (ValidationException $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Validasi gagal',
-                'errors' => $e->errors(),
-            ]);
-        } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => $e->getMessage(),
-            ]);
-        }
-    }
+    //         if ($response->successful()) {
+    //             return response()->json(['success' => true]);
+    //         } else {
+    //             return response()->json([
+    //                 'success' => false,
+    //                 'message' => 'Gagal mengirim ke Google Script.',
+    //                 'debug_response' => $response->body()
+    //             ]);
+    //         }
+    //     } catch (ValidationException $e) {
+    //         return response()->json([
+    //             'success' => false,
+    //             'message' => 'Validasi gagal',
+    //             'errors' => $e->errors(),
+    //         ]);
+    //     } catch (\Exception $e) {
+    //         return response()->json([
+    //             'success' => false,
+    //             'message' => $e->getMessage(),
+    //         ]);
+    //     }
+    // }
+
+    // public function data_pendaftaran_new()
+    // {
+    //     $response = Http::get($this->googleScriptUrl);
+    //     $data     = array_reverse($response->json());
+
+    //     $cleanedData = [];
+
+    //     foreach ($data as $row) {
+    //         $cleanedRow = [];
+    //         foreach ($row as $key => $value) {
+    //             if ($key === 'Timestamp' || $key === 'TANGGAL LAHIR' || $key === 'JIKA YA, SEBUTKAN TGL/BLN/THN') {
+    //                 $dateOnly = substr($value, 0, 10);
+    //                 $cleanedRow[$key] = $dateOnly;
+    //                 continue;
+    //             }
+
+    //             if (in_array($key, ['KEAHLIAN', 'MOTIVASI', 'HOBI', 'SETELAH PULANG JEPANG, APA YANG AKAN DILAKUKAN', 'SIFAT/KEPRIBADIAN', 'KELEBIHAN', 'KELEMAHAN'])) {
+    //                 $cleanedRow[$key] = $this->convertJsonToText($value);
+    //                 continue;
+    //             }
+
+    //             if (in_array($key, ['NAMA (KATAKANA)', 'NAMA (INDONESIA)',
+    //                     'TAHUN MASUK SEKOLAH (SD)', 'TAHUN KELUAR SEKOLAH (SD)',
+    //                     'TAHUN MASUK SEKOLAH (SMP)', 'TAHUN KELUAR SEKOLAH (SMP)',
+    //                     'TAHUN MASUK SEKOLAH (SMA/SMK)', 'TAHUN KELUAR SEKOLAH (SMA/SMK)']))
+    //             {
+    //                 if (stripos($key, 'EMAIL') !== false) {
+    //                     $cleanedRow[$key] = $value;
+    //                 } else {
+    //                     $cleanedRow[$key] = strtoupper($value);
+    //                 }
+    //             } else {
+    //                 $newKey = preg_replace('/\s*\(.*?\).*/', '', $key);
+    //                 if (stripos($newKey, 'EMAIL') !== false) {
+    //                     $cleanedRow[$newKey] = $value;
+    //                 } else {
+    //                     $cleanedRow[$newKey] = strtoupper($value);
+    //                 }
+    //             }
+    //         }
+    //         $cleanedData[] = $cleanedRow;
+    //     }
+
+    //     return view('pendaftaran.data-pendaftaran-new', compact('cleanedData'));
+    // }
 
     public function data_pendaftaran_new()
     {
-        $response = Http::get($this->googleScriptUrl);
-        $data     = array_reverse($response->json());
-
-        $cleanedData = [];
-
-        foreach ($data as $row) {
-            $cleanedRow = [];
-            foreach ($row as $key => $value) {
-                if ($key === 'Timestamp' || $key === 'TANGGAL LAHIR' || $key === 'JIKA YA, SEBUTKAN TGL/BLN/THN') {
-                    $dateOnly = substr($value, 0, 10);
-                    $cleanedRow[$key] = $dateOnly;
-                    continue;
-                }
-
-                if (in_array($key, ['KEAHLIAN', 'MOTIVASI', 'HOBI', 'SETELAH PULANG JEPANG, APA YANG AKAN DILAKUKAN', 'SIFAT/KEPRIBADIAN', 'KELEBIHAN', 'KELEMAHAN'])) {
-                    $cleanedRow[$key] = $this->convertJsonToText($value);
-                    continue;
-                }
-
-                if (in_array($key, ['NAMA (KATAKANA)', 'NAMA (INDONESIA)',
-                        'TAHUN MASUK SEKOLAH (SD)', 'TAHUN KELUAR SEKOLAH (SD)',
-                        'TAHUN MASUK SEKOLAH (SMP)', 'TAHUN KELUAR SEKOLAH (SMP)',
-                        'TAHUN MASUK SEKOLAH (SMA/SMK)', 'TAHUN KELUAR SEKOLAH (SMA/SMK)']))
-                {
-                    if (stripos($key, 'EMAIL') !== false) {
-                        $cleanedRow[$key] = $value;
-                    } else {
-                        $cleanedRow[$key] = strtoupper($value);
-                    }
-                } else {
-                    $newKey = preg_replace('/\s*\(.*?\).*/', '', $key);
-                    if (stripos($newKey, 'EMAIL') !== false) {
-                        $cleanedRow[$newKey] = $value;
-                    } else {
-                        $cleanedRow[$newKey] = strtoupper($value);
-                    }
-                }
-            }
-            $cleanedData[] = $cleanedRow;
-        }
-
-        return view('pendaftaran.data-pendaftaran-new', compact('cleanedData'));
+        return view('pendaftaran.data-pendaftaran-new');
     }
+    
 
     public function refreshTablePendaftaran()
     {
