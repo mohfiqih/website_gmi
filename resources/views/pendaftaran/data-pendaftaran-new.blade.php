@@ -915,6 +915,66 @@
         fetchData();
     </script>
 
+    {{-- download cv --}}
+    <script>
+        $(document).on('click', '.btn-download-cv', function(e) {
+            e.preventDefault();
+
+            const id = $(this).data('id');
+            const nama = $(this).data('nama');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Do you want to download this CV?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#046392'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch(`/export-cv-word/${id}`, {
+                        method: 'GET',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Download failed');
+                        }
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `CV_${nama.replace(/\s+/g, '_')}.docx`;
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                        window.URL.revokeObjectURL(url);
+
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'File has been downloaded.',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+                    })
+                    .catch(error => {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Failed to download file.',
+                            icon: 'error'
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(["_setAccount", "UA-36251023-1"]);
@@ -1034,7 +1094,7 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
+    {{-- <script>
         $(document).on('click', '.btn-download-cv', function(e) {
             e.preventDefault();
 
@@ -1091,7 +1151,7 @@
                 }
             });
         });
-    </script>
+    </script> --}}
 </body>
 
 </html>
