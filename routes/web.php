@@ -31,4 +31,5 @@ Route::get('/data-pendaftaran', [PendaftaranController::class, 'data_pendaftaran
 Route::get('/refresh-table-pendaftaran', [PendaftaranController::class, 'refreshTablePendaftaran'])->name('refresh.pendaftaran');
 
 Route::get('/export-cv-pdf/{id}', [PendaftaranController::class, 'export_cv_pdf'])->name('export.pdf');
-Route::get('/export-cv-word/{id}', [PendaftaranController::class, 'export_cv_word'])->name('export.cv.word');
+// Route::get('/export-cv-word/{id}', [PendaftaranController::class, 'export_cv_word'])->name('export.cv.word');
+Route::post('/export-cv-word', [PendaftaranController::class, 'export_cv_word'])->name('export.cv.word');

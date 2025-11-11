@@ -516,12 +516,14 @@ class PendaftaranController extends Controller
     //     ])->deleteFileAfterSend(true);
     // }
 
-    public function export_cv_word($id)
+    public function export_cv_word(Request $request)
     {
-        $response = Http::get($this->googleScriptUrl);
-        $data     = array_reverse($response->json());
+        // $response = Http::get($this->googleScriptUrl);
+        // $data     = array_reverse($response->json());
 
-        $rowData  = collect($data)->firstWhere('ID', $id);
+        // $rowData  = collect($data)->firstWhere('ID', $id);
+
+        $rowData = json_decode($request->input('data'), true);
 
         $cleanedData = [];
         foreach ($rowData as $key => $value) {

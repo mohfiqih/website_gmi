@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -917,7 +918,64 @@
 
     {{-- download cv --}}
     <script>
-        $(document).on('click', '.btn-download-cv', function(e) {
+        // $(document).on('click', '.btn-download-cv', function(e) {
+        //     e.preventDefault();
+
+        //     const id = $(this).data('id');
+        //     const nama = $(this).data('nama');
+
+        //     Swal.fire({
+        //         title: 'Are you sure?',
+        //         text: "Do you want to download this CV?",
+        //         icon: 'question',
+        //         showCancelButton: true,
+        //         confirmButtonText: 'OK',
+        //         confirmButtonColor: '#046392'
+        //     }).then((result) => {
+        //         if (result.isConfirmed) {
+        //             fetch(`/export-cv-word/${id}`, {
+        //                 method: 'GET',
+        //                 headers: {
+        //                     'X-Requested-With': 'XMLHttpRequest',
+        //                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //                 }
+        //             })
+        //             .then(response => {
+        //                 if (!response.ok) {
+        //                     throw new Error('Download failed');
+        //                 }
+        //                 return response.blob();
+        //             })
+        //             .then(blob => {
+        //                 const url = window.URL.createObjectURL(blob);
+        //                 const a = document.createElement('a');
+        //                 a.href = url;
+        //                 a.download = `CV_${nama.replace(/\s+/g, '_')}.docx`;
+        //                 document.body.appendChild(a);
+        //                 a.click();
+        //                 a.remove();
+        //                 window.URL.revokeObjectURL(url);
+
+        //                 Swal.fire({
+        //                     title: 'Success!',
+        //                     text: 'File has been downloaded.',
+        //                     icon: 'success',
+        //                     timer: 2000,
+        //                     showConfirmButton: false
+        //                 });
+        //             })
+        //             .catch(error => {
+        //                 Swal.fire({
+        //                     title: 'Error!',
+        //                     text: 'Failed to download file.',
+        //                     icon: 'error'
+        //                 });
+        //             });
+        //         }
+        //     });
+        // });
+
+        $(document).on('click', '.btn-download-cv', async function(e) {
             e.preventDefault();
 
             const id = $(this).data('id');
@@ -930,22 +988,43 @@
                 showCancelButton: true,
                 confirmButtonText: 'OK',
                 confirmButtonColor: '#046392'
-            }).then((result) => {
+            }).then(async (result) => {
                 if (result.isConfirmed) {
-                    fetch(`/export-cv-word/${id}`, {
-                        method: 'GET',
-                        headers: {
-                            'X-Requested-With': 'XMLHttpRequest',
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Download failed');
-                        }
-                        return response.blob();
-                    })
-                    .then(blob => {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Sedang download CV, mohon tunggu sebentar...',
+                        toast: true,
+                        position: 'top',
+                        showConfirmButton: false,
+                        allowOutsideClick: false,
+                        didOpen: () => Swal.showLoading()
+                    });
+
+                    try {
+                        // Ambil data dari Google Apps Script
+                        const res = await fetch("https://script.google.com/macros/s/AKfycbyAeVB2nMKZHHEdaSDvLzX68kPCSLdov7TezN7k2vEKKyGvvjDgghC0i02KP5Eqd6hoIA/exec");
+                        const data = await res.json();
+                        const rowData = data.reverse().find(d => d.ID == id);
+
+                        if (!rowData) throw new Error('Data tidak ditemukan');
+
+                        // Kirim data ke Laravel
+                        const formData = new FormData();
+                        formData.append('data', JSON.stringify(rowData));
+
+                        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+                        const response = await fetch('/export-cv-word', {
+                            method: 'POST',
+                            headers: {
+                                'X-CSRF-TOKEN': csrfToken
+                            },
+                            body: formData
+                        });
+
+                        if (!response.ok) throw new Error('Download gagal');
+
+                        const blob = await response.blob();
                         const url = window.URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
@@ -962,14 +1041,15 @@
                             timer: 2000,
                             showConfirmButton: false
                         });
-                    })
-                    .catch(error => {
+
+                    } catch (err) {
+                        console.error(err);
                         Swal.fire({
                             title: 'Error!',
-                            text: 'Failed to download file.',
+                            text: err.message,
                             icon: 'error'
                         });
-                    });
+                    }
                 }
             });
         });
