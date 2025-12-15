@@ -1689,7 +1689,7 @@
                                 <div class="form-group">
                                     <label class="text-label" style="font-weight: bold">BELAJAR BAHASA:</label>
                                     <p class="text-danger" style="font-size: 11px;">
-                                        *) Mohon pilih belajar bahasa, pilih YA jika ingin belajar bahasa di LPK ACC Japan Centre (untuk matching job opsional).
+                                        *) Mohon pilih belajar bahasa, pilih YA jika ingin belajar bahasa di LPK GMI JAPAN TEGAL (untuk matching job opsional).
                                     </p>
                                     <select name="belajar_bahasa" class="form-control" id="belajar_bahasa">
                                         <option value="" disabled selected>Pilih opsi pertanyaan</option>
