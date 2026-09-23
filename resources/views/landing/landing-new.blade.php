@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
-    <title>LPK GMI JAPAN TEGAL</title>
+    <title>LPK GMI Japan Tegal | Pelatihan dan Program Kerja ke Jepang</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="LPK GMI Japan Tegal, pelatihan bahasa Jepang, program magang Jepang, Tokutei Ginou, Matching Job" name="keywords">
+    <meta content="Pelatihan bahasa Jepang dan pendampingan program Magang, Tokutei Ginou, dan Matching Job bersama LPK Garuda Mestakung Indonesia di Tegal." name="description">
     <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -25,619 +25,209 @@
     <!-- Lity CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css">
 
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('gmi-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', savedTheme || (prefersDark ? 'dark' : 'light'));
+        })();
+    </script>
+
     <style>
-        .pagination-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            padding: 10px 15px;
+        /* Landing page redesign */
+        :root {
+            --page-bg: #f7f8fa;
+            --surface: #fff;
+            --surface-soft: #eef2f6;
+            --text-main: #172b3c;
+            --text-muted: #657487;
+            --line: #e2e8ef;
+            --brand: #0d6670;
+            --brand-deep: #093e4b;
+            --brand-light: #e3f1ef;
+            --accent: #e8a944;
+            --shadow: 0 18px 50px rgba(21, 45, 60, .09);
         }
-
-        .pagination {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            gap: 5px;
-            flex-wrap: wrap;
+        html[data-theme="dark"] {
+            color-scheme: dark;
+            --page-bg: #0d151b;
+            --surface: #15232c;
+            --surface-soft: #1b2d37;
+            --text-main: #ecf2f4;
+            --text-muted: #afbdc4;
+            --line: #2b3b44;
+            --brand: #5bc1b1;
+            --brand-deep: #102c35;
+            --brand-light: #1d3b41;
+            --accent: #f2bd62;
+            --shadow: 0 18px 50px rgba(0, 0, 0, .22);
         }
-
-        .pagination li {
-            display: inline-block;
+        body, .container-xxl.bg-white, .bg-white { background: var(--page-bg) !important; color: var(--text-main); }
+        body { font-family: 'Open Sans', sans-serif; }
+        h1,h2,h3,h4,h5,h6 { color: var(--text-main); font-family: 'Montserrat', sans-serif; letter-spacing: -.035em; }
+        p { color: inherit; }
+        .navbar { position: absolute; z-index: 20; top: 0; left: 0; width: 100%; padding: 16px max(24px, calc((100vw - 1200px)/2)) !important; background: transparent !important; box-shadow: none; }
+        .navbar-brand img { width: 62px; height: 56px; object-fit: contain; }
+        .navbar .nav-link { color: #f5f8f8 !important; font-size: .9rem; font-weight: 600; }
+        .navbar .nav-link:hover { color: #f4c46e !important; }
+        .navbar .dropdown-menu { padding: 10px; border: 0; border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+        .navbar .dropdown-item { border-radius: 8px; color: var(--text-main); }
+        .theme-toggle { display:inline-flex; align-items:center; gap:8px; min-height:40px; padding:8px 13px; border:1px solid rgba(255,255,255,.3); border-radius:999px; background:rgba(255,255,255,.1); color:white; font-size:.85rem; font-weight:700; }
+        .theme-toggle:hover { background:rgba(255,255,255,.2); }
+        .hero-header { position:relative; overflow:hidden; min-height:740px; display:flex; align-items:center; padding:130px 0 80px; border-radius:0 0 42px 42px; background:radial-gradient(ellipse at 82% 35%, rgba(69,151,143,.38), transparent 34%), linear-gradient(120deg,#102d38 0%,#114b56 57%,#0a6670 100%) !important; }
+        .hero-header::before { content:''; position:absolute; inset:0; opacity:.12; background-image:radial-gradient(#fff 1px, transparent 1px); background-size:26px 26px; mask-image:linear-gradient(90deg, transparent, #000); }
+        .hero-header .container { position:relative; z-index:1; }
+        .hero-copy { max-width:590px; }
+        .hero-kicker,.eyebrow { display:inline-flex; align-items:center; gap:9px; color:var(--brand); font-size:.75rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+        .hero-kicker { color:#c1e5dd; }
+        .hero-kicker::before,.eyebrow::before { content:''; width:25px; height:2px; background:var(--accent); }
+        .hero-header h1 { margin:20px 0; color:white; font-size:clamp(2.8rem,6vw,5.2rem); font-weight:800; line-height:1.02; }
+        .hero-header h1 span { color:#e9b95f; }
+        .hero-header .hero-description { max-width:550px; color:rgba(255,255,255,.78); font-size:1.03rem; line-height:1.85; }
+        .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin:28px 0; }
+        .btn-gmi,.btn-gmi-outline { display:inline-flex; min-height:50px; align-items:center; justify-content:center; gap:9px; padding:12px 20px; border-radius:10px; font-weight:700; text-decoration:none; }
+        .btn-gmi { background:#e8b254; color:#192a2d; }
+        .btn-gmi:hover { transform:translateY(-2px); background:#f4c66f; color:#17272a; }
+        .btn-gmi-outline { border:1px solid rgba(255,255,255,.4); color:white; }
+        .btn-gmi-outline:hover { background:rgba(255,255,255,.1); color:white; }
+        .hero-location { color:rgba(255,255,255,.7); font-size:.9rem; }
+        .hero-photo { position:relative; max-width:500px; margin:0 auto; padding:14px; border:1px solid rgba(255,255,255,.2); border-radius:28px; background:rgba(255,255,255,.08); backdrop-filter:blur(8px); transform:rotate(1deg); }
+        .hero-photo img { width:100%; height:470px; object-fit:cover; border-radius:19px; }
+        .hero-photo-caption { position:absolute; right:-24px; bottom:35px; padding:14px 18px; border-radius:14px; background:var(--surface); color:var(--text-main); box-shadow:var(--shadow); font-size:.85rem; font-weight:700; }
+        .announcement { margin-top:-1px; padding:12px 20px; background:#f5e7c8; color:#573b0d; font-size:.86rem; }
+        .announcement strong { color:#173940; }
+        .page-section { padding:92px 0; }
+        .section-heading { max-width:700px; margin:0 auto 42px; text-align:center; }
+        .section-heading h2 { margin:12px 0; font-size:clamp(2rem,4vw,3.15rem); font-weight:800; }
+        .section-heading p { color:var(--text-muted); line-height:1.8; }
+        .program-card,.info-card,.gallery-card { height:100%; overflow:hidden; border:1px solid var(--line); border-radius:18px; background:var(--surface); box-shadow:var(--shadow); }
+        .program-card { padding:28px; transition:transform .2s ease, box-shadow .2s ease; }
+        .program-card:hover,.gallery-card:hover { transform:translateY(-5px); box-shadow:0 22px 55px rgba(21,45,60,.15); }
+        .program-icon { display:grid; width:52px; height:52px; place-items:center; margin-bottom:22px; border-radius:15px; background:var(--brand-light); color:var(--brand); font-size:1.3rem; }
+        .program-card h3,.info-card h3 { margin-bottom:10px; font-size:1.2rem; font-weight:800; }
+        .program-card p,.info-card p { margin:0; color:var(--text-muted); line-height:1.75; }
+        .about-panel { padding:clamp(24px,4vw,48px); border-radius:24px; background:var(--surface); box-shadow:var(--shadow); }
+        .about-panel .lead-copy { color:var(--text-muted); font-size:1rem; line-height:1.9; }
+        .about-gallery img { width:100%; height:480px; object-fit:cover; border-radius:22px; }
+        .about-links { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0; }
+        .about-links a { padding:11px 14px; border-radius:10px; background:var(--brand-light); color:var(--brand); font-size:.88rem; font-weight:700; text-decoration:none; }
+        .benefit-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:22px; }
+        .benefit-list span { color:var(--text-main); font-size:.9rem; }
+        .benefit-list i { margin-right:7px; color:var(--brand); }
+        .stats-band { padding:45px 0; background:var(--brand-deep); color:white; }
+        .stat-item { text-align:center; }
+        .stat-item strong { display:block; color:#f2bd62; font-size:2.5rem; font-weight:800; }
+        .stat-item span { color:rgba(255,255,255,.75); font-size:.9rem; }
+        .gallery-card { transition:transform .2s ease; }
+        .gallery-card img { display:block; width:100%; height:260px; object-fit:cover; }
+        .gallery-caption { padding:14px 16px; color:var(--text-muted); font-size:.84rem; }
+        .gallery-carousel { position:relative; }
+        .gallery-controls { display:flex; justify-content:flex-end; gap:10px; margin:-18px 0 18px; }
+        .gallery-arrow { display:grid; width:42px; height:42px; place-items:center; border:1px solid var(--line); border-radius:50%; background:var(--surface); color:var(--text-main); box-shadow:var(--shadow); transition:transform .2s ease,background .2s ease,color .2s ease; }
+        .gallery-arrow:hover { transform:translateY(-2px); background:var(--brand); color:#fff; }
+        .gallery-arrow:disabled { cursor:default; opacity:.35; box-shadow:none; transform:none; }
+        .gallery-viewport { overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none; }
+        .gallery-viewport::-webkit-scrollbar { display:none; }
+        .gallery-track { display:flex; gap:18px; padding:4px 2px 18px; }
+        .gallery-slide { flex:0 0 calc(25% - 14px); min-width:0; scroll-snap-align:start; }
+        .gallery-slide .gallery-card { height:100%; }
+        .gallery-slide .gallery-card img { height:220px; }
+        @media(max-width:991.98px) { .gallery-slide { flex-basis:calc(50% - 9px); } }
+        @media(max-width:575.98px) { .gallery-slide { flex-basis:82%; } .gallery-controls { margin-top:-14px; } }
+        .pagination-container { display:flex; justify-content:center; padding:24px 0 0; }
+        .pagination { justify-content:center; gap:6px; }
+        .pagination li a,.pagination li span { border:1px solid var(--line); border-radius:9px; background:var(--surface); color:var(--text-main); font-weight:700; }
+        .pagination li.active span,.pagination li a:hover { border-color:var(--brand); background:var(--brand); color:#fff; }
+        .cta-panel { overflow:hidden; padding:clamp(30px,5vw,58px); border-radius:24px; background:linear-gradient(120deg,#123a45,#0e6670); color:white; }
+        .cta-panel h2 { color:white; font-size:clamp(2rem,4vw,3rem); font-weight:800; }
+        .cta-panel p { max-width:750px; color:rgba(255,255,255,.75); line-height:1.8; }
+        .map-frame { width:100%; height:390px; border:0; border-radius:18px; box-shadow:var(--shadow); }
+        .modal-content { border:1px solid var(--line); border-radius:18px; background:var(--surface); color:var(--text-main); }
+        .footer { background:#102a33 !important; }
+        .back-to-top { z-index:9; border-radius:12px; }
+        .social-fab { position:fixed; z-index:15; right:22px; bottom:24px; display:grid; width:54px; height:54px; place-items:center; border-radius:50%; background:#169c6b; color:white; box-shadow:0 12px 30px rgba(0,0,0,.2); font-size:1.35rem; text-decoration:none; }
+        .social-fab:hover { transform:translateY(-3px); color:white; }
+        html[data-theme="dark"] .announcement { background:#47391f; color:#ffedc8; }
+        html[data-theme="dark"] .announcement strong { color:#fff; }
+        html[data-theme="dark"] .dropdown-menu { background:var(--surface); }
+        html[data-theme="dark"] .modal-header,html[data-theme="dark"] .modal-footer { border-color:var(--line); }
+        @media(max-width:991.98px) {
+            .navbar { position:absolute; padding:12px 18px !important; }
+            .navbar-collapse { margin-top:12px; padding:14px; border-radius:16px; background:#123b45; }
+            .theme-toggle { margin:10px 8px 0 0; }
+            .hero-header { min-height:auto; padding:115px 0 55px; border-radius:0 0 28px 28px; }
+            .hero-photo { max-width:440px; }
+            .hero-photo img { height:380px; }
+            .hero-photo-caption { right:0; }
+            .page-section { padding:66px 0; }
         }
-
-        .pagination li a,
-        .pagination li span {
-            display: inline-block;
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            border: 1px solid #046392;
-            background-color: white;
-            color: #046392;
-            font-weight: bold;
+        @media(max-width:575.98px) {
+            .hero-header h1 { font-size:2.65rem; }
+            .hero-photo img,.about-gallery img { height:320px; }
+            .benefit-list { grid-template-columns:1fr; }
+            .hero-actions a { flex:1 1 100%; }
+            .stat-item strong { font-size:2rem; }
+            .map-frame { height:300px; }
         }
-
-        .pagination li a:hover {
-            background-color: #046392;
-            color: white;
-        }
-
-        .pagination li.active span {
-            background-color: #046392;
-            color: white;
-        }
-
-        .pagination li.disabled span {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        @media (max-width: 768px) {
-            .pagination-container {
-                padding: 10px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .pagination {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .pagination li a,
-            .pagination li span {
-                padding: 6px 10px;
-                font-size: 14px;
-            }
-        }
+        @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation-duration:.01ms !important; } }
     </style>
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-
-        <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <img src="img/logo-jepang-removebg.jpg" alt="Logo" width="100px">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars" style="color: white;"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                Program LPK GMI
-                            </a>
-                            <div class="dropdown-menu m-0">
-                                <a class="dropdown-item">Program Magang Jepang</a>
-                                <a class="dropdown-item">Program Tokutei Ginou (TG)</a>
-                                <a class="dropdown-item">Matching Job</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                Social Media
-                            </a>
-                            <div class="dropdown-menu m-0">
-                                <a href="https://www.instagram.com/lpk.gmijapanofficial?igsh=MXVyempkOTIxeWRiMQ=="
-                                    class="dropdown-item" target="_blank">
-                                    Instagram
-                                </a>
-                                <a href="https://wa.me/6282324353371" class="dropdown-item" target="_blank">
-                                    WhatsApp
-                                </a>
-                                <a href="https://www.tiktok.com/@lpk.gmijapantegal?_t=ZS-8u2sgx8yiAq&_r=1"
-                                    class="dropdown-item" target="_blank">
-                                    Tiktok
-                                </a>
-                            </div>
-                        </div>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
+        <div id="spinner" class="show bg-white position-fixed top-50 start-50 translate-middle w-100 vh-100 d-flex align-items-center justify-content-center" style="z-index:2000"><div class="spinner-grow text-primary" role="status" aria-label="Memuat halaman"></div></div>
+        <header id="home">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a href="#home" class="navbar-brand p-0" aria-label="LPK GMI halaman utama"><img src="{{ asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI"></a>
+                <button type="button" class="theme-toggle ms-auto me-3 order-lg-3" id="themeToggle" aria-label="Aktifkan mode gelap" aria-pressed="false"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span>Mode Gelap</span></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Buka navigasi"><span class="fa fa-bars"></span></button>
+                <div class="collapse navbar-collapse order-lg-2" id="navbarCollapse"><div class="navbar-nav ms-auto align-items-lg-center gap-lg-2 py-2 py-lg-0">
+                    <a href="#home" class="nav-item nav-link">Beranda</a><a href="#program" class="nav-item nav-link">Program</a><a href="#about" class="nav-item nav-link">Tentang</a><a href="#galeri" class="nav-item nav-link">Galeri</a><a href="#location" class="nav-item nav-link">Lokasi</a><a href="#contact" class="nav-item nav-link">Kontak</a>
+                </div></div>
             </nav>
-
-            <div class="container-xxl bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="https://garudamestakungindonesia.my.id/storage/images/1732115655_IMG-20241120-WA0053.jpg"
-                                            class="d-block w-100" alt="..."
-                                            style="border-radius: 10px;width: 300px;" data-lity>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://garudamestakungindonesia.my.id/storage/images/1732115655_IMG-20241120-WA0052.jpg"
-                                            class="d-block w-100" style="border-radius: 10px;width: 370px;" data-lity>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://garudamestakungindonesia.my.id/storage/images/1732115655_IMG-20241120-WA0054.jpg"
-                                            class="d-block w-100" style="border-radius: 10px;width: 300px;" data-lity>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}"
-                                            class="d-block w-100" style="border-radius: 10px;width: 300px;" data-lity>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            {{-- <p class="justify-content-center text-white">
-                                Welcome to LPK GMI Jepang - Tegal 👋
-                            </p> --}}
-                            <h2 class="text-white mb-4 animated slideInDown">LPK GMI JAPAN TEGAL</h2>
-                            <a href="https://maps.app.goo.gl/FaqwnyLMjym9c4N16" target="_blank">
-                                <p style="color: white;text-align: left;" class="animated slideInDown"><i
-                                        class="fa fa fa-search text-white mb-2"
-                                        style="padding-right: 10px;"></i>Balamoa,
-                                    Kabupaten Tegal,
-                                    Central Java </p>
-                            </a>
-                            <p class="text-white pb-1 animated slideInDown" style="text-align: justify;">
-                                LPK GMI (Garuda Mestakung Indonesia) memberikan kesempatan bagi anda yang ingin bekerja
-                                di luar negeri khususnya di Jepang. LPK GMI telah
-                                membimbing dan
-                                membina banyak anak hingga berangkat bekerja di Luar Negeri khususnya Negara Jepang. LPK
-                                GMI memiliki program diantaranya
-                                Program Magang, Program Tokutei Ginou dan Matching Job, LPK GMI memiliki banyak Job dari
-                                berbagai sektor kerja di Jepang.
-                            </p>
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <marquee scrollamount="10"><b>Announcement!</b> LPK Garuda Mestakung Indonesia (GMI)
-                                    tidak membuka
-                                    cabang diwilayah
-                                    <b>Kota Tegal/sekitarnya!</b> apabila ada lembaga atau perorangan mengatasnamakan
-                                    kami mohon
-                                    diklarifikasikan terlebih dahulu kepada kami, dan kami tidak bertanggung jawab
-                                    apabila ada
-                                    oknum yang mengaku cabang kami! Terimakasih
-                                </marquee>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <a href="{{ url('/pendaftaran-siswa-baru') }}" target="_blank">
-                                        <button class="btn btn-warning" style="width: 100%;height: 50px;">
-                                            <i class="bi bi-book" style="margin-right: 5px;"></i>
-                                            <b>Pendaftaran</b>
-                                        </button>
-                                    </a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="/manual-book">
-                                        <button class="btn btn-warning" style="width: 100%;height: 50px;">
-                                            <i class="bi bi-book" style="margin-right: 5px;"></i>
-                                            <b>Manual Book</b>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><br /><br />
-
-        <div class="container-xxl py-2">
-            <div class="container py-2 px-lg-5">
-                <div class="row g-4">
-                    <p class="section-title text-secondary">Program LPK GMI<span></span></p>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item rounded text-center p-4"
-                            style="background-color: #093d91;color: white;">
-                            <i class="fa fa-3x fa-book text-white mb-4"></i>
-                            <h5 class="mb-3" style="color: white">Program Magang Jepang</h5>
-                            <a>
-                                <p class="m-0" style="color: white">
-                                    Dana Talangan | Proses
-                                    Transparan | Terpercaya & Amanah
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item rounded text-center p-4"
-                            style="background-color: #093d91;color: white;">
-                            <i class="fa fa-3x fa-book text-white mb-4"></i>
-                            <h5 class="mb-3" style="color: white">Program TG Jepang</h5>
-                            <a>
-                                <p class="m-0" style="color: white">
-                                    Dana Talangan | Proses
-                                    Transparan | Terpercaya & Amanah
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br /><br />
-
-        <div class="container-xxl py-2" id="about">
-            <div class="container py-2 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
-                        <p class="section-title text-secondary">About Us<span></span></p>
-                        <h1 class="mb-2">#1 LPK GMI JAPAN TEGAL</h1>
-                        <div class="alert" role="alert" style="background-color: #093d91;color: white;">
-                            <marquee>Bahasa Adalah Jendela Untuk Melihat Dunia Lebih Luas</marquee>
-                        </div>
-                        <p class="mb-2" style="text-align: justify;"><b>LPK GARUDA MESTAKUNG INDONESIA</b> merupakan
-                            suatu
-                            lembaga pelatihan kerja Jepang di
-                            Wilayah jawa Tengah, khususnya Kabupaten/Kota Tegal yang independen berdasarkan Akte Notaris
-                            No. 01 tanggal 18 Agustus 2023, yang beralamat di Jl. kaibon Rt. 03 Rw. 03 Desa Balamoa
-                            kecamatan Pangkah Kabupaten Tegal. Dengan kewenangan utama melaksanakan pelatihan bahasa
-                            yang berbasis kompetensi dalam rangka tujuan untuk membantu mengentaskan kemiskinan dan
-                            pengangguran di wilayah Jawa Tengah
-                        </p><br />
-                        <div class="row" style="padding-bottom: 10px;">
-                            <div class="col-md-6" style="padding-bottom: 10px;">
-                                <a data-bs-toggle="modal" data-bs-target="#modalSarpras"><button type="button"
-                                        class="btn btn-primary text-white"
-                                        style="width: 100%;text-align: left;height: 50px;"><b><i
-                                                class="bi bi-building" style="padding-right: 10px;"></i>
-                                            Sarana & Prasarana LPK GMI</b></button></a>
-                            </div>
-                            <div class="col-md-6" style="padding-bottom: 10px;">
-                                <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <button type="button" class="btn btn-primary text-white"
-                                        style="width: 100%;text-align: left;height: 50px;"><b><i class="fa fa-sitemap"
-                                                style="padding-right: 10px;"></i>
-                                            Struktur Organisasi LPK GMI</b>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="row" style="padding-bottom: 10px;">
-                            <div class="col-md-12" style="padding-bottom: 10px;">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <a data-bs-toggle="modal" data-bs-target="#modalKelebihan">
-                                            <div class="icon-box">
-                                                <div class="icon"><i class="bx bx-tachometer"></i></div>
-                                                <h4>Kelebihan LPK GMI</h4>
-                                                <div class="col-md-12">
-                                                    <p class="text-black">
-                                                        <i class="fa fa-check"></i> Pelatihan Bahasa Jepang Dari Awal
-                                                    </p>
-                                                    <p class="text-black">
-                                                        <i class="fa fa-check"></i> Bimbingan Dari Awal Hingga
-                                                        Keberangkatan
-                                                    </p>
-                                                    <p class="text-black">
-                                                        <i class="fa fa-check"></i> Kesempatan Bekerja di Jepang
-                                                        (Magang atau TG)
-                                                    </p>
-                                                    <p class="text-black">
-                                                        <i class="fa fa-check"></i> Pengalaman Tinggal di Jepang
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div id="carouselExampleIndicators" class="carousel slide">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="0" class="active" aria-current="true"
-                                    aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;" data-lity>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;" data-lity>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('templates/assets/img/GMI/gmi1.png') }}" class="d-block w-100"
-                                        alt="..." style="border-radius: 10px;" data-lity>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('sarpras5.jpg') }}" class="d-block w-100" alt="..."
-                                        style="border-radius: 10px;" data-lity>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div><br />
-
-                        <img src="{{ asset('img/sarpras5.jpg') }}" class="img-fluid" alt=""
-                            style="border-radius: 10px;" data-lity>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-xxl position-relative p-0" id="home">
-            <div class="container" data-aos="fade-up">
-                <center>
-                    <h2>Galeri GMI</h2>
-                </center><br />
-                <div class="row" id="galeri">
-                    @foreach ($images_db as $image)
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="{{ asset('storage/' . $image->filepath) }}"
-                                        class="card-img-top lazyload" data-lity alt="Image"
-                                        style="height: 100%; object-fit: cover;height: 300px;">
-                                </div>
-                                <div class="card-footer text-body-secondary">
-                                    <b>Date:</b> {{ $image->created_at }}<br />
-                                    {{ \Carbon\Carbon::parse($image->created_at)->diffForHumans() }}
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <!-- Custom Pagination -->
-                <div class="pagination-container" style="padding: 0px;">
-                    <ul class="pagination">
-                        @if ($images_db->onFirstPage())
-                            <li class="disabled"><span>&lt;</span></li>
-                        @else
-                            <li><a class="text-white" style="background-color: #046392"
-                                    href="{{ $images_db->previousPageUrl() }}#galeri" rel="prev">&lt;</a></li>
-                        @endif
-
-                        @foreach ($images_db->links()->elements[0] as $page => $url)
-                            @if ($page == $images_db->currentPage())
-                                <li class="active"><span>{{ $page }}</span></li>
-                            @else
-                                <li><a href="{{ $url }}#galeri">{{ $page }}</a></li>
-                            @endif
-                        @endforeach
-
-                        @if ($images_db->hasMorePages())
-                            <li><a class="text-white" style="background-color: #046392"
-                                    href="{{ $images_db->nextPageUrl() }}#galeri" rel="next">&gt;</a></li>
-                        @else
-                            <li class="disabled"><span>&gt;</span></li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Facts Start -->
-        <div class="container-xxl bg-primary fact py-2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-users fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">1000</h1>
-                        <p class="text-white mb-0">Siswa LPK GMI</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                        <i class="fa fa-calendar fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">5</h1>
-                        <p class="text-white mb-0">Years Experience</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                        <i class="fa fa-users fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">30</h1>
-                        <p class="text-white mb-0">Karyawan</p>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                        <i class="fa fa-plane fa-3x text-secondary mb-3"></i>
-                        <h1 class="text-white mb-2" data-toggle="counter-up">1000</h1>
-                        <p class="text-white mb-0">Penerbangan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Facts End -->
-
-        <!-- Service Start -->
-        <div class="container-xxl py-2" id="service">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our
-                        Services<span></span></p>
-                    <h1 class="text-center mb-5">Program LPK GMI</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-search fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Program GMI TG Jepang</h5>
-                            <p class="m-0">Program TG Jepang | Dana Talangan
-                                |
-                                Proses Transparan | Terpercaya & Amanah <br /> Klik More Info</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-laptop fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Program GMI Jepang</h5>
-                            <p class="m-0">Program Magang Jepang | Dana Talangan | Proses Transparan | Terpercaya &
-                                Amanah</p>
-                            <a class="btn btn-square"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-info fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Dana Talangan</h5>
-                            <p class="m-0">LPK Garuda Mestakung Indonesia (GMI) menyediakan Dana Talangan bagi yang
-                                mendaftar</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-thumbs-up fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Resmi dan Terpercaya</h5>
-                            <p class="m-0">LPK Garuda Mestakung Indonesia (GMI) sudah resmi, berpengalaman,
-                                dan terpercaya</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item d-flex flex-column text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-book fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Proses Transparan</h5>
-                            <p class="m-0">LPK Garuda Mestakung Indonesia (GMI) mengutamakan transparan dalam proses
-                            </p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-
-        <!-- Newsletter Start -->
-        <div class="container-xxl bg-primary newsletter py-2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>About GMI<span></span>
-                        </p>
-                        <h1 class="text-center text-white mb-4">Stay Always In LPK GMI</h1>
-                        <p class="text-white mb-4" style="text-align: center">LPK GMI JAPAN TEGAL
-                            Mencetak
-                            Calon Pekerja Migran Indonesia yang Unggul, Pelatihan Bahasa Jepang dan Program Magang dan
-                            Tokutei Ginou (TG)
-                            dari Awal Hingga Mendapatkan Job</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                                placeholder="Email: lpkgarudamestakungindonesia@gmail.com" style="height: 48px;"
-                                readonly>
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter End -->
-
-        <!-- Projects Start -->
-        <div class="container-xxl">
-            <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Our
-                        Galeri GMI<span></span></p>
-                    <h1 class="text-center mb-5">Galeri LPK GMI</h1>
-                </div>
-                <div class="row">
-                    @foreach ($images as $index => $image)
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}"
-                                        class="card-img-top lazyload" data-lity alt="Image"
-                                        style="height: 100%; object-fit: cover;height: 300px;">
-                                </div>
-                                <div class="card-footer text-body-secondary">
-                                    <b>LPK GMI Japan</b>
-                                </div>
-                            </div><br />
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <!-- Projects End -->
-
-        <div class="container py-2" id="location" style="padding-right: 50px;padding-left: 50px;">
-            <h5>1. Lokasi LPK GMI Japan</h5>
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-12">
-                    <iframe class="mb-4 mb-lg-0"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.929751248736!2d109.1843675!3d-6.9522777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fbfe260681b91%3A0x122ab99fb2d88a7!2sLpk%20Garuda%20Mestakung%20Indonesia!5e0!3m2!1sid!2sid!4v1708396367934!5m2!1sid!2sid"
-                        frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-
+            <section class="container-xxl hero-header"><div class="container px-lg-5"><div class="row align-items-center g-5">
+                <div class="col-lg-7"><div class="hero-copy"><span class="hero-kicker">LPK Garuda Mestakung Indonesia</span><h1>Mulai langkahmu,<br><span>gapai masa depan</span><br>di Jepang.</h1><p class="hero-description">Pelatihan bahasa Jepang dan pendampingan kerja untuk membuka peluang masa depan yang lebih luas. Kenali program Magang, Tokutei Ginou, dan Matching Job bersama LPK GMI Japan Tegal.</p><div class="hero-actions"><a class="btn-gmi" href="{{ url('/pendaftaran-siswa-baru') }}" target="_blank" rel="noopener"><i class="bi bi-arrow-right-circle"></i> Daftar sekarang</a><a class="btn-gmi-outline" href="/manual-book"><i class="bi bi-journal-text"></i> Lihat panduan</a></div><a class="hero-location" href="https://maps.app.goo.gl/FaqwnyLMjym9c4N16" target="_blank" rel="noopener"><i class="bi bi-geo-alt-fill me-2"></i>Balamoa, Kabupaten Tegal, Jawa Tengah</a></div></div>
+                <div class="col-lg-5"><div class="hero-photo"><img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" alt="Kegiatan siswa LPK GMI" data-lity><div class="hero-photo-caption"><i class="bi bi-sunrise me-2" style="color:#c38a2e"></i>Belajar hari ini, melangkah lebih jauh</div></div></div>
+            </div></div></section>
+        </header>
+        <div class="announcement" role="note"><div class="container"><i class="bi bi-info-circle-fill me-2"></i><strong>Pengumuman:</strong> LPK GMI tidak membuka cabang di wilayah Kota Tegal dan sekitarnya. Konfirmasikan informasi yang mengatasnamakan GMI melalui kanal resmi kami.</div></div>
+        <main>
+            <section class="page-section" id="program"><div class="container"><div class="section-heading"><span class="eyebrow">Peluang untukmu</span><h2>Temukan program yang sesuai</h2><p>Siapkan kemampuan, pelajari bahasa, dan pilih jalur kerja di Jepang yang sesuai dengan rencana masa depanmu.</p></div><div class="row g-4">
+                <div class="col-md-4"><article class="program-card"><div class="program-icon"><i class="bi bi-journal-bookmark"></i></div><h3>Program Magang Jepang</h3><p>Pelatihan dan pendampingan menuju pengalaman kerja di Jepang. Proses transparan, terpercaya, dan amanah.</p></article></div>
+                <div class="col-md-4"><article class="program-card"><div class="program-icon"><i class="bi bi-briefcase"></i></div><h3>Tokutei Ginou (TG)</h3><p>Persiapkan diri untuk peluang kerja melalui program Tokutei Ginou di berbagai sektor pekerjaan.</p></article></div>
+                <div class="col-md-4"><article class="program-card"><div class="program-icon"><i class="bi bi-people"></i></div><h3>Matching Job</h3><p>Kenali peluang pekerjaan dan dapatkan arahan untuk mempersiapkan langkah berikutnya.</p></article></div>
+            </div></div></section>
+            <section class="page-section pt-0" id="about"><div class="container"><div class="about-panel"><div class="row g-5 align-items-center">
+                <div class="col-lg-6"><div id="aboutCarousel" class="carousel slide about-gallery" data-bs-ride="carousel"><div class="carousel-inner">
+                    <div class="carousel-item active"><img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" alt="Kegiatan LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" alt="Pelatihan di LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ asset('templates/assets/img/GMI/gmi1.png') }}" alt="Siswa LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ asset('img/sarpras5.jpg') }}" alt="Sarana LPK GMI" data-lity></div>
+                </div><button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev" aria-label="Foto sebelumnya"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next" aria-label="Foto berikutnya"><span class="carousel-control-next-icon"></span></button></div></div>
+                <div class="col-lg-6"><span class="eyebrow">Tentang kami</span><h2 class="mt-3 mb-3">Mendampingi langkah menuju Jepang</h2><p class="lead-copy"><strong>LPK GARUDA MESTAKUNG INDONESIA</strong> merupakan lembaga pelatihan kerja Jepang di wilayah Jawa Tengah, khususnya Kabupaten Tegal. Berdiri berdasarkan Akte Notaris No. 01 tanggal 18 Agustus 2023, LPK GMI beralamat di Jl. Kaibon RT. 03 RW. 03, Desa Balamoa, Kecamatan Pangkah, Kabupaten Tegal.</p><p class="lead-copy">Kami melaksanakan pelatihan bahasa berbasis kompetensi untuk membantu membuka kesempatan kerja dan mengurangi pengangguran di wilayah Jawa Tengah.</p><div class="about-links"><a href="#" data-bs-toggle="modal" data-bs-target="#modalSarpras"><i class="bi bi-building me-2"></i>Sarana & Prasarana</a><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-diagram-3 me-2"></i>Struktur Organisasi</a></div><h3 class="h5 fw-bold">Pendampingan dari awal hingga keberangkatan</h3><div class="benefit-list"><span><i class="bi bi-check-circle-fill"></i>Belajar bahasa Jepang dari awal</span><span><i class="bi bi-check-circle-fill"></i>Bimbingan sampai keberangkatan</span><span><i class="bi bi-check-circle-fill"></i>Peluang program Magang atau TG</span><span><i class="bi bi-check-circle-fill"></i>Pengalaman tinggal di Jepang</span></div></div>
+            </div></div></div></section>
+            <section class="stats-band"><div class="container"><div class="row g-4"><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">1000</strong><span>Siswa LPK GMI</span></div><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">5</strong><span>Tahun pengalaman</span></div><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">30</strong><span>Karyawan</span></div><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">1000</strong><span>Penerbangan</span></div></div></div></section>
+            <section class="page-section" id="galeri"><div class="container"><div class="section-heading"><span class="eyebrow">Cerita dari GMI</span><h2>Galeri kegiatan</h2><p>Dokumentasi kegiatan dan perjalanan siswa LPK GMI Japan Tegal.</p></div><div class="gallery-carousel" data-gallery-carousel><div class="gallery-controls"><button type="button" class="gallery-arrow" data-gallery-prev aria-label="Foto sebelumnya"><i class="bi bi-arrow-left"></i></button><button type="button" class="gallery-arrow" data-gallery-next aria-label="Foto berikutnya"><i class="bi bi-arrow-right"></i></button></div><div class="gallery-viewport" data-gallery-viewport><div class="gallery-track">
+                @foreach ($images_db as $image)
+                    <div class="gallery-slide"><article class="gallery-card"><a href="{{ asset('storage/' . $image->filepath) }}" data-lity><img src="{{ asset('storage/' . $image->filepath) }}" class="lazyload" alt="Dokumentasi kegiatan LPK GMI" loading="lazy"></a><div class="gallery-caption"><i class="bi bi-calendar3 me-2"></i>{{ \Carbon\Carbon::parse($image->created_at)->format('d M Y') }} <span class="float-end">{{ \Carbon\Carbon::parse($image->created_at)->diffForHumans() }}</span></div></article></div>
+                @endforeach
+            </div></div></div><div class="pagination-container"><ul class="pagination">
+                @if ($images_db->onFirstPage())<li class="disabled"><span>&lsaquo;</span></li>@else<li><a href="{{ $images_db->previousPageUrl() }}#galeri" rel="prev">&lsaquo;</a></li>@endif
+                @foreach ($images_db->links()->elements[0] as $page => $url)@if ($page == $images_db->currentPage())<li class="active"><span>{{ $page }}</span></li>@else<li><a href="{{ $url }}#galeri">{{ $page }}</a></li>@endif @endforeach
+                @if ($images_db->hasMorePages())<li><a href="{{ $images_db->nextPageUrl() }}#galeri" rel="next">&rsaquo;</a></li>@else<li class="disabled"><span>&rsaquo;</span></li>@endif
+            </ul></div></div></section>
+            <section class="page-section pt-0" id="keunggulan"><div class="container"><div class="section-heading"><span class="eyebrow">Kenapa LPK GMI</span><h2>Proses yang mendampingi</h2><p>Belajar dan mempersiapkan diri dengan dukungan yang berkelanjutan.</p></div><div class="row g-4">
+                <div class="col-md-6 col-lg-4"><article class="program-card"><div class="program-icon"><i class="bi bi-translate"></i></div><h3>Belajar dari awal</h3><p>Pelatihan bahasa Jepang untuk membangun bekal komunikasi.</p></article></div><div class="col-md-6 col-lg-4"><article class="program-card"><div class="program-icon"><i class="bi bi-signpost-split"></i></div><h3>Arahan bertahap</h3><p>Bimbingan dari persiapan hingga proses keberangkatan.</p></article></div><div class="col-md-6 col-lg-4"><article class="program-card"><div class="program-icon"><i class="bi bi-globe-asia-australia"></i></div><h3>Peluang di Jepang</h3><p>Pilihan program Magang, Tokutei Ginou, dan Matching Job.</p></article></div><div class="col-md-6 col-lg-4"><article class="program-card"><div class="program-icon"><i class="bi bi-cash-coin"></i></div><h3>Dana talangan</h3><p>Dukungan dana talangan tersedia bagi peserta yang mendaftar sesuai ketentuan program.</p></article></div><div class="col-md-6 col-lg-4"><article class="program-card"><div class="program-icon"><i class="bi bi-shield-check"></i></div><h3>Resmi dan terpercaya</h3><p>LPK GMI berpengalaman dan berkomitmen mendampingi peserta.</p></article></div><div class="col-md-6 col-lg-4"><article class="program-card"><div class="program-icon"><i class="bi bi-card-checklist"></i></div><h3>Proses transparan</h3><p>Informasi program disampaikan dengan jelas dan bertanggung jawab.</p></article></div>
+            </div></div></section>
+            <section class="page-section pt-0"><div class="container"><div class="cta-panel"><div class="row align-items-center g-4"><div class="col-lg-8"><span class="hero-kicker">LPK GMI Japan Tegal</span><h2 class="mt-3">Siap memulai perjalananmu?</h2><p>Persiapkan diri untuk menjadi calon pekerja migran Indonesia yang unggul melalui pelatihan bahasa Jepang dan program kerja yang sesuai.</p><div class="text-white-50"><i class="bi bi-envelope me-2"></i>lpkgarudamestakungindonesia@gmail.com</div><div class="d-flex flex-wrap gap-3 mt-3"><a class="text-white" href="https://www.instagram.com/lpk.gmijapanofficial?igsh=MXVyempkOTIxeWRiMQ==" target="_blank" rel="noopener"><i class="bi bi-instagram me-1"></i>Instagram</a><a class="text-white" href="https://www.tiktok.com/@lpk.gmijapantegal?_t=ZS-8u2sgx8yiAq&_r=1" target="_blank" rel="noopener"><i class="fa fa-music me-1"></i>TikTok</a><a class="text-white" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA" target="_blank" rel="noopener"><i class="bi bi-youtube me-1"></i>YouTube</a></div></div><div class="col-lg-4 text-lg-end"><a class="btn-gmi" href="{{ url('/pendaftaran-siswa-baru') }}" target="_blank" rel="noopener"><i class="bi bi-arrow-right-circle"></i>Mulai pendaftaran</a></div></div></div></div></section>
+            <section class="page-section pt-0"><div class="container"><div class="section-heading"><span class="eyebrow">Dokumentasi</span><h2>Kegiatan LPK GMI</h2></div><div class="gallery-carousel" data-gallery-carousel><div class="gallery-controls"><button type="button" class="gallery-arrow" data-gallery-prev aria-label="Foto sebelumnya"><i class="bi bi-arrow-left"></i></button><button type="button" class="gallery-arrow" data-gallery-next aria-label="Foto berikutnya"><i class="bi bi-arrow-right"></i></button></div><div class="gallery-viewport" data-gallery-viewport><div class="gallery-track">
+                @foreach ($images as $index => $image)
+                    <div class="gallery-slide"><article class="gallery-card"><a href="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}" data-lity><img src="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}" alt="Kegiatan LPK GMI" loading="lazy"></a><div class="gallery-caption">LPK GMI Japan</div></article></div>
+                @endforeach
+            </div></div></div></div></section>
+            <section class="page-section pt-0" id="location"><div class="container"><div class="section-heading"><span class="eyebrow">Kunjungi kami</span><h2>Lokasi LPK GMI Japan</h2><p>Jl. Kaibon RT. 03 RW. 03, Desa Balamoa, Kecamatan Pangkah, Kabupaten Tegal, Jawa Tengah.</p></div><iframe class="map-frame" title="Peta lokasi LPK Garuda Mestakung Indonesia" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.929751248736!2d109.1843675!3d-6.9522777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fbfe260681b91%3A0x122ab99fb2d88a7!2sLpk%20Garuda%20Mestakung%20Indonesia!5e0!3m2!1sid!2sid!4v1708396367934!5m2!1sid!2sid" loading="lazy" allowfullscreen></iframe></div></section>
+        </main>
         @include('landing.footer')
-
-        <a class="btn btn-lg btn-secondary btn-lg-square back-to-top">
-            <i class="bi bi-arrow-up">
-            </i>
-        </a>
-
-        <div class="zoom">
-            <a class="zoom-fab zoom-btn-large bg-success" id="zoomBtn"><i class="bi bi-whatsapp"></i></a>
-            <ul class="zoom-menu">
-                <li>
-                    <a target="_blank" href="https://wa.me/6282324353371"
-                        class="zoom-fab zoom-btn-sm zoom-btn-person scale-transition scale-out bg-success">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://www.instagram.com/lpk.gmijapanofficial?igsh=MXVyempkOTIxeWRiMQ=="
-                        class="zoom-fab zoom-btn-sm zoom-btn-doc scale-transition scale-out">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA"
-                        class="zoom-fab zoom-btn-sm zoom-btn-tangram scale-transition scale-out">
-                        <i class="bi bi-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://www.tiktok.com/@lpk.gmijapantegal?_t=ZS-8u2sgx8yiAq&_r=1"
-                        class="zoom-fab zoom-btn-sm zoom-btn-report scale-transition scale-out" alt="Tiktok">
-                        <i class="fa fa-music"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <a class="btn btn-lg btn-secondary btn-lg-square back-to-top" href="#home" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></a>
+        <a class="social-fab" href="https://wa.me/6282324353371" target="_blank" rel="noopener" aria-label="Hubungi LPK GMI melalui WhatsApp"><i class="bi bi-whatsapp"></i></a>
     </div>
-
     <!-- Struktur Organisasi -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -748,6 +338,59 @@
     <script src="{{ asset('landing/js/main.js') }}"></script>
     <!-- Lity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+    <script>
+        document.querySelectorAll('[data-gallery-carousel]').forEach(function (carousel) {
+            const viewport = carousel.querySelector('[data-gallery-viewport]');
+            const track = carousel.querySelector('.gallery-track');
+            const slides = carousel.querySelectorAll('.gallery-slide');
+            const previous = carousel.querySelector('[data-gallery-prev]');
+            const next = carousel.querySelector('[data-gallery-next]');
+            if (!viewport || !track || slides.length < 2) {
+                carousel.querySelector('.gallery-controls').hidden = true;
+                return;
+            }
+
+            function updateButtons() {
+                previous.disabled = viewport.scrollLeft <= 2;
+                next.disabled = viewport.scrollLeft + viewport.clientWidth >= viewport.scrollWidth - 2;
+            }
+
+            function move(direction) {
+                const gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
+                const distance = slides[0].getBoundingClientRect().width + gap;
+                viewport.scrollBy({ left: direction * distance, behavior: 'smooth' });
+            }
+
+            previous.addEventListener('click', function () { move(-1); });
+            next.addEventListener('click', function () { move(1); });
+            viewport.addEventListener('scroll', updateButtons, { passive: true });
+            window.addEventListener('resize', updateButtons);
+            updateButtons();
+        });
+    </script>
+    <script>
+        (function () {
+            const toggle = document.getElementById('themeToggle');
+            if (!toggle) return;
+
+            function updateToggle(theme) {
+                const dark = theme === 'dark';
+                toggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+                toggle.setAttribute('aria-label', dark ? 'Aktifkan mode terang' : 'Aktifkan mode gelap');
+                toggle.innerHTML = dark
+                    ? '<i class="bi bi-sun-fill" aria-hidden="true"></i><span>Mode Terang</span>'
+                    : '<i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span>Mode Gelap</span>';
+            }
+
+            updateToggle(document.documentElement.getAttribute('data-theme') || 'light');
+            toggle.addEventListener('click', function () {
+                const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', nextTheme);
+                localStorage.setItem('gmi-theme', nextTheme);
+                updateToggle(nextTheme);
+            });
+        })();
+    </script>
 </body>
 
 </html>
