@@ -53,3 +53,13 @@ jobs:
           protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
           server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
           local-dir: ./public/
+
+      - name: Upload template Blade ke Laravel
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
+          server-dir: ${{ vars.LARAVEL_VIEWS_SERVER_DIR || './resources/views/' }}
+          local-dir: ./resources/views/
