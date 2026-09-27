@@ -42,9 +42,9 @@
             --text-main: #172b3c;
             --text-muted: #657487;
             --line: #e2e8ef;
-            --brand: #0d6670;
-            --brand-deep: #093e4b;
-            --brand-light: #e3f1ef;
+            --brand: #0878bd;
+            --brand-deep: #064b7a;
+            --brand-light: #e3f2fb;
             --accent: #e8a944;
             --shadow: 0 18px 50px rgba(21, 45, 60, .09);
         }
@@ -56,9 +56,9 @@
             --text-main: #ecf2f4;
             --text-muted: #afbdc4;
             --line: #2b3b44;
-            --brand: #5bc1b1;
-            --brand-deep: #102c35;
-            --brand-light: #1d3b41;
+            --brand: #35a9e8;
+            --brand-deep: #0b2940;
+            --brand-light: #173b52;
             --accent: #f2bd62;
             --shadow: 0 18px 50px rgba(0, 0, 0, .22);
         }
@@ -74,7 +74,7 @@
         .navbar .dropdown-item { border-radius: 8px; color: var(--text-main); }
         .theme-toggle { display:inline-flex; align-items:center; gap:8px; min-height:40px; padding:8px 13px; border:1px solid rgba(255,255,255,.3); border-radius:999px; background:rgba(255,255,255,.1); color:white; font-size:.85rem; font-weight:700; }
         .theme-toggle:hover { background:rgba(255,255,255,.2); }
-        .hero-header { position:relative; overflow:hidden; min-height:740px; display:flex; align-items:center; padding:130px 0 80px; border-radius:0 0 42px 42px; background:radial-gradient(ellipse at 82% 35%, rgba(69,151,143,.38), transparent 34%), linear-gradient(120deg,#102d38 0%,#114b56 57%,#0a6670 100%) !important; }
+        .hero-header { position:relative; overflow:hidden; min-height:100vh; min-height:100svh; box-sizing:border-box; display:flex; align-items:center; padding:104px 0 36px; border-radius:0 0 42px 42px; background:radial-gradient(ellipse at 82% 35%, rgba(45,169,232,.38), transparent 34%), linear-gradient(120deg,#082d50 0%,#075b96 57%,#0878bd 100%) !important; }
         .hero-header::before { content:''; position:absolute; inset:0; opacity:.12; background-image:radial-gradient(#fff 1px, transparent 1px); background-size:26px 26px; mask-image:linear-gradient(90deg, transparent, #000); }
         .hero-header .container { position:relative; z-index:1; }
         .hero-copy { max-width:590px; }
@@ -92,7 +92,7 @@
         .btn-gmi-outline:hover { background:rgba(255,255,255,.1); color:white; }
         .hero-location { color:rgba(255,255,255,.7); font-size:.9rem; }
         .hero-photo { position:relative; max-width:500px; margin:0 auto; padding:14px; border:1px solid rgba(255,255,255,.2); border-radius:28px; background:rgba(255,255,255,.08); backdrop-filter:blur(8px); transform:rotate(1deg); }
-        .hero-photo img { width:100%; height:470px; object-fit:cover; border-radius:19px; }
+        .hero-photo img { width:100%; height:clamp(300px,54vh,430px); object-fit:cover; border-radius:19px; }
         .hero-photo-caption { position:absolute; right:-24px; bottom:35px; padding:14px 18px; border-radius:14px; background:var(--surface); color:var(--text-main); box-shadow:var(--shadow); font-size:.85rem; font-weight:700; }
         .announcement { margin-top:-1px; padding:12px 20px; background:#f5e7c8; color:#573b0d; font-size:.86rem; }
         .announcement strong { color:#173940; }
@@ -138,12 +138,12 @@
         .pagination { justify-content:center; gap:6px; }
         .pagination li a,.pagination li span { border:1px solid var(--line); border-radius:9px; background:var(--surface); color:var(--text-main); font-weight:700; }
         .pagination li.active span,.pagination li a:hover { border-color:var(--brand); background:var(--brand); color:#fff; }
-        .cta-panel { overflow:hidden; padding:clamp(30px,5vw,58px); border-radius:24px; background:linear-gradient(120deg,#123a45,#0e6670); color:white; }
+        .cta-panel { overflow:hidden; padding:clamp(30px,5vw,58px); border-radius:24px; background:linear-gradient(120deg,#08345a,#0878bd); color:white; }
         .cta-panel h2 { color:white; font-size:clamp(2rem,4vw,3rem); font-weight:800; }
         .cta-panel p { max-width:750px; color:rgba(255,255,255,.75); line-height:1.8; }
         .map-frame { width:100%; height:390px; border:0; border-radius:18px; box-shadow:var(--shadow); }
         .modal-content { border:1px solid var(--line); border-radius:18px; background:var(--surface); color:var(--text-main); }
-        .footer { background:#102a33 !important; }
+        .footer { background:#082d50 !important; }
         .back-to-top { z-index:9; border-radius:12px; }
         .social-fab { position:fixed; z-index:15; right:22px; bottom:24px; display:grid; width:54px; height:54px; place-items:center; border-radius:50%; background:#169c6b; color:white; box-shadow:0 12px 30px rgba(0,0,0,.2); font-size:1.35rem; text-decoration:none; }
         .social-fab:hover { transform:translateY(-3px); color:white; }
@@ -153,7 +153,7 @@
         html[data-theme="dark"] .modal-header,html[data-theme="dark"] .modal-footer { border-color:var(--line); }
         @media(max-width:991.98px) {
             .navbar { position:absolute; padding:12px 18px !important; }
-            .navbar-collapse { margin-top:12px; padding:14px; border-radius:16px; background:#123b45; }
+            .navbar-collapse { margin-top:12px; padding:14px; border-radius:16px; background:#083b65; }
             .theme-toggle { margin:10px 8px 0 0; }
             .hero-header { min-height:auto; padding:115px 0 55px; border-radius:0 0 28px 28px; }
             .hero-photo { max-width:440px; }
@@ -168,6 +168,13 @@
             .hero-actions a { flex:1 1 100%; }
             .stat-item strong { font-size:2rem; }
             .map-frame { height:300px; }
+        }
+        @media(min-width:992px) and (max-height:800px) {
+            .hero-header { padding:88px 0 24px; }
+            .hero-header h1 { margin:14px 0; font-size:clamp(2.5rem,4.6vw,3.8rem); }
+            .hero-header .hero-description { font-size:.96rem; line-height:1.65; }
+            .hero-actions { margin:20px 0; }
+            .hero-photo img { height:clamp(280px,48vh,380px); }
         }
         @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation-duration:.01ms !important; } }
     </style>
