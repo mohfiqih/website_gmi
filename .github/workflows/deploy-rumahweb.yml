@@ -54,6 +54,36 @@ jobs:
           server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
           local-dir: ./public/
 
+      - name: Upload kode aplikasi Laravel
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
+          server-dir: ${{ vars.LARAVEL_APP_SERVER_DIR || './garudamestakungindonesia.my.id/app/' }}
+          local-dir: ./app/
+
+      - name: Upload konfigurasi Laravel
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
+          server-dir: ${{ vars.LARAVEL_CONFIG_SERVER_DIR || './garudamestakungindonesia.my.id/config/' }}
+          local-dir: ./config/
+
+      - name: Upload routes Laravel
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
+          server-dir: ${{ vars.LARAVEL_ROUTES_SERVER_DIR || './garudamestakungindonesia.my.id/routes/' }}
+          local-dir: ./routes/
+
       - name: Upload template Blade ke Laravel
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -61,5 +91,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
-          server-dir: ${{ vars.LARAVEL_VIEWS_SERVER_DIR || './resources/views/' }}
+          server-dir: ${{ vars.LARAVEL_VIEWS_SERVER_DIR || './garudamestakungindonesia.my.id/resources/views/' }}
           local-dir: ./resources/views/
