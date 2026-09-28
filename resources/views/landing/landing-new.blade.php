@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="LPK GMI Japan Tegal, pelatihan bahasa Jepang, program magang Jepang, Tokutei Ginou, Matching Job" name="keywords">
     <meta content="Pelatihan bahasa Jepang dan pendampingan program Magang, Tokutei Ginou, dan Matching Job bersama LPK Garuda Mestakung Indonesia di Tegal." name="description">
-    <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
+    <link href="{{ versioned_asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -16,12 +16,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.1') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/style.css?v=1.1') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/site-refresh.css') }}?v={{ config('site.version') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/bootstrap.min.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/style.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/site-refresh.css') }}" rel="stylesheet">
 
     <!-- Lity CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css">
@@ -213,7 +213,7 @@
         <div id="spinner" class="show bg-white position-fixed top-50 start-50 translate-middle w-100 vh-100 d-flex align-items-center justify-content-center" style="z-index:2000"><div class="spinner-grow text-primary" role="status" aria-label="Memuat halaman"></div></div>
         <header id="home">
             <nav class="navbar navbar-expand-lg navbar-dark site-nav">
-                <a href="#home" class="navbar-brand p-0" aria-label="LPK GMI halaman utama"><img src="{{ asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI"></a>
+                <a href="#home" class="navbar-brand p-0" aria-label="LPK GMI halaman utama"><img src="{{ versioned_asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI"></a>
                 <button type="button" class="theme-toggle ms-auto me-3 order-lg-3" id="themeToggle" aria-label="Aktifkan mode gelap" aria-pressed="false"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span>Mode Gelap</span></button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Buka navigasi"><span class="fa fa-bars"></span></button>
                 <div class="collapse navbar-collapse order-lg-2" id="navbarCollapse"><div class="navbar-nav ms-auto align-items-lg-center gap-lg-2 py-2 py-lg-0">
@@ -222,7 +222,7 @@
             </nav>
             <section class="container-xxl hero-header"><div class="container px-lg-5"><div class="row align-items-center g-5">
                 <div class="col-lg-7"><div class="hero-copy"><span class="hero-kicker">LPK Garuda Mestakung Indonesia</span><h1>Mulai langkahmu,<br><span>gapai masa depan</span><br>di Jepang.</h1><p class="hero-description">Pelatihan bahasa Jepang dan pendampingan kerja untuk membuka peluang masa depan yang lebih luas. Kenali program Magang, Tokutei Ginou, dan Matching Job bersama LPK GMI Japan Tegal.</p><div class="hero-actions"><a class="btn-gmi" href="{{ url('/pendaftaran-siswa-baru') }}" target="_blank" rel="noopener"><i class="bi bi-arrow-right-circle"></i> Daftar sekarang</a><a class="btn-gmi-outline" href="/manual-book"><i class="bi bi-journal-text"></i> Lihat panduan</a></div><a class="hero-location" href="https://maps.app.goo.gl/FaqwnyLMjym9c4N16" target="_blank" rel="noopener"><i class="bi bi-geo-alt-fill me-2"></i>Balamoa, Kabupaten Tegal, Jawa Tengah</a></div></div>
-                <div class="col-lg-5"><div class="hero-photo"><img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" alt="Kegiatan siswa LPK GMI" data-lity><div class="hero-photo-caption"><i class="bi bi-sunrise me-2" style="color:#c38a2e"></i>Belajar hari ini, melangkah lebih jauh</div></div></div>
+                <div class="col-lg-5"><div class="hero-photo"><img src="{{ versioned_asset('templates/assets/img/GMI/13.jpg') }}" alt="Kegiatan siswa LPK GMI" data-lity><div class="hero-photo-caption"><i class="bi bi-sunrise me-2" style="color:#c38a2e"></i>Belajar hari ini, melangkah lebih jauh</div></div></div>
             </div></div></section>
         </header>
         <div class="announcement" role="note"><div class="container"><i class="bi bi-info-circle-fill me-2"></i><strong>Pengumuman:</strong> LPK GMI tidak membuka cabang di wilayah Kota Tegal dan sekitarnya. Konfirmasikan informasi yang mengatasnamakan GMI melalui kanal resmi kami.</div></div>
@@ -234,14 +234,14 @@
             </div></div></section>
             <section class="page-section pt-0" id="about"><div class="container"><div class="about-panel"><div class="row g-5 align-items-center">
                 <div class="col-lg-6"><div id="aboutCarousel" class="carousel slide about-gallery" data-bs-ride="carousel"><div class="carousel-inner">
-                    <div class="carousel-item active"><img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" alt="Kegiatan LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" alt="Pelatihan di LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ asset('templates/assets/img/GMI/gmi1.png') }}" alt="Siswa LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ asset('img/sarpras5.jpg') }}" alt="Sarana LPK GMI" data-lity></div>
+                    <div class="carousel-item active"><img src="{{ versioned_asset('templates/assets/img/GMI/14.jpg') }}" alt="Kegiatan LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ versioned_asset('templates/assets/img/GMI/12.jpg') }}" alt="Pelatihan di LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ versioned_asset('templates/assets/img/GMI/gmi1.png') }}" alt="Siswa LPK GMI" data-lity></div><div class="carousel-item"><img src="{{ versioned_asset('img/sarpras5.jpg') }}" alt="Sarana LPK GMI" data-lity></div>
                 </div><button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev" aria-label="Foto sebelumnya"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next" aria-label="Foto berikutnya"><span class="carousel-control-next-icon"></span></button></div></div>
                 <div class="col-lg-6"><span class="eyebrow">Tentang kami</span><h2 class="mt-3 mb-3">Mendampingi langkah menuju Jepang</h2><p class="lead-copy"><strong>LPK GARUDA MESTAKUNG INDONESIA</strong> merupakan lembaga pelatihan kerja Jepang di wilayah Jawa Tengah, khususnya Kabupaten Tegal. Berdiri berdasarkan Akte Notaris No. 01 tanggal 18 Agustus 2023, LPK GMI beralamat di Jl. Kaibon RT. 03 RW. 03, Desa Balamoa, Kecamatan Pangkah, Kabupaten Tegal.</p><p class="lead-copy">Kami melaksanakan pelatihan bahasa berbasis kompetensi untuk membantu membuka kesempatan kerja dan mengurangi pengangguran di wilayah Jawa Tengah.</p><div class="about-links"><a href="#" data-bs-toggle="modal" data-bs-target="#modalSarpras"><i class="bi bi-building me-2"></i>Sarana & Prasarana</a><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-diagram-3 me-2"></i>Struktur Organisasi</a></div><h3 class="h5 fw-bold">Pendampingan dari awal hingga keberangkatan</h3><div class="benefit-list"><span><i class="bi bi-check-circle-fill"></i>Belajar bahasa Jepang dari awal</span><span><i class="bi bi-check-circle-fill"></i>Bimbingan sampai keberangkatan</span><span><i class="bi bi-check-circle-fill"></i>Peluang program Magang atau TG</span><span><i class="bi bi-check-circle-fill"></i>Pengalaman tinggal di Jepang</span></div></div>
             </div></div></div></section>
             <section class="stats-band"><div class="container"><div class="row g-4"><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">1000</strong><span>Siswa LPK GMI</span></div><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">5</strong><span>Tahun pengalaman</span></div><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">30</strong><span>Karyawan</span></div><div class="col-6 col-lg-3 stat-item"><strong data-toggle="counter-up">1000</strong><span>Penerbangan</span></div></div></div></section>
             <section class="page-section" id="galeri"><div class="container"><div class="section-heading"><span class="eyebrow">Cerita dari GMI</span><h2>Galeri kegiatan</h2><p>Dokumentasi kegiatan dan perjalanan siswa LPK GMI Japan Tegal.</p></div><div class="gallery-carousel" data-gallery-carousel><div class="gallery-controls"><button type="button" class="gallery-arrow" data-gallery-prev aria-label="Foto sebelumnya"><i class="bi bi-arrow-left"></i></button><button type="button" class="gallery-arrow" data-gallery-next aria-label="Foto berikutnya"><i class="bi bi-arrow-right"></i></button></div><div class="gallery-viewport" data-gallery-viewport><div class="gallery-track">
                 @foreach ($images_db as $image)
-                    <div class="gallery-slide"><article class="gallery-card"><a href="{{ asset('storage/' . $image->filepath) }}" data-lity><img src="{{ asset('storage/' . $image->filepath) }}" class="lazyload" alt="Dokumentasi kegiatan LPK GMI" loading="lazy"></a><div class="gallery-caption"><i class="bi bi-calendar3 me-2"></i>{{ \Carbon\Carbon::parse($image->created_at)->format('d M Y') }} <span class="float-end">{{ \Carbon\Carbon::parse($image->created_at)->diffForHumans() }}</span></div></article></div>
+                    <div class="gallery-slide"><article class="gallery-card"><a href="{{ versioned_asset('storage/' . $image->filepath) }}" data-lity><img src="{{ versioned_asset('storage/' . $image->filepath) }}" class="lazyload" alt="Dokumentasi kegiatan LPK GMI" loading="lazy"></a><div class="gallery-caption"><i class="bi bi-calendar3 me-2"></i>{{ \Carbon\Carbon::parse($image->created_at)->format('d M Y') }} <span class="float-end">{{ \Carbon\Carbon::parse($image->created_at)->diffForHumans() }}</span></div></article></div>
                 @endforeach
             </div></div></div><div class="pagination-container"><ul class="pagination">
                 @if ($images_db->onFirstPage())<li class="disabled"><span>&lsaquo;</span></li>@else<li><a href="{{ $images_db->previousPageUrl() }}#galeri" rel="prev">&lsaquo;</a></li>@endif
@@ -254,7 +254,7 @@
             <section class="page-section pt-0"><div class="container"><div class="cta-panel"><div class="row align-items-center g-4"><div class="col-lg-8"><span class="hero-kicker">LPK GMI Japan Tegal</span><h2 class="mt-3">Siap memulai perjalananmu?</h2><p>Persiapkan diri untuk menjadi calon pekerja migran Indonesia yang unggul melalui pelatihan bahasa Jepang dan program kerja yang sesuai.</p><div class="text-white-50"><i class="bi bi-envelope me-2"></i>lpkgarudamestakungindonesia@gmail.com</div><div class="d-flex flex-wrap gap-3 mt-3"><a class="text-white" href="https://www.instagram.com/lpk.gmijapanofficial?igsh=MXVyempkOTIxeWRiMQ==" target="_blank" rel="noopener"><i class="bi bi-instagram me-1"></i>Instagram</a><a class="text-white" href="https://www.tiktok.com/@lpk.gmijapantegal?_t=ZS-8u2sgx8yiAq&_r=1" target="_blank" rel="noopener"><i class="fa fa-music me-1"></i>TikTok</a><a class="text-white" href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA" target="_blank" rel="noopener"><i class="bi bi-youtube me-1"></i>YouTube</a></div></div><div class="col-lg-4 text-lg-end"><a class="btn-gmi" href="{{ url('/pendaftaran-siswa-baru') }}" target="_blank" rel="noopener"><i class="bi bi-arrow-right-circle"></i>Mulai pendaftaran</a></div></div></div></div></section>
             <section class="page-section pt-0"><div class="container"><div class="section-heading"><span class="eyebrow">Dokumentasi</span><h2>Kegiatan LPK GMI</h2></div><div class="gallery-carousel" data-gallery-carousel><div class="gallery-controls"><button type="button" class="gallery-arrow" data-gallery-prev aria-label="Foto sebelumnya"><i class="bi bi-arrow-left"></i></button><button type="button" class="gallery-arrow" data-gallery-next aria-label="Foto berikutnya"><i class="bi bi-arrow-right"></i></button></div><div class="gallery-viewport" data-gallery-viewport><div class="gallery-track">
                 @foreach ($images as $index => $image)
-                    <div class="gallery-slide"><article class="gallery-card"><a href="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}" data-lity><img src="{{ asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}" alt="Kegiatan LPK GMI" loading="lazy"></a><div class="gallery-caption">LPK GMI Japan</div></article></div>
+                    <div class="gallery-slide"><article class="gallery-card"><a href="{{ versioned_asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}" data-lity><img src="{{ versioned_asset('templates/assets/img/GMI/' . ($index + 1) . '.jpg') }}" alt="Kegiatan LPK GMI" loading="lazy"></a><div class="gallery-caption">LPK GMI Japan</div></article></div>
                 @endforeach
             </div></div></div></div></section>
             <section class="page-section pt-0" id="location"><div class="container"><div class="section-heading"><span class="eyebrow">Kunjungi kami</span><h2>Lokasi LPK GMI Japan</h2><p>Jl. Kaibon RT. 03 RW. 03, Desa Balamoa, Kecamatan Pangkah, Kabupaten Tegal, Jawa Tengah.</p></div><iframe class="map-frame" title="Peta lokasi LPK Garuda Mestakung Indonesia" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15841.929751248736!2d109.1843675!3d-6.9522777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fbfe260681b91%3A0x122ab99fb2d88a7!2sLpk%20Garuda%20Mestakung%20Indonesia!5e0!3m2!1sid!2sid!4v1708396367934!5m2!1sid!2sid" loading="lazy" allowfullscreen></iframe></div></section>
@@ -273,7 +273,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="{{ asset('img/struktur-gmi.png') }}" class="img-fluid rounded-4" alt="">
+                    <img src="{{ versioned_asset('img/struktur-gmi.png') }}" class="img-fluid rounded-4" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -293,10 +293,10 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="{{ asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras4.jpg') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras5.jpg') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras4.jpg') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras5.jpg') }}" class="img-fluid rounded-4" alt="">
                         </div>
                     </div>
                 </div>
@@ -361,16 +361,16 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('landing/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/isotope/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/lightbox/js/lightbox.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{ asset('landing/js/main.js') }}"></script>
+    <script src="{{ versioned_asset('landing/js/main.js') }}"></script>
     <!-- Lity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
     <script>

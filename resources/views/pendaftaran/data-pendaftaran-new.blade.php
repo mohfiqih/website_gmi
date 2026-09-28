@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
+    <link href="{{ versioned_asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -17,11 +17,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
     @include('partials.site-theme-head')
 
     <!-- Lity CSS -->
@@ -197,7 +197,7 @@
                                             class="d-block w-100" style="border-radius: 10px;width: 300px;" data-lity>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
+                                        <img src="{{ versioned_asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
                                             style="border-radius: 10px;width: 300px;" data-lity>
                                     </div>
                                 </div>
@@ -1102,16 +1102,16 @@
         });
     </script>
 
-    <script src="{{ asset('landing/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/isotope/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/lightbox/js/lightbox.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{ asset('landing/js/main.js') }}"></script>
+    <script src="{{ versioned_asset('landing/js/main.js') }}"></script>
     <!-- Lity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
 

@@ -35,15 +35,15 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
+                                <img src="{{ versioned_asset('templates/assets/img/GMI/14.jpg') }}" class="d-block w-100"
                                     alt="..." style="border-radius: 10px;width: 370px;">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
+                                <img src="{{ versioned_asset('templates/assets/img/GMI/12.jpg') }}" class="d-block w-100"
                                     alt="..." style="border-radius: 10px;width: 370px;">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
+                                <img src="{{ versioned_asset('templates/assets/img/GMI/13.jpg') }}" class="d-block w-100"
                                     alt="..." style="border-radius: 10px;width: 370px;">
                             </div>
                         </div>

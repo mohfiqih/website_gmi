@@ -23,15 +23,15 @@
 
     <!-- Libraries Stylesheet -->
 
-    <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
     @include('partials.site-theme-head')
 </head>
 
@@ -75,19 +75,19 @@
                                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <img src="{{ asset('img/sarpras5.jpg') }}" class="d-block w-100"
+                                                <img src="{{ versioned_asset('img/sarpras5.jpg') }}" class="d-block w-100"
                                                     alt="..." style="border-radius: 10px;width: 370px;">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="{{ asset('img/sarpras4.jpg') }}" class="d-block w-100"
+                                                <img src="{{ versioned_asset('img/sarpras4.jpg') }}" class="d-block w-100"
                                                     alt="..." style="border-radius: 10px;width: 370px;">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="{{ asset('img/jepang1.jpg') }}" class="d-block w-100"
+                                                <img src="{{ versioned_asset('img/jepang1.jpg') }}" class="d-block w-100"
                                                     alt="..." style="border-radius: 10px;width: 370px;">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="{{ asset('img/sarpras5.jpg') }}" class="d-block w-100"
+                                                <img src="{{ versioned_asset('img/sarpras5.jpg') }}" class="d-block w-100"
                                                     alt="..." style="border-radius: 10px;width: 370px;">
                                             </div>
                                 </div>
@@ -313,15 +313,15 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="{{ asset('img/jepang1.jpg') }}" class="d-block w-100"
+                                    <img src="{{ versioned_asset('img/jepang1.jpg') }}" class="d-block w-100"
                                         alt="..." style="border-radius: 10px;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('img/jepang2.jpg') }}" class="d-block w-100"
+                                    <img src="{{ versioned_asset('img/jepang2.jpg') }}" class="d-block w-100"
                                         alt="..." style="border-radius: 10px;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('img/jepang3.jpg') }}" class="d-block w-100"
+                                    <img src="{{ versioned_asset('img/jepang3.jpg') }}" class="d-block w-100"
                                         alt="..." style="border-radius: 10px;">
                                 </div>
                             </div>
@@ -337,12 +337,12 @@
                             </button>
                         </div><br />
 
-                        <img src="{{ asset('img/sarpras4.jpg') }}"
+                        <img src="{{ versioned_asset('img/sarpras4.jpg') }}"
                             class="img-fluid" alt="" style="border-radius: 10px;">
                         <br /><br />
-                        <img src="{{ asset('img/sarpras5.jpg') }}" class="img-fluid" alt=""
+                        <img src="{{ versioned_asset('img/sarpras5.jpg') }}" class="img-fluid" alt=""
                             style="border-radius: 10px;">
-                        <img src="{{ asset('img/jepang7.jpg') }}" class="img-fluid" alt=""
+                        <img src="{{ versioned_asset('img/jepang7.jpg') }}" class="img-fluid" alt=""
                             style="border-radius: 10px;padding-top: 20px;">
                     </div>
                 </div>
@@ -581,7 +581,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="{{ asset('img/struktur_organisasi.jpg') }}" class="img-fluid rounded-4" alt="">
+                    <img src="{{ versioned_asset('img/struktur_organisasi.jpg') }}" class="img-fluid rounded-4" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -601,10 +601,10 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="{{ asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras4.jpg') }}" class="img-fluid rounded-4" alt="">
-                            <img src="{{ asset('img/sarpras5.jpg') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras2.png') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras3.png') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras4.jpg') }}" class="img-fluid rounded-4" alt="">
+                            <img src="{{ versioned_asset('img/sarpras5.jpg') }}" class="img-fluid rounded-4" alt="">
                         </div>
                     </div>
                 </div>
@@ -763,16 +763,16 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('landing/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/isotope/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('landing/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ versioned_asset('landing/lib/lightbox/js/lightbox.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{ asset('landing/js/main.js') }}"></script>
+    <script src="{{ versioned_asset('landing/js/main.js') }}"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <link href="{{ asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
+    <link href="{{ versioned_asset('img/logo-jepang-removebg.jpg') }}" rel="icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -16,12 +16,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.1') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/style.css?v=1.1') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/site-refresh.css') }}?v={{ config('site.version') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/bootstrap.min.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/style.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('landing/css/site-refresh.css') }}" rel="stylesheet">
 
     <script>
         (function () {
@@ -390,7 +390,7 @@
         <div class="position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark site-nav">
                 <a href="{{ url('/#home') }}" class="navbar-brand p-0" aria-label="LPK GMI halaman utama">
-                    <img src="{{ asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI">
+                    <img src="{{ versioned_asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI">
                 </a>
                 <button type="button" class="theme-toggle ms-auto me-3 order-lg-3" id="themeToggle" aria-label="Aktifkan mode gelap" aria-pressed="false"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span>Mode Gelap</span></button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Buka navigasi"><span class="fa fa-bars"></span></button>
@@ -409,7 +409,7 @@
             <header class="registration-hero">
                 <div class="registration-video">
                     <video autoplay muted loop playsinline preload="metadata" aria-label="Kegiatan pelatihan LPK GMI">
-                        <source src="{{ asset('img/gmi.mp4') }}" type="video/mp4">
+                        <source src="{{ versioned_asset('img/gmi.mp4') }}" type="video/mp4">
                     </video>
                 </div>
                 <h1>Pendaftaran Siswa Baru</h1>
@@ -2540,17 +2540,17 @@
 
     <script src='https://widgets.sociablekit.com/google-business-profile/widget.js' async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{ asset('templates/assets/js/kc.fab.min.js') }}"></script>
-    <script src="{{ asset('templates/assets/js/kc.fab.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/js/kc.fab.min.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/js/kc.fab.js') }}"></script>
     <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
-    <script src="{{ asset('templates/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('templates/assets/vendor/aos/aos.js') }}"></script>
-    <script src="{{ asset('templates/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('templates/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-    <script src="{{ asset('templates/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('templates/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('templates/assets/vendor/php-email-form/validate.js') }}"></script>
-    <script src="{{ asset('templates/assets/js/main.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ versioned_asset('templates/assets/js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
     <!-- Lity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>

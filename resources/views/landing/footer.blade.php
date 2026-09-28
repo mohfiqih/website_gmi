@@ -3,7 +3,7 @@
         <div class="row g-4 g-lg-5">
             <div class="col-lg-5">
                 <a class="site-footer-brand" href="{{ url('/') }}" aria-label="LPK GMI halaman utama">
-                    <img src="{{ asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI">
+                    <img src="{{ versioned_asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI">
                     <span>LPK Garuda Mestakung Indonesia</span>
                 </a>
                 <p class="site-footer-copy">Mendampingi langkahmu melalui pelatihan bahasa Jepang dan persiapan menuju peluang kerja di Jepang.</p>

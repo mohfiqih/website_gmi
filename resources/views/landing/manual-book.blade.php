@@ -20,14 +20,14 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('manual_book/template/vendor/bootstrap/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('manual_book/template/vendor/bootstrap-icons/bootstrap-icons.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('manual_book/template/vendor/aos/aos.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('manual_book/template/vendor/glightbox/css/glightbox.min.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('manual_book/template/vendor/swiper/swiper-bundle.min.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('manual_book/template/vendor/bootstrap/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('manual_book/template/vendor/bootstrap-icons/bootstrap-icons.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('manual_book/template/vendor/aos/aos.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('manual_book/template/vendor/glightbox/css/glightbox.min.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('manual_book/template/vendor/swiper/swiper-bundle.min.css?v=1.0') }}" rel="stylesheet">
 
     <!-- Main CSS File -->
-    <link href="{{ asset('manual_book/template/css/main.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ versioned_asset('manual_book/template/css/main.css?v=1.0') }}" rel="stylesheet">
     @include('partials.site-theme-head')
 
     <style>
@@ -159,7 +159,7 @@
                             Tegal, Jawa Tengah 5247</p>
                         <p>Klik Website LPK GMI : <a href="/">https://garudamestakungindonesia.my.id/</a></p>
                         <div class="d-flex">
-                            <a href="{{ asset('book/manual_book_gmi.pdf') }}" 
+                            <a href="{{ versioned_asset('book/manual_book_gmi.pdf') }}" 
                                 class="btn-get-started"
                                 download>
                                 PDF Manual Book
@@ -543,7 +543,7 @@
                         <div class="col-sm-3">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="{{ asset('storage/' . $image->filepath) }}"
+                                    <img src="{{ versioned_asset('storage/' . $image->filepath) }}"
                                         class="card-img-top lazyload" data-lity alt="Image"
                                         style="height: 100%; object-fit: cover;height: 300px;">
                                 </div>
@@ -595,17 +595,17 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('manual_book/template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('manual_book/template/vendor/php-email-form/validate.js') }}"></script>
-    <script src="{{ asset('manual_book/template/vendor/aos/aos.js') }}"></script>
-    <script src="{{ asset('manual_book/template/vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('manual_book/template/vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('manual_book/template/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-    <script src="{{ asset('manual_book/template/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('manual_book/template/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/aos/aos.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
     <!-- Main JS File -->
-    <script src="{{ asset('manual_book/template/js/main.js') }}"></script>
+    <script src="{{ versioned_asset('manual_book/template/js/main.js') }}"></script>
 
 </body>
 

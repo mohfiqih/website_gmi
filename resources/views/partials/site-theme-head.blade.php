@@ -1,4 +1,4 @@
-<link href="{{ asset('landing/css/site-refresh.css') }}?v={{ config('site.version') }}" rel="stylesheet">
+<link href="{{ versioned_asset('landing/css/site-refresh.css') }}" rel="stylesheet">
 <script>
     (function () {
         const savedTheme = localStorage.getItem('gmi-theme');
