@@ -19,8 +19,9 @@
     <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/style.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/site-refresh.css') }}?v={{ config('site.version') }}" rel="stylesheet">
 
     <!-- Lity CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css">
@@ -62,6 +63,7 @@
             --accent: #f2bd62;
             --shadow: 0 18px 50px rgba(0, 0, 0, .22);
         }
+        html, body { max-width:100%; overflow-x:clip; }
         body, .container-xxl.bg-white, .bg-white { background: var(--page-bg) !important; color: var(--text-main); }
         body { font-family: 'Open Sans', sans-serif; }
         h1,h2,h3,h4,h5,h6 { color: var(--text-main); font-family: 'Montserrat', sans-serif; letter-spacing: -.035em; }
@@ -74,7 +76,7 @@
         .navbar .dropdown-item { border-radius: 8px; color: var(--text-main); }
         .theme-toggle { display:inline-flex; align-items:center; gap:8px; min-height:40px; padding:8px 13px; border:1px solid rgba(255,255,255,.3); border-radius:999px; background:rgba(255,255,255,.1); color:white; font-size:.85rem; font-weight:700; }
         .theme-toggle:hover { background:rgba(255,255,255,.2); }
-        .hero-header { position:relative; overflow:hidden; min-height:100vh; min-height:100svh; box-sizing:border-box; display:flex; align-items:center; padding:104px 0 36px; border-radius:0 0 42px 42px; background:radial-gradient(ellipse at 82% 35%, rgba(45,169,232,.38), transparent 34%), linear-gradient(120deg,#082d50 0%,#075b96 57%,#0878bd 100%) !important; }
+        .hero-header { position:relative; overflow:hidden; min-height:100vh; min-height:100svh; box-sizing:border-box; display:flex; align-items:center; padding:104px 0 36px; border-radius:0 0 42px 42px; background:radial-gradient(ellipse at 82% 35%, rgba(45,169,232,.28), transparent 34%), linear-gradient(120deg,#061d32 0%,#07395e 57%,#064b7a 100%) !important; }
         .hero-header::before { content:''; position:absolute; inset:0; opacity:.12; background-image:radial-gradient(#fff 1px, transparent 1px); background-size:26px 26px; mask-image:linear-gradient(90deg, transparent, #000); }
         .hero-header .container { position:relative; z-index:1; }
         .hero-copy { max-width:590px; }
@@ -149,6 +151,24 @@
         .social-fab:hover { transform:translateY(-3px); color:white; }
         html[data-theme="dark"] .announcement { background:#47391f; color:#ffedc8; }
         html[data-theme="dark"] .announcement strong { color:#fff; }
+        html[data-theme="dark"] .hero-header { background:radial-gradient(ellipse at 82% 35%,rgba(39,91,116,.18),transparent 34%),linear-gradient(120deg,#05090d 0%,#09131a 57%,#0d202b 100%) !important; }
+        html[data-theme="dark"] .hero-header::before { opacity:.07; }
+        html[data-theme="dark"] .hero-header h1,
+        html[data-theme="dark"] .hero-header .hero-description,
+        html[data-theme="dark"] .hero-location { color:#f4f7f8; }
+        html[data-theme="dark"] .hero-header h1 span { color:#f2bd62; }
+        html[data-theme="dark"] .stats-band { background:#080f14; color:#f4f7f8; }
+        html[data-theme="dark"] .cta-panel { background:linear-gradient(120deg,#080f14,#102b3a); color:#f4f7f8; }
+        html[data-theme="dark"] .site-footer,
+        html[data-theme="dark"] .footer { background:linear-gradient(125deg,#070e13,#0d1b24) !important; color:#f4f7f8; }
+        html[data-theme="dark"] .site-footer-title,
+        html[data-theme="dark"] .site-footer-brand,
+        html[data-theme="dark"] .site-footer-bottom a { color:#fff; }
+        html[data-theme="dark"] .site-footer-copy,
+        html[data-theme="dark"] .site-footer-link,
+        html[data-theme="dark"] .site-footer-contact,
+        html[data-theme="dark"] .site-footer-bottom { color:#d4dfe4; }
+        html[data-theme="dark"] .site-nav .navbar-collapse { background:#0b1c28; }
         html[data-theme="dark"] .dropdown-menu { background:var(--surface); }
         html[data-theme="dark"] .modal-header,html[data-theme="dark"] .modal-footer { border-color:var(--line); }
         @media(max-width:991.98px) {
@@ -162,12 +182,20 @@
             .page-section { padding:66px 0; }
         }
         @media(max-width:575.98px) {
+            .navbar-brand img { width:52px; height:48px; }
+            .navbar { padding-left:14px !important; padding-right:14px !important; }
+            .navbar .theme-toggle { min-height:38px; margin-right:10px !important; padding:7px 10px; font-size:.75rem; }
             .hero-header h1 { font-size:2.65rem; }
+            .hero-header .row { --bs-gutter-x:1.25rem; }
             .hero-photo img,.about-gallery img { height:320px; }
+            .hero-photo { padding:9px; border-radius:20px; transform:none; }
+            .hero-photo-caption { right:8px; bottom:20px; left:8px; padding:10px 12px; text-align:center; font-size:.78rem; }
             .benefit-list { grid-template-columns:1fr; }
             .hero-actions a { flex:1 1 100%; }
             .stat-item strong { font-size:2rem; }
             .map-frame { height:300px; }
+            .about-panel { padding:20px 16px; }
+            .social-fab { right:14px; bottom:16px; width:48px; height:48px; }
         }
         @media(min-width:992px) and (max-height:800px) {
             .hero-header { padding:88px 0 24px; }
@@ -184,7 +212,7 @@
     <div class="container-xxl bg-white p-0">
         <div id="spinner" class="show bg-white position-fixed top-50 start-50 translate-middle w-100 vh-100 d-flex align-items-center justify-content-center" style="z-index:2000"><div class="spinner-grow text-primary" role="status" aria-label="Memuat halaman"></div></div>
         <header id="home">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark site-nav">
                 <a href="#home" class="navbar-brand p-0" aria-label="LPK GMI halaman utama"><img src="{{ asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI"></a>
                 <button type="button" class="theme-toggle ms-auto me-3 order-lg-3" id="themeToggle" aria-label="Aktifkan mode gelap" aria-pressed="false"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span>Mode Gelap</span></button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Buka navigasi"><span class="fa fa-bars"></span></button>

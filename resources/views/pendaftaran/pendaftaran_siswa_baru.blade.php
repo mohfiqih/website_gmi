@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
@@ -19,8 +19,17 @@
     <link href="{{ asset('landing/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/bootstrap.min.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/style.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ asset('landing/css/site-refresh.css') }}?v={{ config('site.version') }}" rel="stylesheet">
+
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('gmi-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', savedTheme || (prefersDark ? 'dark' : 'light'));
+        })();
+    </script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css" rel="stylesheet">
@@ -110,33 +119,6 @@
             }
         }
 
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("https://www.amanahcitracemerlang.id/storage/images/1738420242_IMG-20250131-WA0006.jpg") center center/cover no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            z-index: -2;
-        }
-
         .banner-video {
             width: 90%;
             height: 300px;
@@ -149,6 +131,49 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        /* Registration page refresh and mobile layout safeguards */
+        :root { --registration-ink:#15324a; --registration-blue:#075b91; --registration-soft:#f1f6fa; }
+        html, body { max-width:100%; overflow-x:hidden; }
+        body { color:var(--registration-ink); background:#f3f6f9; }
+        .registration-shell { min-height:100vh; background:linear-gradient(180deg,#edf5fa 0,#f6f8fb 420px); }
+        .registration-hero { position:relative; isolation:isolate; display:flex; min-height:clamp(440px,68vh,680px); flex-direction:column; align-items:center; justify-content:center; overflow:hidden; padding:140px 20px 96px; border-radius:0 0 34px 34px; color:#fff; text-align:center; background:#061d32; }
+        .registration-hero::after { position:absolute; z-index:-1; inset:0; content:""; background:linear-gradient(90deg,rgba(4,27,47,.82),rgba(4,39,65,.52) 55%,rgba(3,34,57,.67)),linear-gradient(0deg,rgba(3,27,46,.42),transparent 65%); }
+        .registration-hero h1 { max-width:850px; margin:0 auto 14px; color:#fff; font-size:clamp(1.8rem,4.5vw,3.25rem); font-weight:800; line-height:1.12; text-shadow:0 3px 22px rgba(0,0,0,.32); }
+        .registration-hero p { max-width:680px; margin:0 auto; color:rgba(255,255,255,.88); line-height:1.75; text-shadow:0 2px 12px rgba(0,0,0,.35); }
+        .registration-video { position:absolute; z-index:-2; inset:0; width:100%; height:100%; overflow:hidden; background:#0a263e; }
+        .registration-video video { display:block; width:100%; height:100%; object-fit:cover; object-position:center 44%; }
+        .registration-form-wrap { position:relative; z-index:1; width:min(100% - 32px,1100px); margin:-34px auto 60px; }
+        #stepFirst { padding:clamp(18px,4vw,42px)!important; border:1px solid #e4ebf1; border-radius:22px!important; background:#fff; box-shadow:0 20px 60px rgba(23,57,81,.1); }
+        #stepFirst .breadcrumb { padding:12px 16px; border-radius:10px; background:var(--registration-soft); }
+        #stepFirst .form-control, #stepFirst .select2-container--default .select2-selection--single { min-height:46px; border-color:#d5e0e8; border-radius:9px; }
+        #stepFirst .form-control:focus { border-color:#2686bb; box-shadow:0 0 0 .2rem rgba(38,134,187,.14); }
+        #stepFirst .form-group { min-width:0; }
+        #stepFirst .row { --bs-gutter-x:1.25rem; }
+        #stepNav { gap:8px; }
+        #stepNav .nav-item { min-width:0; }
+        #stepNav .nav-link { height:100%; padding:12px 14px; border-radius:10px; }
+        .banner-video { width:100%; max-width:540px; }
+        html[data-theme="dark"] body { color:#ecf2f4; background:#0d151b; }
+        html[data-theme="dark"] .registration-shell { background:linear-gradient(180deg,#0d151b 0,#121d25 420px); }
+        html[data-theme="dark"] #stepFirst { border-color:#2b3b44; background:#15232c; color:#ecf2f4; }
+        html[data-theme="dark"] #stepFirst h1, html[data-theme="dark"] #stepFirst h2, html[data-theme="dark"] #stepFirst h3, html[data-theme="dark"] #stepFirst label { color:#ecf2f4; }
+        html[data-theme="dark"] #stepFirst .breadcrumb { background:#1b2d37; }
+        html[data-theme="dark"] #stepFirst .breadcrumb-item.active { color:#afbdc4; }
+        html[data-theme="dark"] #stepFirst .form-control { border-color:#40535e; background:#10202a; color:#ecf2f4; }
+        html[data-theme="dark"] #stepFirst .form-control::placeholder { color:#afbdc4; }
+        html[data-theme="dark"] #stepFirst .select2-container--default .select2-selection--single { border-color:#40535e; background:#10202a; color:#ecf2f4; }
+        @media(max-width:767.98px) {
+            .registration-hero { min-height:clamp(420px,72svh,600px); padding:112px 18px 82px; border-radius:0 0 24px 24px; }
+            .registration-form-wrap { width:calc(100% - 24px); margin-top:-24px; }
+            #stepFirst { padding:18px 14px!important; border-radius:16px!important; }
+            #stepFirst .row { --bs-gutter-x:.75rem; }
+            #stepNav .nav-item { flex:1 1 100%; }
+            #stepNav .nav-link { width:100%; }
+            .signup-content, #pendaftaranForm { min-width:0; width:100%; }
+            .select2-container { max-width:100%; }
+            .registration-form-wrap .btn { max-width:100%; white-space:normal; }
         }
 
         @media (max-width: 768px) {
@@ -361,81 +386,39 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    <img src="img/logo-jepang-removebg.jpg" alt="Logo" width="100px">
+    <div class="container-xxl p-0 registration-shell">
+        <div class="position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+                <a href="{{ url('/#home') }}" class="navbar-brand p-0" aria-label="LPK GMI halaman utama">
+                    <img src="{{ asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars" style="color: white;"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="/" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                Program LPK GMI
-                            </a>
-                            <div class="dropdown-menu m-0">
-                                <a class="dropdown-item">Program Magang Jepang</a>
-                                <a class="dropdown-item">Program Tokutei Ginou (TG)</a>
-                                <a class="dropdown-item">Matching Job</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                Social Media
-                            </a>
-                            <div class="dropdown-menu m-0">
-                                <a href="https://www.instagram.com/lpk.gmijapanofficial?igsh=MXVyempkOTIxeWRiMQ=="
-                                    class="dropdown-item" target="_blank">
-                                    Instagram
-                                </a>
-                                <a href="https://wa.me/6282324353371" class="dropdown-item" target="_blank">
-                                    WhatsApp
-                                </a>
-                                <a href="https://www.tiktok.com/@lpk.gmijapantegal?_t=ZS-8u2sgx8yiAq&_r=1"
-                                    class="dropdown-item" target="_blank">
-                                    Tiktok
-                                </a>
-                            </div>
-                        </div>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                <button type="button" class="theme-toggle ms-auto me-3 order-lg-3" id="themeToggle" aria-label="Aktifkan mode gelap" aria-pressed="false"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span>Mode Gelap</span></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Buka navigasi"><span class="fa fa-bars"></span></button>
+                <div class="collapse navbar-collapse order-lg-2" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2 py-2 py-lg-0">
+                        <a href="{{ url('/#home') }}" class="nav-item nav-link">Beranda</a>
+                        <a href="{{ url('/#program') }}" class="nav-item nav-link">Program</a>
+                        <a href="{{ url('/#about') }}" class="nav-item nav-link">Tentang</a>
+                        <a href="{{ url('/#galeri') }}" class="nav-item nav-link">Galeri</a>
+                        <a href="{{ url('/#location') }}" class="nav-item nav-link">Lokasi</a>
+                        <a href="{{ url('/#contact') }}" class="nav-item nav-link">Kontak</a>
                     </div>
                 </div>
             </nav>
 
-            <div class="container-xxl bg-primary hero-header">
-                <div class="col-lg-12 text-center text-lg-start">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide justify-content-center ml-2 mr-2"
-                        data-bs-ride="carousel">
-                        <center>
-                            <div class="banner-video">
-                                <video autoplay muted loop playsinline>
-                                    <source src="{{ asset('img/gmi.mp4') }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <br />
-                            <h2 class="text-white">
-                                DATA PENDAFTARAN SISWA BARU (CV) LPK GMI JAPAN TEGAL
-                            </h2>
-                            <p class="text-white" style="padding-left: 10px;padding-right: 10px;">LPK GMI Japan
-                                Berlokasi di RT.03/RW.03, Kaibun, Balamoa,
-                                Kec.
-                                Pangkah, Kabupaten Tegal, Jawa Tengah 5247.
-                            </p>
-                        </center>
-                    </div>
+            <header class="registration-hero">
+                <div class="registration-video">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="Kegiatan pelatihan LPK GMI">
+                        <source src="{{ asset('img/gmi.mp4') }}" type="video/mp4">
+                    </video>
                 </div>
-            </div>
+                <h1>Pendaftaran Siswa Baru</h1>
+                <p>Mulai langkahmu bersama LPK GMI Japan Tegal. Lengkapi data diri dengan teliti untuk memulai proses pendaftaran.</p>
+            </header>
 
             {{-- Form Pendaftaran --}}
-            <div class="container mt-4 mb-4 mr-4 ml-4">
-                <div class="card" style="padding: 30px;border-radius: 10px;" id="stepFirst">
+            <div class="registration-form-wrap">
+                <div class="card" id="stepFirst">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -2730,6 +2713,28 @@
                 perguruanCount--;
             });
         });
+    </script>
+    @include('landing.footer')
+    <script>
+        (function () {
+            const toggle = document.getElementById('themeToggle');
+            if (!toggle) return;
+            function render(theme) {
+                const dark = theme === 'dark';
+                toggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+                toggle.setAttribute('aria-label', dark ? 'Aktifkan mode terang' : 'Aktifkan mode gelap');
+                toggle.innerHTML = dark
+                    ? '<i class="bi bi-sun-fill" aria-hidden="true"></i><span>Mode Terang</span>'
+                    : '<i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span>Mode Gelap</span>';
+            }
+            render(document.documentElement.getAttribute('data-theme') || 'light');
+            toggle.addEventListener('click', function () {
+                const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
+                document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+                localStorage.setItem('gmi-theme', dark ? 'dark' : 'light');
+                render(dark ? 'dark' : 'light');
+            });
+        })();
     </script>
 </body>
 

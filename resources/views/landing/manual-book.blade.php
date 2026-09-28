@@ -28,6 +28,7 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('manual_book/template/css/main.css?v=1.0') }}" rel="stylesheet">
+    @include('partials.site-theme-head')
 
     <style>
         .pagination-container {
@@ -98,7 +99,7 @@
     </style>
 </head>
 
-<body class="index-page">
+<body class="index-page gmi-page">
     <header id="header" class="header fixed-top">
         <div class="topbar d-flex align-items-center">
             <div class="container d-flex justify-content-center justify-content-md-between">
@@ -584,67 +585,7 @@
         </section>
     </main>
 
-    <footer id="footer" class="footer accent-background">
-
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">LPK GMI JAPAN</span>
-                    </a>
-                    <p style="text-align: justify;">
-                        LPK GMI (Garuda Mestakung Indonesia) memberikan kesempatan bagi anda yang ingin bekerja di luar
-                        negeri khususnya di Jepang. LPK GMI telah membimbing dan membina banyak anak hingga berangkat
-                        bekerja di Luar Negeri khususnya Negara Jepang.
-                        LPK GMI memiliki program diantaranya Program Magang, Program Tokutei Ginou dan Matching Job, LPK
-                        GMI memiliki banyak Job dari berbagai sektor kerja di Jepang.
-                    </p>
-                    <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-6 footer-links text-center text-md-start">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a>Home</a></li>
-                        <li><a>About us</a></li>
-                        <li><a>Services</a></li>
-                        <li><a>Terms of service</a></li>
-                        <li><a>Privacy policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="/">Web GMI</a></li>
-                        <li><a href="/pendaftaran-siswa-baru">Pendaftaran GMI</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
-                    <p>
-                        LPK GMI Japan Tegal RT.03/RW.03, Kaibun, Balamoa, Kec. Pangkah, Kabupaten Tegal, Jawa Tengah
-                        5247.
-                    </p>
-                    <p class="mt-4"><strong>WhatsApp:</strong> <span>0823-2435-3371</span></p>
-                    <p><strong>Email:</strong> <span>garudamestakungindonesia@gmail.com</span></p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">LPK GMI JAPAN</strong> <span>All Rights
-                    Reserved</span></p>
-        </div>
-
-    </footer>
+    @include('landing.footer')
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i

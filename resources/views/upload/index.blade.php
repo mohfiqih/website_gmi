@@ -20,6 +20,7 @@
     <link href="{{ asset('landing/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landing/css/bootstrap.min.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    @include('partials.site-theme-head')
     <!-- Lity CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
@@ -36,33 +37,6 @@
             --c-text-primary: #0d0f21;
             --c-text-secondary: #6a6b76;
             --c-background-primary: #d0d1de;
-        }
-
-        body::before {
-            content: "";
-            position: fixed; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("https://garudamestakungindonesia.my.id/templates/assets/img/GMI/14.jpg") center center/cover no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            z-index: -2;
         }
 
         input,
@@ -297,7 +271,7 @@
     </style>
 </head>
 
-<body>
+<body class="gmi-page">
     <div class="container-xxl bg-white p-0">
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -307,7 +281,7 @@
         </div>
 
         <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light site-nav px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <img src="img/logo-jepang-removebg.jpg" alt="Logo" width="100px">
                 </a>
@@ -562,6 +536,7 @@
     <script src="{{ asset('landing/js/main.js') }}"></script>
     <!-- Lity JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+    @include('landing.footer')
 </body>
 
 </html>

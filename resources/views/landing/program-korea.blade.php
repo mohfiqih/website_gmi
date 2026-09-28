@@ -32,10 +32,11 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('landing/css/style.css?v=1.0') }}" rel="stylesheet">
+    @include('partials.site-theme-head')
     {{-- <link href="{{ asset('templates/assets/css/floating.css?v=1.0') }}" rel="stylesheet"> --}}
 </head>
 
-<body>
+<body class="gmi-page">
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner"
@@ -49,7 +50,7 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light site-nav px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h3 class="m-0">LPK GMI</h3> -->
                     <img src="https://garudamestakungindonesia.my.id/templates/assets/img/GMI/logo.png" alt="Logo">

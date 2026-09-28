@@ -28,9 +28,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('templates/assets/css/style.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('templates/assets/css/floating.css') }}" rel="stylesheet">
+    @include('partials.site-theme-head')
 </head>
 
-<body>
+<body class="gmi-page">
     <section id="topbar" class="d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">

@@ -1,55 +1,35 @@
-<div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s" id="contact"
-    style="padding-right: 30px;padding-left: 30px;">
-    <div class="container py-2 px-lg-2">
-        <div class="row g-2">
-            <div class="col-md-6 col-lg-5" style="margin-right: 20px;">
-                <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                <p><i class="fa fa-map me-3"></i>RT.03/RW.03, Kaibun, Balamoa, Kec.
-                    Pangkah,
-                    Kabupaten Tegal, Jawa Tengah 52471</p>
-                <p><i class="fa fa-envelope me-3"></i>lpkgarudamestakungindonesia@gmail.com</p>
-
+<footer class="site-footer" id="contact">
+    <div class="container">
+        <div class="row g-4 g-lg-5">
+            <div class="col-lg-5">
+                <a class="site-footer-brand" href="{{ url('/') }}" aria-label="LPK GMI halaman utama">
+                    <img src="{{ asset('img/logo-jepang-removebg.jpg') }}" alt="Logo LPK GMI">
+                    <span>LPK Garuda Mestakung Indonesia</span>
+                </a>
+                <p class="site-footer-copy">Mendampingi langkahmu melalui pelatihan bahasa Jepang dan persiapan menuju peluang kerja di Jepang.</p>
             </div>
-            <div class="col-md-4 col-lg-3">
-                <p class="section-title text-white h5 mb-4">Our Services<span></span></p>
-                <div class="row g-2">
-                    <a class="btn btn-link" href="{{ url('/program-jepang') }}">Program GMI Japan</a>
-                    <a class="btn btn-link" href="#">Dana Talangan</a>
-                    <a class="btn btn-link" href="#">Proses Transparan</a>
-                    <a class="btn btn-link" href="#">Terpercaya & Amanah</a>
-                </div>
+            <div class="col-6 col-lg-3">
+                <h2 class="site-footer-title">Jelajahi</h2>
+                <a class="site-footer-link" href="{{ url('/#program') }}">Program</a>
+                <a class="site-footer-link" href="{{ url('/#about') }}">Tentang kami</a>
+                <a class="site-footer-link" href="{{ url('/manual-book') }}">Panduan pendaftaran</a>
+                <a class="site-footer-link" href="{{ url('/pendaftaran-siswa-baru') }}">Daftar siswa baru</a>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <p class="section-title text-white h5 mb-4">LPK GMI Japan<span></span></p>
-                <p>LPK GMI Japan Tegal RT.03/RW.03, Kaibun, Balamoa, Kec. Pangkah, Kabupaten Tegal, Jawa Tengah 5247</p>
-                <div class="position-relative w-100 mt-3">
-                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                        placeholder="lpkgarudamestakungindonesia@gmail.com" style="height: 48px;width: 100px;" readonly>
-                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
-                        <i class="fa fa-envelope text-primary fs-4"></i>
-                    </button>
+            <div class="col-6 col-lg-4">
+                <h2 class="site-footer-title">Hubungi kami</h2>
+                <p class="site-footer-contact"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Jl. Kaibon RT. 03 RW. 03, Desa Balamoa, Kecamatan Pangkah, Kabupaten Tegal, Jawa Tengah 52471</span></p>
+                <a class="site-footer-contact" href="mailto:lpkgarudamestakungindonesia@gmail.com"><i class="bi bi-envelope-fill" aria-hidden="true"></i><span>lpkgarudamestakungindonesia@gmail.com</span></a>
+                <div class="site-footer-socials" aria-label="Media sosial LPK GMI">
+                    <a href="https://wa.me/6282324353371" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/lpk.gmijapanofficial/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@lpk.gmijapantegal" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@LPKGARUDAMESTAKUNGINDONESIA" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container px-lg-2">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-left text-md-start mb-3 mb-md-0" style="text-align: center;">
-                    Copyright
-                    &copy; <a class="border-bottom" href="#" style="text-align: center;">LPK GMI JAPAN
-                        TEGAL</a><br />
-                    <p style="margin-top: 10px;">Website Version v1.4.0</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-menu">
-                        <a href="#">Home</a>
-                        <a href="#">Cookies</a>
-                        <a href="#">Help</a>
-                        <a href="#">FQAs</a>
-                    </div>
-                </div>
-            </div>
+        <div class="site-footer-bottom">
+            <span>© {{ date('Y') }} LPK Garuda Mestakung Indonesia · Versi {{ config('site.version') }}</span>
+            <a href="{{ url('/') }}">LPK GMI Japan Tegal</a>
         </div>
     </div>
-</div>
+</footer>
