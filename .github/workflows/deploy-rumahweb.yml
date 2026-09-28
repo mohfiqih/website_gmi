@@ -47,12 +47,23 @@ jobs:
           test -n "$FTP_USERNAME" || { echo "::error::Tambahkan secret FTP_USERNAME."; exit 1; }
           test -n "$FTP_PASSWORD" || { echo "::error::Tambahkan secret FTP_PASSWORD."; exit 1; }
 
-      - name: Upload direktori public ke Rumahweb
+      - name: Upload aplikasi Laravel ke Rumahweb
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
-          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
-          local-dir: ./public/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.env
+            **/.env.*
+            **/node_modules/**
+            **/vendor/**
+            **/tests/**
+            **/storage/**
+            db_gmi.sql
