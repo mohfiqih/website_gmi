@@ -42,10 +42,21 @@ jobs:
           FTP_HOST: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
         run: |
           test -n "$FTP_HOST" || { echo "::error::Tambahkan secret FTP_SERVER atau FTP_HOST."; exit 1; }
           test -n "$FTP_USERNAME" || { echo "::error::Tambahkan secret FTP_USERNAME."; exit 1; }
           test -n "$FTP_PASSWORD" || { echo "::error::Tambahkan secret FTP_PASSWORD."; exit 1; }
+          test -n "$FTP_SERVER_DIR" || { echo "::error::Tambahkan secret FTP_SERVER_DIR."; exit 1; }
+
+      - name: Rapikan path folder FTP
+        id: ftp-dir
+        env:
+          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
+        run: |
+          dir="$FTP_SERVER_DIR"
+          while [[ "$dir" == */ ]]; do dir="${dir%/}"; done
+          printf 'server_dir=%s/\n' "$dir" >> "$GITHUB_OUTPUT"
 
       - name: Upload aplikasi Laravel ke Rumahweb
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
@@ -54,7 +65,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftp' }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          server-dir: ${{ steps.ftp-dir.outputs.server_dir }}
           local-dir: ./
           exclude: |
             **/.git*
